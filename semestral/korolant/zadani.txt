@@ -1,0 +1,121 @@
+# Kalendář
+Autor: Anton Korolov
+------------------------------------------------------------------------------------------------------------------------
+# Zadani semestralni prace z Progtestu
+Aplikace pro správu kalendáře s možností vytvářet události a jejich hledání.
+
+Implementujte následující funcionalitu:
+
+1)denní, týdenní a měsíční zobrazení kalendáře
+2)vytvářet a spravovat události (čas, místo, datum, účastníci, ...)
+3)možnost nastavit události opakování (jednou za týden, 14 dní, ...)
+4)hledat události podle názvu a/nebo místa konání
+5)hledat nejbližší možný termín a možnost přesouvat události
+6)exportování a importování událostí
+
+Použití polymorfismu (doporučené)
+
+1)druhy událostí: povinná, volitelná, přesunutelná, ...
+2)strategie přesunů: nejbližší možný (s omezením), nejbližší možný s přesunutím X jiných událostí
+3)zobrazení kalendáře (denní, týdenní, měsíční)
+4)formáty exportovaných událostí
+
+------------------------------------------------------------------------------------------------------------------------
+# Specifikace zadání
+Aplikace "Kalendář", uživatel aplikaci spustí a může pomocí jednoduchých příkazů do konzole ovládát aplikaci.
+Příkazy:
+- `new ...` vytvoří novou událost, aplikace se dotáže na další parametry
+-  `showDaily` denní zobrazení kalendáře s udalostí, které má
+-  `showWeekly` tydenní zobrazení kalendáře s udalostí, které má
+-  `showMonthly` měsíční zobrazení kalendáře s udalostí, které má 
+- `load [filename]` načte události ze souboru
+- `save [filename]` uloží události do souboru
+- `edit ...` změní událost, aplikace se dotáže na další parametry
+- `help` zobrazí nápovědu
+- `quit` ukončí program
+
+Uživatel vytvoří buď povinnou(required) nebo volitelnou(optional) událost.
+Rozdíl bude jenom v výpisu. Je to jen pro uživatele, aby věděl, musí-li této událostí zúčastnit.
+Událostí lze načíst ze souboru(měl by mít přesný tvar). Když soubor nepůjde otevřít, aplikace výhodí výjimku.
+Stejně tak lze do souboru nahrat(exportovat) všechny událostí, které jsou v kalendáří.
+
+##Výpis:
+#Měsíční zobrazení kalendáře př.: 
+
+Calendar - "year"
+
+
+  ------------January-------------
+  Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                             1    2
+    3    4    5    6    7    8    9
+   10   11   12   13   14   15   16
+   17   18   19   20   21   22   23
+   24   25   26   27   28   29   30
+   31
+   
+ `[Optional][day/month/year - day/month/year]Name: :název události:`
+ `[Required][day/month/year - day/month/year]Name: :název události:`
+
+  ------------February-------------
+  Sun  Mon  Tue  Wed  Thu  Fri  Sat
+         1    2    3    4    5    6
+    7    8    9   10   11   12   13
+   14   15   16   17   18   19   20
+   21   22   23   24   25   26   27
+   28   29
+   
+ `[Required][day/month/year - day/month/year]Name: :název události:`
+ `[Optional][day/month/year - day/month/year]Name: :název události:`
+ `[Required][day/month/year - day/month/year]Name: :název události:`
+
+#Tydenní zobrazení kalendáře př.:
+
+  ------------January-------------
+  Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                             1    2
+ `[Required][day/month/year - day/month/year]Name: :název události:`                           
+ `[Required][01/01/year - 28/07/year]Name: :název události:`
+                             
+  ------------January-------------
+  Sun  Mon  Tue  Wed  Thu  Fri  Sat
+    3    4    5    6    7    8    9
+ `[Required][day/month/year - day/month/year]Name: :název události:`
+ `[Required][01/01/year - 28/07/year]Name: :název události:`
+ 
+  ------------January-------------
+  Sun  Mon  Tue  Wed  Thu  Fri  Sat
+   14   15   16   17   18   19   20                       
+ `[Required][day/month/year - day/month/year]Name: :název události:`
+ `[Required][01/01/year - 28/07/year]Name: :název události:`
+ 
+#Denní zobrazení kalendáře př.:
+------------January-------------
+ [JANUARY][Fri][01/01/year]
+`[Required][day/month/year - day/month/year]Name: :název události:` 
+
+ [JANUARY][Sat][02/01/year]
+`[Required][day/month/year - day/month/year]Name: :název události:`
+`[Required][day/month/year - day/month/year]Name: :název události:` 
+`[Required][day/month/year - day/month/year]Name: :název události:` 
+ [JANUARY][Sun][03/01/year]
+ [JANUARY][Mon][04/01/year]   
+ ...
+ ...
+ 
+ ------------February-------------
+ Sun  Mon  Tue  Wed  Thu  Fri  Sat
+        1    2    3    4    5    6
+`[Required][day/month/year - day/month/year]Name: :název události:`
+ ...        
+
+------------------------------------------------------------------------------------------------------------------------
+# Popis polymorfismu a zamyšlení v čem usnadní práci
+Polymorfismus používám ve třídách "CView" a "CEvent"
+
+Ve třídě "CView" polymorfismus mi usnadní výpis.
+Dá se díky polymorfismu zobrazit kalendář jinak, zobrazení by mohlo být denní, tydenní a měsiční.
+
+Ve třídě "CEvent" díky polymorfismu rozděluji událost(Event) na povinnou(required) a nepovinnou(optional).
+
+------------------------------------------------------------------------------------------------------------------------
