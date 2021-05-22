@@ -13,7 +13,7 @@ class CCalendar {
 public:
     CCalendar() = default;
 
-    void createEvent(const int & idEvent, const std::string & name, const std::shared_ptr<CDate> & dateFrom, const std::shared_ptr<CDate> & dateTo,
+    void createEvent(const int & idEvent, const std::string & name, const CDate & dateFrom, const CDate & dateTo,
                      const std::string & place, const std::vector<std::string> & members, const std::string & description );
     void editEvent( const int & idEvent, const std::string & name);
 

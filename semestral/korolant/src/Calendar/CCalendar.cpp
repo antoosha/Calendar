@@ -1,7 +1,7 @@
 #include "CCalendar.h"
 using namespace std;
 
-void CCalendar::createEvent(const int & idEvent, const string &name, const std::shared_ptr<CDate> & dateFrom, const std::shared_ptr<CDate> & dateTo,
+void CCalendar::createEvent(const int & idEvent, const string &name, const CDate & dateFrom, const CDate & dateTo,
                             const string &place, const vector<std::string> &members, const string &description) {
     //TODO
 }

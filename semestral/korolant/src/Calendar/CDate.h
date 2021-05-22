@@ -4,9 +4,9 @@
 class CDate {
 public:
     CDate() = default;
-    CDate(const int & day, const int & month, const int & year);
+    CDate(const int & dayIn, const int & monthIn, const int & yearIn, const int & hourIn, const int & minuteIn );
 
-    void editDate(const std::shared_ptr<CDate> & dateFrom, const std::shared_ptr<CDate> & dateTo);
+    void editDate(const CDate & dateFrom, const CDate & dateTo);
 
     int returnDay() const;
     int returnMonth() const;
@@ -16,6 +16,8 @@ private:
     int day;
     int month;
     int year;
+    int hour;
+    int minute;
 };
 
 

@@ -1,9 +1,9 @@
 #include "CDate.h"
 
-CDate::CDate(const int & day, const int & month, const int & year)
-             : day(day), month(month), year(year) {}
+CDate::CDate(const int & dayIn, const int & monthIn, const int & yearIn, const int & hourIn, const int & minuteIn)
+             : day(dayIn), month(monthIn), year(yearIn), hour(hourIn), minute(minuteIn) {}
 
-void CDate::editDate(const std::shared_ptr<CDate> &dateFrom, const std::shared_ptr<CDate> &dateTo) {
+void CDate::editDate(const CDate & dateFrom, const CDate & dateTo) {
     //TODO
 }
 

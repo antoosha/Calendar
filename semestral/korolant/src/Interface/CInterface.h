@@ -1,19 +1,22 @@
 #pragma once
 #include <iostream>
+#include <string>
+#include <cstring>
+#include <vector>
 
 class CInterface {
-
-protected:
-    std::istream & m_In;
-    std::ostream & m_Out;
 
 public:
     CInterface ( std::istream & in, std::ostream & out );
 
+    int doSmthWithCommand();
 
-    //string getCommand()
+    void getCommand();
 
-    //получит комманлу а потом с ней просто что то сделает
+protected:
+    std::istream & m_In;
+    std::ostream & m_Out;
+    std::vector<std::string> words;
 };
 
 

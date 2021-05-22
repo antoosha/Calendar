@@ -2,7 +2,7 @@
 using namespace std;
 
 void CDay::show(ostream &os,  CCalendar * cCalendar) const {
-    //TODO
+    //TODO vypis by day
 }
 
 
