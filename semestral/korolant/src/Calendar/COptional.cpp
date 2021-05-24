@@ -10,7 +10,7 @@ CDate & COptional::returnDateTo(){
 }
 
 void COptional::printFunc(std::ostream &os) const {
-    os << "[Optional][" << dateFrom.returnDay() << "/" << dateFrom.returnMonth() << "/" << dateFrom.returnYear()
-    << " - " << dateTo.returnDay() << "/" << dateTo.returnMonth() << "/" << dateTo.returnYear() << "]" << "Name: " <<
-    name << std::endl;
+    os << "[Optional][" << dateFrom.returnDate() << " - " << dateTo.returnDate() << "]" << "Name: " <<
+       name << std::endl;
 }
+

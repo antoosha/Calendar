@@ -60,11 +60,11 @@ void CMonthly::show(ostream &os,  CCalendar * cCalendar) const {
         current = k;
 
         // Print events from this month
-        std::map<std::string, std::shared_ptr<CEvent>> printMap = cCalendar->returnMapByName();
-        for(auto l = printMap.begin(); l != printMap.end(); l++){
+        std::multimap<std::string, std::shared_ptr<CEvent>> printMap = cCalendar->returnMapByName();
+        /*for(auto l = printMap.begin(); l != printMap.end(); l++){
             if(l->second->returnDateFrom().returnMonth() == i){
                 l->second->printFunc(os);
             }
-        }
+        }*/
     }
 }

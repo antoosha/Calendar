@@ -14,5 +14,3 @@ public:
 
     void printFunc(std::ostream & os) const override;
 };
-
-

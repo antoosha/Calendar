@@ -1,6 +1,5 @@
 #include "CRequired.h"
 
-
 CDate & CRequired::returnDateFrom(){
     return dateFrom;
 }
@@ -11,7 +10,6 @@ CDate & CRequired::returnDateTo(){
 
 
 void CRequired::printFunc(std::ostream &os) const {
-    os << "[Required][" << dateFrom.returnDay() << "/" << dateFrom.returnMonth() << "/" << dateFrom.returnYear()
-       << " - " << dateTo.returnDay() << "/" << dateTo.returnMonth() << "/" << dateTo.returnYear() << "]" << "Name: " <<
+    os << "[Required][" << dateFrom.returnDate() << " - " << dateTo.returnDate() << "]" << "Name: " <<
        name << std::endl;
 }
