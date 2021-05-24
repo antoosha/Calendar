@@ -63,6 +63,8 @@ int CInterface::doSmthWithCommand(){
         vector<string> members;
         string description;
         string obligation;
+        int dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom;
+        int dayTo, monthTo, yearTo, hourTo, minuteTo;
 
         CDate dateFrom;
         CDate dateTo;
@@ -81,41 +83,83 @@ int CInterface::doSmthWithCommand(){
         getline(m_In, name);
 
 
-        m_Out << "Write date 'from' in format \"dd/mm/year hour:minute\" and press 'Enter':" << endl;
+        /*m_Out << "Write date 'from' in format \"dd/mm/year hour:minute\" and press 'Enter':" << endl;
         getline(m_In, dateFromIn);
         if(dateFromIn.size() != 16){
             m_Out << "You should write date in correct format \"dd/mm/year hour:minute\", try again.." << endl;
             return -4; // something went wrong
         }
-        dateFrom = CDate(dateFromIn);
+        dateFrom = CDate(dateFromIn);*/
+
+        //TODO osetreseni vstupu
+        m_Out << "Write day of date 'from' and press 'Enter':" << endl;
+        m_In >> dayFrom;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Write month of date 'from' and press 'Enter':" << endl;
+        m_In >> monthFrom;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Write year of date 'from' and press 'Enter':" << endl;
+        m_In >> yearFrom;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Write hour of date 'from' and press 'Enter':" << endl;
+        m_In >> hourFrom;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Write minute of date 'from' and press 'Enter':" << endl;
+        m_In >> minuteFrom;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        dateFrom = CDate(dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom);
 
 
-        m_Out << "Write date 'to' in format \"dd/mm/year hour:minute\" and press 'Enter':" << endl;
+        /*m_Out << "Write date 'to' in format \"dd/mm/year hour:minute\" and press 'Enter':" << endl;
         getline(m_In, dateToIn);
         if(dateToIn.size() != 16){
             m_Out << "You should write date in correct format \"dd/mm/year hour:minute\", try again.." << endl;
             return -4; // something went wrong
         }
         dateTo = CDate(dateToIn);
+        */
+
+
+        //TODO osetreseni vstupu
+        m_Out << "Write day of date 'to' and press 'Enter':" << endl;
+        m_In >> dayTo;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Write month of date 'to' and press 'Enter':" << endl;
+        m_In >> monthTo;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Write year of date 'to' and press 'Enter':" << endl;
+        m_In >> yearTo;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Write hour of date 'to' and press 'Enter':" << endl;
+        m_In >> hourTo;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Write minute of date 'to' and press 'Enter':" << endl;
+        m_In >> minuteTo;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        dateTo = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
+
 
 
         m_Out << "Write place of this event and press 'Enter':" << endl;
         std::getline(m_In, place);
 
-        //TODO do it another way, because if person hace name and surname, than will be problem
-        m_Out << "Write all members(without commas, use spaces to split persons), which will at this event and press 'Enter':" << endl;
-        string membersIn;
-        string person;
-        getline(m_In, membersIn);
-        for (size_t i = 0; i < membersIn.size(); i++) {
-            if (isspace(membersIn[i])) {
+        while(1) {
+            char sign;
+            m_Out << "If you want to add member, write \"+\" and press 'Enter':" << endl;
+            m_Out << "If you DO NOT want to add member, write \"-\" and press 'Enter':" << endl;
+            m_In >> sign;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+            if(sign == '+'){
+                m_Out << "Write person, who you want to add to this event and press 'Enter':" << endl;
+                string memberIn;
+                getline(m_In, memberIn);
+                members.emplace_back(memberIn);
+                m_Out << "Person " << memberIn << " has been successfully added." << endl;
                 continue;
             }
-            size_t j = i;
-            while (!isspace(membersIn[j])) j++;
-            person = membersIn.substr(i, j - i);
-            members.emplace_back(person);
-            i = j;
+            else{
+                break;
+            }
         }
 
 
@@ -135,30 +179,62 @@ int CInterface::doSmthWithCommand(){
 
 
         cCalendar.createEvent(id, name, dateFrom, dateTo, place, members, description, obligation);
-        //cout << endl;
-       // (cCalendar.returnMapById()).at(id)->printFunc(cout);
-        //cout << endl;
+
+        cout << endl;
+        (cCalendar.returnMapById()).at(id)->printFunc(cout);
+        cout << endl;
+
         words.clear();
-        return 0;
+        return 0; //OK
     }
 
     else if(!strcasecmp(words[0].c_str(), "showDaily")){
         //TODO emplement calling "showDaily"
+        words.clear();
     }
     else if(!strcasecmp(words[0].c_str(), "showWeekly")){
         //TODO emplement calling "showWeekly"
+        words.clear();
     }
     else if(!strcasecmp(words[0].c_str(), "showMonthly")){
         //TODO emplement calling "showMonthly"
+        words.clear();
     }
     else if(!strcasecmp(words[0].c_str(), "load")){
         //TODO emplement calling "load"
+        words.clear();
     }
     else if(!strcasecmp(words[0].c_str(), "save")){
         //TODO emplement calling "save"
+        words.clear();
     }
     else if(!strcasecmp(words[0].c_str(), "edit")){
-        //TODO emplement calling "edit"
+        CCalendar cCalendar;
+        int id;
+        int number;
+        m_Out << "Write ID of event you want to change and press 'Enter':" << endl;
+        m_In >> id;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Choose number, which you want to change and press 'Enter':" << endl;
+        m_Out << "1) Date from" << endl;
+        m_Out << "2) Date to" << endl;
+        m_In >> number;
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if(number == 1){
+            //TODO implement reading of new date with osetrseni vstupu
+            CDate newDate;
+            cCalendar.returnMapById().at(id)->returnDateFrom().editDate(newDate);
+            m_Out << "Date was successfully changed." << endl;
+        }
+        else if(number == 2){
+            //TODO implement reading of new date with osetrseni vstupu
+            CDate newDate;
+            cCalendar.returnMapById().at(id)->returnDateTo().editDate(newDate);
+            m_Out << "Date was successfully changed." << endl;
+        }
+
+
+        words.clear();
     }
     else if(!strcasecmp(words[0].c_str(), "help")){
         m_Out << "------HELP------" << endl;

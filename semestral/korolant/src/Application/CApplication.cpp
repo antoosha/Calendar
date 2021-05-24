@@ -6,6 +6,7 @@ void run(){}
 
 
 /*
+ * return 0 = all is OK
  * return -1 = nothing was written
  * return -2 = command does not exist
  * return -3 = command "quit"
