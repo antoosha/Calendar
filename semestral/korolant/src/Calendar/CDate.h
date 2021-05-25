@@ -11,6 +11,8 @@ public:
 
     void editDate(const CDate & date);
 
+    std::string dateToString();
+
     //std:: string returnDate() const;
 
     int returnDay() const;

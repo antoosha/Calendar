@@ -25,6 +25,12 @@ int CDate::returnYear() const {
     this->hour = date.hour;
     this->minute = date.minute;
 }
+
+std::string CDate::dateToString() {
+    string dateToString;
+    dateToString = to_string(year) + to_string(month) + to_string(day) + to_string(hour) + to_string(minute);
+    return dateToString;
+}
 /*
 CDate::CDate(const string &dateIn) : date(dateIn) {}
  }
