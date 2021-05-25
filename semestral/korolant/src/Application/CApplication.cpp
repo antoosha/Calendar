@@ -15,13 +15,14 @@ void run(){}
 void CApplication::run() {
     //TODO could be problem if CIN COUT is wrong
     //ofstream MyFile("C:\\Users\\Anton\\Desktop\\file.txt");
-    CInterface  a(cin, cout);
+    CCalendar cCalendar;
+    CInterface  a(cin, cout, cCalendar);
     while(1){
-        cout << "Write you command, if you want to see the list of commands, write \"help\"" << endl;
+        cout << "Write your command, if you want to see the list of commands, write \"help\"" << endl;
         a.getCommand();
         if(a.doSmthWithCommand() == -3){
 
-          //  MyFile.close();
+            //MyFile.close();
 
             return;
         }

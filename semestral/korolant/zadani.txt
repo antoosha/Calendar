@@ -119,3 +119,6 @@ Dá se díky polymorfismu zobrazit kalendář jinak, zobrazení by mohlo být de
 Ve třídě "CEvent" díky polymorfismu rozděluji událost(Event) na povinnou(required) a nepovinnou(optional).
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Poznamky:
+Rok musí být od 1600

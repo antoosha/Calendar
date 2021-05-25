@@ -1,9 +1,8 @@
 #include "CInterface.h"
-#include "../Calendar/CCalendar.h"
 
 using namespace std;
 
-CInterface::CInterface(istream &in, ostream &out) : m_In(in), m_Out(out) {
+CInterface::CInterface(istream &in, ostream &out, const CCalendar & cCalendarIn) : m_In(in), m_Out(out), cCalendar(cCalendarIn) {
     words.resize(0);
 }
 
@@ -54,7 +53,7 @@ int CInterface::doSmthWithCommand(){
     }
 
     if(!strcasecmp(words[0].c_str(), "new")){
-        CCalendar cCalendar;
+        CView cView;
         int id;
         string name;
         string dateFromIn;
@@ -91,23 +90,56 @@ int CInterface::doSmthWithCommand(){
         }
         dateFrom = CDate(dateFromIn);*/
 
-        //TODO osetreseni vstupu
-        m_Out << "Write day of date 'from' and press 'Enter':" << endl;
-        m_In >> dayFrom;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        m_Out << "Write month of date 'from' and press 'Enter':" << endl;
-        m_In >> monthFrom;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        m_Out << "Write year of date 'from' and press 'Enter':" << endl;
-        m_In >> yearFrom;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        m_Out << "Write hour of date 'from' and press 'Enter':" << endl;
-        m_In >> hourFrom;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        m_Out << "Write minute of date 'from' and press 'Enter':" << endl;
-        m_In >> minuteFrom;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        dateFrom = CDate(dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom);
+        int flagDateFrom = 0;
+        while(flagDateFrom == 0) {
+            m_Out << "Write year of date 'from' and press 'Enter':" << endl;
+            m_In >> yearFrom;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            if(yearFrom < 1600){
+                m_Out << "Year is not correct, try again.." << endl;
+                continue;
+            }
+
+            m_Out << "Write month of date 'from' and press 'Enter':" << endl;
+            m_In >> monthFrom;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            if(monthFrom < 1 || monthFrom > 12){
+                m_Out << "Month is not correct, try again.." << endl;
+                continue;
+            }
+
+            m_Out << "Write day of date 'from' and press 'Enter':" << endl;
+            m_In >> dayFrom;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            if(dayFrom > cView.numberOfDays(monthFrom-1, yearFrom) || dayFrom < 1){
+                m_Out << "Day is not correct, try again.." << endl;
+                continue;
+            }
+
+            m_Out << "Write hour of date 'from' and press 'Enter':" << endl;
+            m_In >> hourFrom;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            if(hourFrom > 23 || hourFrom < 0){
+                m_Out << "Hour is not correct, try again.." << endl;
+                continue;
+            }
+
+            m_Out << "Write minute of date 'from' and press 'Enter':" << endl;
+            m_In >> minuteFrom;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            if(minuteFrom > 59 || minuteFrom < 0){
+                m_Out << "Minutes are not correct, try again.." << endl;
+                continue;
+            }
+
+            dateFrom = CDate(dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom);
+            flagDateFrom = 1;
+        }
 
 
         /*m_Out << "Write date 'to' in format \"dd/mm/year hour:minute\" and press 'Enter':" << endl;
@@ -119,26 +151,57 @@ int CInterface::doSmthWithCommand(){
         dateTo = CDate(dateToIn);
         */
 
+        //TODO problem if second date min then first
+        int flagDateTo = 0;
+        while(flagDateTo == 0) {
+            m_Out << "Write year of date 'to' and press 'Enter':" << endl;
+            m_In >> yearTo;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-        //TODO osetreseni vstupu
-        m_Out << "Write day of date 'to' and press 'Enter':" << endl;
-        m_In >> dayTo;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        m_Out << "Write month of date 'to' and press 'Enter':" << endl;
-        m_In >> monthTo;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        m_Out << "Write year of date 'to' and press 'Enter':" << endl;
-        m_In >> yearTo;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        m_Out << "Write hour of date 'to' and press 'Enter':" << endl;
-        m_In >> hourTo;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        m_Out << "Write minute of date 'to' and press 'Enter':" << endl;
-        m_In >> minuteTo;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        dateTo = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
+            if(yearTo < 1600){
+                m_Out << "Year is not correct, try again.." << endl;
+                continue;
+            }
 
+            m_Out << "Write month of date 'to' and press 'Enter':" << endl;
+            m_In >> monthTo;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
+            if(monthTo < 1 || monthTo > 12){
+                m_Out << "Month is not correct, try again.." << endl;
+                continue;
+            }
+
+            m_Out << "Write day of date 'to' and press 'Enter':" << endl;
+            m_In >> dayTo;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            if(dayTo > cView.numberOfDays(monthTo-1, yearTo) || dayTo < 1){
+                m_Out << "Day is not correct, try again.." << endl;
+                continue;
+            }
+
+            m_Out << "Write hour of date 'to' and press 'Enter':" << endl;
+            m_In >> hourTo;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            if(hourTo > 23 || hourTo < 0){
+                m_Out << "Hour is not correct, try again.." << endl;
+                continue;
+            }
+
+            m_Out << "Write minute of date 'to' and press 'Enter':" << endl;
+            m_In >> minuteTo;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            if(minuteTo > 59 || minuteTo < 0){
+                m_Out << "Minutes are not correct, try again.." << endl;
+                continue;
+            }
+
+            dateTo = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
+            flagDateTo = 1;
+        }
 
         m_Out << "Write place of this event and press 'Enter':" << endl;
         std::getline(m_In, place);
@@ -209,32 +272,151 @@ int CInterface::doSmthWithCommand(){
         words.clear();
     }
     else if(!strcasecmp(words[0].c_str(), "edit")){
-        CCalendar cCalendar;
+        //TODO problem if second date min then first
+        int flagIfIdIsCorrect = 0;
         int id;
-        int number;
-        m_Out << "Write ID of event you want to change and press 'Enter':" << endl;
-        m_In >> id;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        m_Out << "Choose number, which you want to change and press 'Enter':" << endl;
-        m_Out << "1) Date from" << endl;
-        m_Out << "2) Date to" << endl;
-        m_In >> number;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        if(number == 1){
-            //TODO implement reading of new date with osetrseni vstupu
-            CDate newDate;
-            cCalendar.returnMapById().at(id)->returnDateFrom().editDate(newDate);
-            m_Out << "Date was successfully changed." << endl;
-        }
-        else if(number == 2){
-            //TODO implement reading of new date with osetrseni vstupu
-            CDate newDate;
-            cCalendar.returnMapById().at(id)->returnDateTo().editDate(newDate);
-            m_Out << "Date was successfully changed." << endl;
+        while(flagIfIdIsCorrect == 0) {
+            CView cView;
+            int dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom;
+            int dayTo, monthTo, yearTo, hourTo, minuteTo;
+            int number;
+            m_Out << "Write ID of event you want to change and press 'Enter':" << endl;
+            m_In >> id;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+            if(cCalendar.returnMapById().count(id) == 0){
+                m_Out << "ID does not exist, try again.." << endl;
+                continue;
+            }
+            m_Out << "Choose number, which you want to change and press 'Enter':" << endl;
+            m_Out << "1) Date from" << endl;
+            m_Out << "2) Date to" << endl;
+            m_In >> number;
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+            if (number == 1) {
+
+                CDate newDate;
+                int flagDateFrom = 0;
+                while(flagDateFrom == 0) {
+                    m_Out << "Write year of date 'from' and press 'Enter':" << endl;
+                    m_In >> yearFrom;
+                    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                    if(yearFrom < 1600){
+                        m_Out << "Year is not correct, try again.." << endl;
+                        continue;
+                    }
+
+                    m_Out << "Write month of date 'from' and press 'Enter':" << endl;
+                    m_In >> monthFrom;
+                    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                    if(monthFrom < 1 || monthFrom > 12){
+                        m_Out << "Month is not correct, try again.." << endl;
+                        continue;
+                    }
+
+                    m_Out << "Write day of date 'from' and press 'Enter':" << endl;
+                    m_In >> dayFrom;
+                    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                    if(dayFrom > cView.numberOfDays(monthFrom-1, yearFrom) || dayFrom < 1){
+                        m_Out << "Day is not correct, try again.." << endl;
+                        continue;
+                    }
+
+                    m_Out << "Write hour of date 'from' and press 'Enter':" << endl;
+                    m_In >> hourFrom;
+                    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                    if(hourFrom > 23 || hourFrom < 0){
+                        m_Out << "Hour is not correct, try again.." << endl;
+                        continue;
+                    }
+
+                    m_Out << "Write minute of date 'from' and press 'Enter':" << endl;
+                    m_In >> minuteFrom;
+                    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                    if(minuteFrom > 59 || minuteFrom < 0){
+                        m_Out << "Minutes are not correct, try again.." << endl;
+                        continue;
+                    }
+
+                    newDate = CDate(dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom);
+                    flagDateFrom = 1;
+
+                }
+                cCalendar.returnMapById().at(id)->returnDateFrom().editDate(newDate);
+                m_Out << "Date was successfully changed." << endl;
+                break;
+            } else if (number == 2) {
+                CDate newDate;
+                int flagDateTo = 0;
+                while(flagDateTo == 0) {
+                    m_Out << "Write year of date 'to' and press 'Enter':" << endl;
+                    m_In >> yearTo;
+                    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                    if(yearTo < 1600){
+                        m_Out << "Year is not correct, try again.." << endl;
+                        continue;
+                    }
+
+                    m_Out << "Write month of date 'to' and press 'Enter':" << endl;
+                    m_In >> monthTo;
+                    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                    if(monthTo < 1 || monthTo > 12){
+                        m_Out << "Month is not correct, try again.." << endl;
+                        continue;
+                    }
+
+                    m_Out << "Write day of date 'to' and press 'Enter':" << endl;
+                    m_In >> dayTo;
+                    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                    if(dayTo > cView.numberOfDays(monthTo-1, yearTo) || dayTo < 1){
+                        m_Out << "Day is not correct, try again.." << endl;
+                        continue;
+                    }
+
+                    m_Out << "Write hour of date 'to' and press 'Enter':" << endl;
+                    m_In >> hourTo;
+                    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                    if(hourTo > 23 || hourTo < 0){
+                        m_Out << "Hour is not correct, try again.." << endl;
+                        continue;
+                    }
+
+                    m_Out << "Write minute of date 'to' and press 'Enter':" << endl;
+                    m_In >> minuteTo;
+                    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                    if(minuteTo > 59 || minuteTo < 0){
+                        m_Out << "Minutes are not correct, try again.." << endl;
+                        continue;
+                    }
+
+                    newDate = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
+                    flagDateTo = 1;
+                }
+                cCalendar.returnMapById().at(id)->returnDateTo().editDate(newDate);
+                m_Out << "Date was successfully changed." << endl;
+                break;
+            }
+            else{
+                m_Out << "Please choose correct number, try again.." << endl;
+                continue;
+            }
+            flagIfIdIsCorrect = 1;
         }
 
-
+        cout << endl;
+        (cCalendar.returnMapById()).at(id)->printFunc(cout);
+        cout << endl;
         words.clear();
+        return 0;
     }
     else if(!strcasecmp(words[0].c_str(), "help")){
         m_Out << "------HELP------" << endl;
@@ -263,4 +445,7 @@ int CInterface::doSmthWithCommand(){
     }
     return 0;
 }
+
+
+
 
