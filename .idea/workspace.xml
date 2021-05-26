@@ -29,11 +29,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="has been implemented:&#10;1) osetrseni vstupu(70%) need to do if first date greater than second(problem) &#10;2)EDIT with osetreseni vstupu&#10;&#10;NEED TO DO:&#10;1)osetrseni vstupu(first date greater than second) new + edit&#10;2)import/export &#10;3)presunuti&#10;4)view">
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="has been implemented:&#10;1) first date greater than second(problem), this problem has been solved (edit + new)&#10;&#10;NEED TO DO:&#10;1)import/export &#10;2)presunuti&#10;3)view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/COptional.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/COptional.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CRequired.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CRequired.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CDay.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CDay.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CDay.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CDay.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CView.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +102,7 @@
       <updated>1620926426139</updated>
       <workItem from="1620926427367" duration="1052000" />
       <workItem from="1621318391780" duration="609000" />
-      <workItem from="1621543078918" duration="52523000" />
+      <workItem from="1621543078918" duration="67402000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, added after KB">
       <created>1620926569285</created>
@@ -127,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621957275562</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="has been implemented:&#10;1) first date greater than second(problem), this problem has been solved (edit + new)&#10;&#10;NEED TO DO:&#10;1)import/export &#10;2)presunuti&#10;3)view">
+      <created>1621958667019</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621958667019</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +170,8 @@
     <MESSAGE value="was implemented command &quot;new&quot; in interface&#10;mapByName was changed to multimap&#10;in CDate ints were changed to one string&#10;&#10;what need to be implemented next:&#10;CDATE string could be bad and will bring problems&#10;iplement reading of members another way, because now it works only with names, if person have name and surname, could be problem!" />
     <MESSAGE value="changed CDate string to ints&#10;&#10;need to do:&#10;TODO EDIT osetreseni vstupu in reading date From and To&#10;TODO implement reading of new date with osetrseni vstupu&#10;TODO vypisByDay, byWeek,byMonth&#10;TODO presun&#10;TODO imp/exp" />
     <MESSAGE value="has been implemented:&#10;1) osetrseni vstupu(70%) need to do if first date greater than second(problem) &#10;2)EDIT with osetreseni vstupu&#10;&#10;NEED TO DO:&#10;1)osetrseni vstupu(first date greater than second) new + edit&#10;2)import/export &#10;3)presunuti&#10;4)view" />
-    <option name="LAST_COMMIT_MESSAGE" value="has been implemented:&#10;1) osetrseni vstupu(70%) need to do if first date greater than second(problem) &#10;2)EDIT with osetreseni vstupu&#10;&#10;NEED TO DO:&#10;1)osetrseni vstupu(first date greater than second) new + edit&#10;2)import/export &#10;3)presunuti&#10;4)view" />
+    <MESSAGE value="has been implemented:&#10;1) first date greater than second(problem), this problem has been solved (edit + new)&#10;&#10;NEED TO DO:&#10;1)import/export &#10;2)presunuti&#10;3)view" />
+    <option name="LAST_COMMIT_MESSAGE" value="has been implemented:&#10;1) first date greater than second(problem), this problem has been solved (edit + new)&#10;&#10;NEED TO DO:&#10;1)import/export &#10;2)presunuti&#10;3)view" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2199" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621952615132">
@@ -167,26 +187,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621713813764" />
-    <state width="1877" height="36" key="GridCell.Tab.0.bottom" timestamp="1621958590790">
+    <state width="1877" height="104" key="GridCell.Tab.0.bottom" timestamp="1622052088089">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="659" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857947403" />
-    <state width="1877" height="36" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621958590790" />
-    <state width="1877" height="36" key="GridCell.Tab.0.center" timestamp="1621958590789">
+    <state width="1877" height="104" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622052088089" />
+    <state width="1877" height="104" key="GridCell.Tab.0.center" timestamp="1622052088089">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="659" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857947403" />
-    <state width="1877" height="36" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621958590789" />
-    <state width="1877" height="36" key="GridCell.Tab.0.left" timestamp="1621958590789">
+    <state width="1877" height="104" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622052088089" />
+    <state width="1877" height="104" key="GridCell.Tab.0.left" timestamp="1622052088089">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="659" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857947403" />
-    <state width="1877" height="36" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621958590789" />
-    <state width="1877" height="36" key="GridCell.Tab.0.right" timestamp="1621958590790">
+    <state width="1877" height="104" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622052088089" />
+    <state width="1877" height="104" key="GridCell.Tab.0.right" timestamp="1622052088089">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="659" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857947403" />
-    <state width="1877" height="36" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621958590790" />
+    <state width="1877" height="104" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622052088089" />
     <state width="1877" height="167" key="GridCell.Tab.1.bottom" timestamp="1621956148054">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -230,13 +250,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.h</url>
-          <line>15</line>
+          <line>16</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp</url>
-          <line>281</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -3,7 +3,7 @@
 
 class CWeekly : CView {
 public:
-    void show(std::ostream &os,  CCalendar * cCalendar) const override;
+   // void show(std::ostream &os, const CCalendar & cCalendar) const override;
 };
 
 

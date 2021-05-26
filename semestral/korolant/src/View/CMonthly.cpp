@@ -4,7 +4,7 @@ using namespace std;
 
 
 //need to change to ostream(not to COUT!)
-void CMonthly::show(ostream &os,  CCalendar * cCalendar) const {
+/*void CMonthly::show(ostream &os) const {
     CView cView;
     time_t t = time(nullptr);
     tm* timePtr = localtime(&t);
@@ -68,3 +68,4 @@ void CMonthly::show(ostream &os,  CCalendar * cCalendar) const {
         }
     }
 }
+*/

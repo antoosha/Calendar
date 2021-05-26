@@ -2,14 +2,17 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstring>
+#include <limits>
 
 #include "../Calendar/CCalendar.h"
+#include "../View/CView.h"
 class CImportExport {
 public:
 
-    void importData(const std::string & fileName) const;
+    int importData(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) ;
 
-    void exportData(const std::string & fileName) const;
+    int exportData(std::istream & in, std::ostream & out, CCalendar & cCalendar) ;
 };
 
 

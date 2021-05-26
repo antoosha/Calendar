@@ -7,6 +7,7 @@
 #include "../View/CView.h"
 #include "../Calendar/CCalendar.h"
 #include "../View/CMonthly.h"
+#include "../ImportExport/CImportExport.h"
 
 class CInterface {
 

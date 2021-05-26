@@ -3,12 +3,11 @@
 #include <string>
 #include <chrono>
 #include <ctime>
-
 #include "../Calendar/CCalendar.h"
 
 class CView {
 public:
-    virtual void show(std::ostream & os, CCalendar * cCalendar) const{};
+    //virtual void show(std::ostream & os, const CCalendar & cCalendar) const;
 
     int dayNumber(int day, int month, int year) const{
         static int t[] = { 0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 };
@@ -82,6 +81,7 @@ public:
         // December
         if (monthNumber == 11)
             return (31);
+        return -1;
     }
 
 };
