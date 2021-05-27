@@ -19,9 +19,31 @@ public:
         }
     }
 
-    virtual CDate & returnDateFrom() = 0;
+    std::string &returnName() {
+        return name;
+    }
 
-    virtual CDate & returnDateTo() = 0;
+    std::string &returnPlace() {
+        return place;
+    }
+
+    std::vector<std::string>  & returnMembers() {
+        return members;
+    }
+
+    std::string &returnDescription() {
+        return description;
+    }
+
+
+    CDate &returnDateFrom() {
+        return dateFrom;
+    }
+
+
+    CDate &returnDateTo() {
+        return dateTo;
+    }
 
     virtual void printFunc(std::ostream & os) const = 0;
 

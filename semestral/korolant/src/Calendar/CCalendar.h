@@ -21,11 +21,11 @@ public:
     int createEvent(std::istream & in, std::ostream & out, CCalendar & cCalendar);
 
     void addEvent(const int & id, const std::string & name, const CDate & dateFrom, const CDate & dateTo, const std::string place,
-                  std::vector<std::string> members, const std::string & description, const std::string & obligation);
+                  const std::vector<std::string>& members, const std::string & description, const std::string & obligation);
 
     int editEvent( std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
 
-    std::vector<std::shared_ptr<CEvent>> findEvent(const int & idEvent, const std::string & name, const std::string & place);
+    int findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
 
     std::shared_ptr<CEvent> returnEvent(const int & idEvent);
 

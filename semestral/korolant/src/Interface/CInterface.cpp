@@ -84,6 +84,10 @@ int CInterface::doSmthWithCommand(){
         words.clear();
         return cCalendar.editEvent(m_In,m_Out,cCalendar);;
     }
+    else if(!strcasecmp(words[0].c_str(), "find")){
+        words.clear();
+        return cCalendar.findEvent(m_In,m_Out,cCalendar);;
+    }
     else if(!strcasecmp(words[0].c_str(), "help")){
         m_Out << "------HELP------" << endl;
         m_Out << "\"new\" ...  - create new event." << endl;
