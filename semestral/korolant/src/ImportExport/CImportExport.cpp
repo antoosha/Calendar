@@ -34,7 +34,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
             continue;
         }
 
-        CView cView;
+        CDate * cDate;
         int id;
         string name;
         string dateFromIn;
@@ -77,7 +77,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
         indata >> dayFrom;
         indata.ignore(numeric_limits<streamsize>::max(), '\n');
 
-        if (dayFrom > cView.numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1) {
+        if (dayFrom > cDate->numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1) {
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -119,7 +119,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
         indata >> dayTo;
         indata.ignore(numeric_limits<streamsize>::max(), '\n');
 
-        if (dayTo > cView.numberOfDays(monthTo - 1, yearTo) || dayTo < 1) {
+        if (dayTo > cDate->numberOfDays(monthTo - 1, yearTo) || dayTo < 1) {
             howManyEventsHasBeenSkipped++;
             continue;
         }

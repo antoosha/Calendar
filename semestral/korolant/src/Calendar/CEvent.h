@@ -1,10 +1,10 @@
 #pragma once
-#include "CCalendar.h"
 #include "CDate.h"
 
 #include <utility>
 #include <iostream>
 #include <string>
+#include <vector>
 
 
 class CEvent {
@@ -21,27 +21,15 @@ public:
 
     std::string &returnName();
 
-    std::string &returnPlace() {
-        return place;
-    }
+    std::string &returnPlace();
 
-    std::vector<std::string>  & returnMembers() {
-        return members;
-    }
+    std::vector<std::string>  & returnMembers();
 
-    std::string &returnDescription() {
-        return description;
-    }
+    std::string &returnDescription();
 
+    CDate &returnDateFrom();
 
-    CDate &returnDateFrom() {
-        return dateFrom;
-    }
-
-
-    CDate &returnDateTo() {
-        return dateTo;
-    }
+    CDate &returnDateTo();
 
     virtual void printFunc(std::ostream & os) const = 0;
 

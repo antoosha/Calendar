@@ -13,6 +13,12 @@ public:
 
     std::string dateToString();
 
+    int dayNumber(int day, int month, int year) const;
+
+    std::string getMonthName(int monthNumber) const;
+
+    int numberOfDays (int monthNumber, int year) const;
+
     //std:: string returnDate() const;
 
     int returnDay() const;

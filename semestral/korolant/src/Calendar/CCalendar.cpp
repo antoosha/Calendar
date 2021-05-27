@@ -5,7 +5,7 @@ using namespace std;
 
 int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) {
 
-    CView cView;
+    CDate * cDate;
     int id;
     string name;
     string dateFromIn;
@@ -68,7 +68,7 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             m_In >> dayFrom;
             m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (dayFrom > cView.numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1) {
+            if (dayFrom > cDate->numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1) {
                 m_Out << "Day is not correct, try again.." << endl;
                 continue;
             }
@@ -129,7 +129,7 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             m_In >> dayTo;
             m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (dayTo > cView.numberOfDays(monthTo - 1, yearTo) || dayTo < 1) {
+            if (dayTo > cDate->numberOfDays(monthTo - 1, yearTo) || dayTo < 1) {
                 m_Out << "Day is not correct, try again.." << endl;
                 continue;
             }
@@ -212,7 +212,7 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) {
 
     int id;
-    CView  * cView;
+    CDate * cDate;
     int dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom;
     int dayTo, monthTo, yearTo, hourTo, minuteTo;
     int number;
@@ -259,7 +259,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             m_In >> dayFrom;
             m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(dayFrom > cView->numberOfDays(monthFrom-1, yearFrom) || dayFrom < 1){
+            if(dayFrom > cDate->numberOfDays(monthFrom-1, yearFrom) || dayFrom < 1){
                 m_Out << "Day is not correct, try again.." << endl;
                 continue;
             }
@@ -320,7 +320,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             m_In >> dayTo;
             m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(dayTo > cView->numberOfDays(monthTo-1, yearTo) || dayTo < 1){
+            if(dayTo > cDate->numberOfDays(monthTo-1, yearTo) || dayTo < 1){
                 m_Out << "Day is not correct, try again.." << endl;
                 continue;
             }

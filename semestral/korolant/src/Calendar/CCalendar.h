@@ -5,13 +5,12 @@
 #include <vector>
 #include <utility>
 #include <cstring>
+#include <limits>
 
 #include "CEvent.h"
 #include "COptional.h"
 #include "CRequired.h"
 #include "CDate.h"
-#include "../View/CView.h"
-
 
 class CCalendar {
 

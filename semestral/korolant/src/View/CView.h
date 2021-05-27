@@ -7,13 +7,7 @@
 
 class CView {
 public:
-    //virtual void show(std::ostream & os, const CCalendar & cCalendar) const;
-
-    int dayNumber(int day, int month, int year) const;
-
-    std::string getMonthName(int monthNumber) const;
-
-    int numberOfDays (int monthNumber, int year) const;
+    virtual void show(std::ostream & os, CCalendar & cCalendar) const;
 
 };
 

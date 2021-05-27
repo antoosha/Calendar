@@ -6,7 +6,6 @@
 #include <limits>
 
 #include "../Calendar/CCalendar.h"
-#include "../View/CView.h"
 class CImportExport {
 public:
 
