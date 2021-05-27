@@ -7,7 +7,7 @@
 
 class CView {
 public:
-    virtual void show(std::ostream & os, CCalendar & cCalendar) const;
+    virtual void show(std::ostream & os, CCalendar & cCalendar) const = 0;
 
 };
 

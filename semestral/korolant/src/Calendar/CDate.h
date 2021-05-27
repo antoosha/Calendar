@@ -11,7 +11,7 @@ public:
 
     void editDate(const CDate & date);
 
-    std::string dateToString();
+    std::string dateToString() const;
 
     int dayNumber(int day, int month, int year) const;
 

@@ -13,7 +13,7 @@ void run(){}
  * return -4 = something went wrong
 */
 void CApplication::run() {
-    //TODO could be problem if CIN COUT is wrong
+
     //ofstream MyFile("C:\\Users\\Anton\\Desktop\\file.txt");
     CCalendar cCalendar;
     CInterface  a(cin, cout, cCalendar);

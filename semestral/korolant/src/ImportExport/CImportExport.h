@@ -11,7 +11,7 @@ public:
 
     int importData(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) ;
 
-    int exportData(std::istream & in, std::ostream & out, CCalendar & cCalendar) ;
+    int exportData(std::istream & in, std::ostream & out, CCalendar & cCalendar) const;
 };
 
 

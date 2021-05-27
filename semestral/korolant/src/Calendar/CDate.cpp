@@ -26,7 +26,7 @@ int CDate::returnYear() const {
     this->minute = date.minute;
 }
 
-std::string CDate::dateToString() {
+std::string CDate::dateToString() const {
     string dateToString;
     dateToString = to_string(year) + to_string(month) + to_string(day) + to_string(hour) + to_string(minute);
     return dateToString;

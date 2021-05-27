@@ -36,8 +36,8 @@ public:
 protected:
     int id = 0;
     std::string name;
-    CDate dateFrom;
-    CDate dateTo;
+    CDate dateFrom{};
+    CDate dateTo{};
     std::string place;
     std::vector<std::string> members;
     std::string description;

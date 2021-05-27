@@ -187,7 +187,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
     return 0;
 }
 
-int CImportExport::exportData (std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) {
+int CImportExport::exportData (std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) const {
     string fileName;
     m_Out << "Write path to file, where you want to export data from calendar and press 'Enter':" << endl;
     m_Out << "Example: \"C:\\Users\\PC\\Desktop\\file.txt\"" << endl;

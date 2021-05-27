@@ -453,14 +453,15 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
     (cCalendar.returnMapById()).at(id)->printFunc(cout);
     cout << endl;
 }
-int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) {
+int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) const {
     int number;
     m_Out << "Choose number by which parameter you want to find the event and press 'Enter':" << endl;
     m_Out << "1) Name:" << endl;
     m_Out << "2) Place:" << endl;
+    m_Out << "3) Name and place:" << endl;
     m_In >> number;
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(number != 1 && number != 2){
+    if(number != 1 && number != 2 && number != 3){
         m_Out << "Number is not correct, try again.." << endl;
         return -4;
     }
@@ -511,13 +512,33 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             return 0;
         }
     }
+    else if(number == 3){
+        string nameFind;
+        string placeFind;
+        vector<shared_ptr<CEvent>> events;
+        m_Out << "Write name of event and press 'Enter':" << endl;
+        getline(m_In, nameFind);
+        m_Out << "Write place of event and press 'Enter':" << endl;
+        getline(m_In, placeFind);
+        for(auto i = cCalendar.returnMapByName().begin(); i != cCalendar.returnMapByName().end(); i++){
+            if(!strcasecmp(i->second->returnPlace().c_str(), placeFind.c_str()) && !strcasecmp(i->first.c_str(), nameFind.c_str())){
+                events.emplace_back(i->second);
+            }
+        }
+        if(events.empty()){
+            m_Out << "Any events have not been found." << endl;
+            return 0;
+        }
+        else{
+            for(auto i = events.begin(); i != events.end(); i++){
+                i->get()->printFunc(m_Out);
+            }
+            return 0;
+        }
+    }
     return 0;
 }
-std::shared_ptr<CEvent> CCalendar::returnEvent(const int &id) {
 
-    //TODO
-    return std::shared_ptr<CEvent>();
-}
 std::map<int, std::shared_ptr<CEvent>> & CCalendar::returnMapById()   {
     return mapOfEventsById;
 }

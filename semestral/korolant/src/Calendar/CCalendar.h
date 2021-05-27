@@ -24,9 +24,7 @@ public:
 
     int editEvent( std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
 
-    int findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
-
-    std::shared_ptr<CEvent> returnEvent(const int & idEvent);
+    int findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) const;
 
     std::map<int, std::shared_ptr<CEvent>> & returnMapById();
 
