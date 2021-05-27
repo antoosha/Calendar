@@ -19,9 +19,7 @@ public:
         }
     }
 
-    std::string &returnName() {
-        return name;
-    }
+    std::string &returnName();
 
     std::string &returnPlace() {
         return place;

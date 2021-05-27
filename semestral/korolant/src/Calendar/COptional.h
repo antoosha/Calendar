@@ -1,6 +1,8 @@
 #pragma once
+
 #include "CCalendar.h"
 #include "CEvent.h"
+
 
 class COptional : public CEvent {
 public:
