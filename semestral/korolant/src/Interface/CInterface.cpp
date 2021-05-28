@@ -36,9 +36,14 @@ void CInterface::getCommand(){
 
 /*
 - `new ...` vytvoří novou událost, aplikace se dotáže na další parametry
--  `showDaily` denní zobrazení kalendáře s udalostí, které má
--  `showWeekly` tydenní zobrazení kalendáře s udalostí, které má
--  `showMonthly` měsíční zobrazení kalendáře s udalostí, které má
+- `delete ...` smaže nějakou událost, aplikace se dotáže na další parametry
+- `listEvents` výpíše vsechny události, které jsou v kalendáři
+- `repeat ...` nastaví událost, kterou vybere uživatel, opakovaně, aplikace se dotáže na další parametry
+- `move ...` přesune událost, kterou vybere uživatel, aplikace se dotáže na další parametry
+- `showDaily` denní zobrazení kalendáře s udalostí, které má
+- `showWeekly` tydenní zobrazení kalendáře s udalostí, které má
+- `showMonthly` měsíční zobrazení kalendáře s udalostí, které má
+- `find ...` vyhledá událost,  aplikace se dotáže na další parametry
 - `load [filename]` načte události ze souboru
 - `save [filename]` uloží události do souboru
 - `edit ...` změní událost, aplikace se dotáže na další parametry
@@ -62,7 +67,6 @@ int CInterface::doSmthWithCommand(){
     }
     else if(!strcasecmp(words[0].c_str(), "repeat")){
         words.clear();
-        //TODO
         return cCalendar.repeatEvent(m_In, m_Out, cCalendar);
     }
     else if(!strcasecmp(words[0].c_str(), "listEvents")){
@@ -72,7 +76,6 @@ int CInterface::doSmthWithCommand(){
     }
     else if(!strcasecmp(words[0].c_str(), "move")){
         words.clear();
-        //TODO implement to move event zpatky, napr o par mesicu zpatky
         return cCalendar.moveEvent(m_In, m_Out, cCalendar);
     }
     else if(!strcasecmp(words[0].c_str(), "showDaily")){
@@ -109,9 +112,14 @@ int CInterface::doSmthWithCommand(){
     else if(!strcasecmp(words[0].c_str(), "help")){
         m_Out << "------HELP------" << endl;
         m_Out << "\"new\" ...  - create new event." << endl;
+        m_Out << "\"delete ...\" smaže událost, aplikace se dotáže na další parametry." << endl;
+        m_Out << "\"listEvents\" - výpíše vsechny události, které jsou v kalendáři." << endl;
+        m_Out << "\"repeat ...\" - nastaví událost, kterou vybere uživatel, opakovaně, aplikace se dotáže na další parametry." << endl;
+        m_Out << "\"move ...\" - přesune událost, kterou vybere uživatel, aplikace se dotáže na další parametry." << endl;
         m_Out << "\"showDaily\" - show calendar and all events by day." << endl;
         m_Out << "\"showWeekly\" - show calendar and all events by week." << endl;
         m_Out << "\"showMonthly\" - show calendar and all events by month." << endl;
+        m_Out << "\"find ...\" - vyhledá událost,  aplikace se dotáže na další parametry." << endl;
         m_Out << "\"load [filename]\" - upload all events from the file called \"filename\"." << endl;
         m_Out << "\"save [filename]\" - save all events to the file called \"filename\"." << endl;
         m_Out << "\"edit\" ... - edit event." << endl;

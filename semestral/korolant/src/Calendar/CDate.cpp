@@ -131,8 +131,8 @@ void CDate::moveHours(int hours) {
 
 void CDate::moveDays(int days) {
     if(day + days > numberOfDays(month-1, year)){
+        day = (numberOfDays(month-1, year) - (day + days));
         moveMonths(1);
-        day = numberOfDays(month-1, year) - (day + days);
         if(day < 0) day*=-1;
     }
     else{
@@ -141,6 +141,7 @@ void CDate::moveDays(int days) {
 }
 
 void CDate::moveMonths(int months) {
+    //TODO есди у прошлой даты было 31 число а двигается на февраль то получится 31 февраля что НЕ МОЖЕТ БЫТЬ!
     if(month + months > 11){
         moveYears(1);
         month = 12 - (month + months);
@@ -152,7 +153,20 @@ void CDate::moveMonths(int months) {
 }
 
 void CDate::moveYears(int years) {
-    year += years;
+    if(month == 2){
+        if((numberOfDays(2, year) != numberOfDays(2, year + years)) && day == 29){
+            year += years;
+            month++;
+            day = 1;
+        }
+        else{
+            year += years;
+        }
+
+    }
+    else{
+        year += years;
+    }
 }
 
 void CDate::moveMinutesBack(int minutes) {
@@ -176,8 +190,9 @@ void CDate::moveHoursBack(int hours) {
 }
 
 void CDate::moveDaysBack(int days) {
+
     if(day - days < 1){
-        moveMonthsBack(1);
+        moveMonthsBack(1); // true poradi
         day = numberOfDays(month-1, year) + day - days;
     }
     else{
@@ -186,6 +201,7 @@ void CDate::moveDaysBack(int days) {
 }
 
 void CDate::moveMonthsBack(int months) {
+    //TODO есди у прошлой даты было 31 число а двигается на февраль то получится 31 февраля что НЕ МОЖЕТ БЫТЬ!
     if(month - months < 1){
         moveYearsBack(1);
         month = 12 + month - months ;
@@ -196,7 +212,19 @@ void CDate::moveMonthsBack(int months) {
 }
 
 void CDate::moveYearsBack(int years) {
-    year-=years;
+    if(month == 2){
+        if((numberOfDays(2, year) != numberOfDays(2, year - years)) && day == 29){
+            year -= years;
+            month--;
+            day = 31;
+        }
+        else{
+            year -= years;
+        }
+    }
+    else{
+        year -= years;
+    }
 }
 
 /*

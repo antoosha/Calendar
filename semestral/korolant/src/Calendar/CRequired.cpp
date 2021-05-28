@@ -7,7 +7,7 @@
 }*/
 
 void CRequired::printFunc(std::ostream &os) const {
-    os << "[Required][" << dateFrom.returnDay() << "/" << dateFrom.returnMonth() << "/" << dateFrom.returnYear()
+    os << "[ID:"<< id << "][Required][" << dateFrom.returnDay() << "/" << dateFrom.returnMonth() << "/" << dateFrom.returnYear()
        << " - " << dateTo.returnDay() << "/" << dateTo.returnMonth() << "/" << dateTo.returnYear() << "]" << " Name: " <<
        name << std::endl;
     os << "\tPlace: " << place << std::endl;

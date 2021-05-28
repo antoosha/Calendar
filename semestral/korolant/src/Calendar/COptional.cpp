@@ -6,7 +6,7 @@
 }
 */
 void COptional::printFunc(std::ostream &os) const  {
-    os << "[Optional][" << dateFrom.returnDay() << "/" << dateFrom.returnMonth() << "/" << dateFrom.returnYear()
+    os << "[ID:"<< id << "][Optional][" << dateFrom.returnDay() << "/" << dateFrom.returnMonth() << "/" << dateFrom.returnYear()
        << " - " << dateTo.returnDay() << "/" << dateTo.returnMonth() << "/" << dateTo.returnYear() << "]" << " Name: " <<
        name << std::endl;
     os << "\tPlace: " << place << std::endl;

@@ -49,14 +49,14 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
         CDate dateFrom;
         CDate dateTo;
 
-        indata >> id;
+        id = cCalendar.generateId(cCalendar);
         if(cCalendar.returnMapById().count(id) != 0){
             howManyEventsHasBeenSkipped++;
             continue;
         }
-        indata.ignore(numeric_limits<streamsize>::max(), '\n');
 
         getline(indata, name);
+        if(indata.eof()) continue;
 
         indata >> yearFrom;
         indata.ignore(numeric_limits<streamsize>::max(), '\n');

@@ -6,6 +6,7 @@
 #include <utility>
 #include <cstring>
 #include <limits>
+#include <typeinfo>
 
 #include "CEvent.h"
 #include "COptional.h"
@@ -31,6 +32,8 @@ public:
     void listEvents(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) const;
 
     int moveEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
+
+    size_t generateId(CCalendar & cCalendar);
 
     int repeatEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
 

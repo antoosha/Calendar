@@ -29,17 +29,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="i have implemented find with both of parameters and that is all :)">
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="implemented:&#10;delete to delete event&#10;listEvents to list events&#10;move(presunuti) to move events rewind date foward or back &#10;&#10;need to do:&#10;repeat(opakovani)&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CEvent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CEvent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CEvent.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CEvent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/COptional.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/COptional.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CRequired.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CRequired.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/zadani.txt" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/zadani.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +96,7 @@
       <workItem from="1620926427367" duration="1052000" />
       <workItem from="1621318391780" duration="609000" />
       <workItem from="1621543078918" duration="68731000" />
-      <workItem from="1622101836269" duration="30789000" />
+      <workItem from="1622101836269" duration="42727000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, added after KB">
       <created>1620926569285</created>
@@ -176,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622127812790</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="implemented:&#10;delete to delete event&#10;listEvents to list events&#10;move(presunuti) to move events rewind date foward or back &#10;&#10;need to do:&#10;repeat(opakovani)&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;...">
+      <created>1622223076696</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622223076696</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +212,8 @@
     <MESSAGE value="hned link" />
     <MESSAGE value="predelal jsem normalne virtualy a ted nemam cycklickou smycku" />
     <MESSAGE value="i have implemented find with both of parameters and that is all :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="i have implemented find with both of parameters and that is all :)" />
+    <MESSAGE value="implemented:&#10;delete to delete event&#10;listEvents to list events&#10;move(presunuti) to move events rewind date foward or back &#10;&#10;need to do:&#10;repeat(opakovani)&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;..." />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented:&#10;delete to delete event&#10;listEvents to list events&#10;move(presunuti) to move events rewind date foward or back &#10;&#10;need to do:&#10;repeat(opakovani)&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2199" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621952615132">
@@ -222,46 +229,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621713813764" />
-    <state width="1877" height="817" key="GridCell.Tab.0.bottom" timestamp="1622222633486">
+    <state width="1877" height="38" key="GridCell.Tab.0.bottom" timestamp="1622237640695">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="659" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857947403" />
-    <state width="1877" height="817" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622222633486" />
-    <state width="1877" height="817" key="GridCell.Tab.0.center" timestamp="1622222633486">
+    <state width="1877" height="38" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622237640695" />
+    <state width="1877" height="38" key="GridCell.Tab.0.center" timestamp="1622237640695">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="659" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857947403" />
-    <state width="1877" height="817" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622222633486" />
-    <state width="1877" height="817" key="GridCell.Tab.0.left" timestamp="1622222633486">
+    <state width="1877" height="38" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622237640695" />
+    <state width="1877" height="38" key="GridCell.Tab.0.left" timestamp="1622237640695">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="659" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857947403" />
-    <state width="1877" height="817" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622222633486" />
-    <state width="1877" height="817" key="GridCell.Tab.0.right" timestamp="1622222633486">
+    <state width="1877" height="38" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622237640695" />
+    <state width="1877" height="38" key="GridCell.Tab.0.right" timestamp="1622237640695">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="659" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857947403" />
-    <state width="1877" height="817" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622222633486" />
-    <state width="1877" height="167" key="GridCell.Tab.1.bottom" timestamp="1622219475404">
+    <state width="1877" height="38" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622237640695" />
+    <state width="1877" height="278" key="GridCell.Tab.1.bottom" timestamp="1622232544459">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="167" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622219475404" />
-    <state width="1877" height="167" key="GridCell.Tab.1.center" timestamp="1622219475403">
+    <state width="1877" height="278" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622232544459" />
+    <state width="1877" height="278" key="GridCell.Tab.1.center" timestamp="1622232544459">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="167" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622219475403" />
-    <state width="1877" height="167" key="GridCell.Tab.1.left" timestamp="1622219475403">
+    <state width="1877" height="278" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622232544459" />
+    <state width="1877" height="278" key="GridCell.Tab.1.left" timestamp="1622232544459">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="167" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622219475403" />
-    <state width="1877" height="167" key="GridCell.Tab.1.right" timestamp="1622219475403">
+    <state width="1877" height="278" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622232544459" />
+    <state width="1877" height="278" key="GridCell.Tab.1.right" timestamp="1622232544459">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="167" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622219475403" />
+    <state width="1877" height="278" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622232544459" />
     <state x="279" y="58" key="SettingsEditor" timestamp="1621856771876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -284,9 +291,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.h</url>
-          <line>16</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp</url>
+          <line>5</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
