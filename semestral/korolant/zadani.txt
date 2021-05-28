@@ -25,6 +25,10 @@ Použití polymorfismu (doporučené)
 Aplikace "Kalendář", uživatel aplikaci spustí a může pomocí jednoduchých příkazů do konzole ovládát aplikaci.
 Příkazy:
 - `new ...` vytvoří novou událost, aplikace se dotáže na další parametry
+- `delete ...` smaže nějakou událost, aplikace se dotáže na další parametry
+- `listEvents` výpíše vsechny události, které jsou v kalendáři
+- `repeat ...` nastaví událost, kterou vybere uživatel, opakovaně, aplikace se dotáže na další parametry
+- `move ...` přesune událost, kterou vybere uživatel, aplikace se dotáže na další parametry
 - `showDaily` denní zobrazení kalendáře s udalostí, které má
 - `showWeekly` tydenní zobrazení kalendáře s udalostí, které má
 - `showMonthly` měsíční zobrazení kalendáře s udalostí, které má

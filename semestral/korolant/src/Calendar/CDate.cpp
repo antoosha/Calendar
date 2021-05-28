@@ -107,6 +107,98 @@ std::string CDate::getMonthName(int monthNumber) const {
     return (months[monthNumber]);
 }
 
+void CDate::moveMinutes(int minutes) {
+    if(minute + minutes > 59){
+        moveHours(1);
+        minute = 60- (minute + minutes);
+        if(minute < 0) minute*=-1;
+    }
+    else{
+        minute += minutes;
+    }
+}
+
+void CDate::moveHours(int hours) {
+    if(hour + hours > 23){
+        moveDays(1);
+        hour = 24 - (hour + hours);
+        if(hour < 0) hour*=-1;
+    }
+    else{
+        hour += hours;
+    }
+}
+
+void CDate::moveDays(int days) {
+    if(day + days > numberOfDays(month-1, year)){
+        moveMonths(1);
+        day = numberOfDays(month-1, year) - (day + days);
+        if(day < 0) day*=-1;
+    }
+    else{
+        day += days;
+    }
+}
+
+void CDate::moveMonths(int months) {
+    if(month + months > 11){
+        moveYears(1);
+        month = 12 - (month + months);
+        if(month < 0) month*=-1;
+    }
+    else{
+        month += months;
+    }
+}
+
+void CDate::moveYears(int years) {
+    year += years;
+}
+
+void CDate::moveMinutesBack(int minutes) {
+    if(minute - minutes < 0){
+        moveHoursBack(1);
+        minute = 60 + minute - minutes;
+    }
+    else{
+        minute-=minutes;
+    }
+}
+
+void CDate::moveHoursBack(int hours) {
+    if(hour - hours < 0){
+        moveDaysBack(1);
+        hour = 24 + hour - hours;
+    }
+    else{
+        hour-=hours;
+    }
+}
+
+void CDate::moveDaysBack(int days) {
+    if(day - days < 1){
+        moveMonthsBack(1);
+        day = numberOfDays(month-1, year) + day - days;
+    }
+    else{
+        day-=days;
+    }
+}
+
+void CDate::moveMonthsBack(int months) {
+    if(month - months < 1){
+        moveYearsBack(1);
+        month = 12 + month - months ;
+    }
+    else{
+        month-=months;
+    }
+}
+
+void CDate::moveYearsBack(int years) {
+    year-=years;
+}
+
 /*
 CDate::CDate(const string &dateIn) : date(dateIn) {}
  }

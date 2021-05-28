@@ -9,10 +9,6 @@ int main(int argc, char * argv[]){
     return 0;
 }
 
-//написать давиду с вопросом или просьбой о консультации как нужно сделать пресунути/опаковане/COptional print cRequired print
-//может ли так быть import? там просто формат не самый красивый, но она работает и работает как по мне довольно хорошо, если делать это всё одной строкой,
-// то это тоже возможно, но там вероятность плохого ввода больше, у нас семестралка не об этом что бы сделать супер пупер ошетршени вступа
-///presunuti сделать
 ///гледат найблизжи можный термин
 ///наставит удалост опаковане
 ///сделать выписы календаря
@@ -21,4 +17,9 @@ int main(int argc, char * argv[]){
 ///ошетршени вступу
 
 
+/*Musím ošetřovat vstupy?
+Ano, to je samozřejmost.
+ Nezapomeňte, že vstupem jsou i různé druhy souborů a tak je potřeba ošetřit i načítání (nebo i ukládání) z těchto souborů.
+ Typicky neexistující soubor, soubor bez práv k přístupu, atp.
+ */
 

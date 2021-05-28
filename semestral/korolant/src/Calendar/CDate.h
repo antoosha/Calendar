@@ -15,6 +15,26 @@ public:
 
     int dayNumber(int day, int month, int year) const;
 
+    void moveMinutes(int minutes);
+
+    void moveHours(int hours);
+
+    void moveDays(int days);
+
+    void moveMonths(int months);
+
+    void moveYears(int years);
+
+    void moveMinutesBack(int minutes);
+
+    void moveHoursBack(int hours);
+
+    void moveDaysBack(int days);
+
+    void moveMonthsBack(int months);
+
+    void moveYearsBack(int years);
+
     std::string getMonthName(int monthNumber) const;
 
     int numberOfDays (int monthNumber, int year) const;

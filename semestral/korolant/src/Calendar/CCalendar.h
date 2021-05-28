@@ -26,6 +26,14 @@ public:
 
     int findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) const;
 
+    int deleteEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
+
+    void listEvents(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) const;
+
+    int moveEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
+
+    int repeatEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
+
     std::map<int, std::shared_ptr<CEvent>> & returnMapById();
 
     std::multimap<std::string, std::shared_ptr<CEvent>> &  returnMapByName();

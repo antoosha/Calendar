@@ -1,5 +1,9 @@
 #include "CEvent.h"
 
+int & CEvent::returnId() {
+    return id;
+}
+
 std::string &CEvent::returnName() {
     return name;
 }

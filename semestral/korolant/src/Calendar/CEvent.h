@@ -19,6 +19,8 @@ public:
         }
     }
 
+    int & returnId();
+
     std::string &returnName();
 
     std::string &returnPlace();
