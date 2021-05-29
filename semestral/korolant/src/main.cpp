@@ -8,16 +8,10 @@ int main(int argc, char * argv[]){
 
     return 0;
 }
-
-
-
-//CDATE movemonths and movemonthsback!!! исправить потому что там может быть ошибка если в месяцах не равное колличество дней!
-///гледат найблизжи можный термин
 ///сделать выписы календаря
 
 ///тесты
 ///ошетршени вступу
-
 
 /*Musím ošetřovat vstupy?
 Ano, to je samozřejmost.

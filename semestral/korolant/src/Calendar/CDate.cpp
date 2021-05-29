@@ -296,6 +296,15 @@ void CDate::moveYearsBack(int years) {
     }
 }
 
+int CDate::returnHour() const {
+    return hour;
+}
+
+int CDate::returnMinute() const {
+    return minute;
+}
+
+
 /*
 CDate::CDate(const string &dateIn) : date(dateIn) {}
  }

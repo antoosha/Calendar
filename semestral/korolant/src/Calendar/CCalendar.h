@@ -33,13 +33,19 @@ public:
 
     size_t generateId(CCalendar & cCalendar);
 
+    int findFirstPossible(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
+
     std::map<int, std::shared_ptr<CEvent>> & returnMapById();
 
     std::multimap<std::string, std::shared_ptr<CEvent>> &  returnMapByName();
 
+    std::multimap<std::string, std::shared_ptr<CEvent>> &  returnMapByDate();
+
 protected:
     std::map<int, std::shared_ptr<CEvent>> mapOfEventsById;
     std::multimap<std::string, std::shared_ptr<CEvent>> mapOfEventsByName;
+    std::multimap<std::string, std::shared_ptr<CEvent>> mapOfEventsByDate;
+
 };
 
 

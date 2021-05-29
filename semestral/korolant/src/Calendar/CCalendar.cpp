@@ -543,12 +543,14 @@ void CCalendar::addEvent(const int & id, const std::string & name, const CDate &
         CRequired cRequired = CRequired(id, name, dateFrom, dateTo, place, members, description);
         mapOfEventsByName.emplace(name, make_shared<CRequired>(cRequired));
         mapOfEventsById.emplace(id, make_shared<CRequired>(cRequired));
+        mapOfEventsByDate.emplace(dateFrom.dateToString(), make_shared<CRequired>(cRequired));
 
     }
     else if(!strcasecmp(obligation.c_str(), "optional")){
         COptional cOptional = COptional(id, name, dateFrom, dateTo, place, members, description);
-        mapOfEventsByName.insert({name, make_shared<COptional>(cOptional)});
-        mapOfEventsById.insert({id, make_shared<COptional>(cOptional)});
+        mapOfEventsByName.emplace(name, make_shared<COptional>(cOptional));
+        mapOfEventsById.emplace(id, make_shared<COptional>(cOptional));
+        mapOfEventsByDate.emplace(dateFrom.dateToString(), make_shared<COptional>(cOptional));
     }
 
 }
@@ -593,4 +595,53 @@ void CCalendar::listEvents(istream &m_In, ostream &m_Out, CCalendar &cCalendar) 
 
 size_t CCalendar::generateId(CCalendar &cCalendar) {
    return cCalendar.returnMapById().size();
+}
+
+int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
+    int id;
+    m_Out << "Write id of event you want to find first possible term to postpone it and press 'Enter':" << endl;
+    m_In >> id;
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+    if(cCalendar.returnMapById().count(id) == 0){
+        m_Out << "This ID does not exist, try again.." << endl;
+        return -4;
+    }
+    string dateFromStr = cCalendar.mapOfEventsById.at(id)->returnDateFrom().dateToString();
+    string dateToStr = cCalendar.mapOfEventsById.at(id)->returnDateTo().dateToString();
+    for(auto i = cCalendar.mapOfEventsByDate.begin(); i != cCalendar.mapOfEventsByDate.end(); i++){
+        if(dateFromStr > i->second->returnDateTo().dateToString()){
+            continue;
+        }
+        auto nextIter = i;
+        nextIter++;
+        if(dateToStr <= nextIter->second->returnDateFrom().dateToString()){
+            //show this place
+            char s1[19];
+            s1[18] = '\0';
+            char s2[19];
+            s2[18] = '\0';
+            std::sprintf(s1, "[%02d/%02d/%04d %02d:%02d]",i->second->returnDateTo().returnDay(), i->second->returnDateTo().returnMonth(),
+                         i->second->returnDateTo().returnYear(), i->second->returnDateTo().returnHour(), i->second->returnDateTo().returnMinute());
+            std::sprintf(s2, "[%02d/%02d/%04d %02d:%02d]",nextIter->second->returnDateFrom().returnDay(), nextIter->second->returnDateFrom().returnMonth(),
+                         nextIter->second->returnDateFrom().returnYear(), nextIter->second->returnDateFrom().returnHour(), nextIter->second->returnDateFrom().returnMinute());
+            m_Out << "A window between " << s1 << " and " << s2<< endl;
+
+            return 0;
+        }
+        //continue to find
+    }
+    //the last place, after the last event
+    auto i = returnMapByDate().end()--;
+    char s1[19];
+    s1[18] = '\0';
+    std::sprintf(s1, "[%02d/%02d/%04d %02d:%02d]",i->second->returnDateTo().returnDay(), i->second->returnDateTo().returnMonth(),
+                 i->second->returnDateTo().returnYear(), i->second->returnDateTo().returnHour(), i->second->returnDateTo().returnMinute());
+    m_Out << "Sorry, but does not exist free window(space), exists term after the last event, after" << s1 << endl;
+    //show this place
+    return 0;
+
+}
+
+std::multimap<std::string, std::shared_ptr<CEvent>> &CCalendar::returnMapByDate() {
+    return mapOfEventsByDate;
 }

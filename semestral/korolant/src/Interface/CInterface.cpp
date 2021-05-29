@@ -80,6 +80,10 @@ int CInterface::doSmthWithCommand(){
         words.clear();
         return cPostpone.moveEvent(m_In, m_Out, cCalendar);
     }
+    else if(!strcasecmp(words[0].c_str(), "findFirstPossible")){
+        words.clear();
+        return cCalendar.findFirstPossible(m_In, m_Out, cCalendar);
+    }
     else if(!strcasecmp(words[0].c_str(), "showDaily")){
         //TODO emplement calling "showDaily"
         words.clear();
@@ -118,6 +122,7 @@ int CInterface::doSmthWithCommand(){
         m_Out << "\"listEvents\" - výpíše vsechny události, které jsou v kalendáři." << endl;
         m_Out << "\"repeat ...\" - nastaví událost, kterou vybere uživatel, opakovaně, aplikace se dotáže na další parametry." << endl;
         m_Out << "\"move ...\" - přesune událost, kterou vybere uživatel, aplikace se dotáže na další parametry." << endl;
+        m_Out << "\"findFristPossible ...\" - vyhledá nejbližší možný termín přesunu události, kterou vybere uživatel, aplikace se dotáže na další parametry." << endl;
         m_Out << "\"showDaily\" - show calendar and all events by day." << endl;
         m_Out << "\"showWeekly\" - show calendar and all events by week." << endl;
         m_Out << "\"showMonthly\" - show calendar and all events by month." << endl;

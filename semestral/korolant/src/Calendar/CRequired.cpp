@@ -7,8 +7,17 @@
 }*/
 
 void CRequired::printFunc(std::ostream &os) const {
-    os << "[ID:"<< id << "][Required][" << dateFrom.returnDay() << "/" << dateFrom.returnMonth() << "/" << dateFrom.returnYear()
-       << " - " << dateTo.returnDay() << "/" << dateTo.returnMonth() << "/" << dateTo.returnYear() << "]" << " Name: " <<
+    char s1[17];
+    s1[16] = '\0';
+    char s2[17];
+    s2[16] = '\0';
+    std::sprintf(s1, "%02d/%02d/%04d %02d:%02d",dateFrom.returnDay(), dateFrom.returnMonth(),
+                 dateFrom.returnYear(), dateFrom.returnHour(), dateFrom.returnMinute());
+    std::sprintf(s2, "%02d/%02d/%04d %02d:%02d",dateTo.returnDay(), dateTo.returnMonth(),
+                 dateTo.returnYear(), dateTo.returnHour(), dateTo.returnMinute());
+
+
+    os << "[ID:"<< id << "][Optional][" << s1 << " - " << s2  << "] Name: " <<
        name << std::endl;
     os << "\tPlace: " << place << std::endl;
 

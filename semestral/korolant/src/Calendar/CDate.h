@@ -44,6 +44,8 @@ public:
     int returnDay() const;
     int returnMonth() const;
     int returnYear() const;
+    int returnHour() const;
+    int returnMinute() const;
 
 private:
     //std::string date;
