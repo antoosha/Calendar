@@ -2,7 +2,7 @@
 
 using namespace std;
 
-CInterface::CInterface(istream &in, ostream &out, const CCalendar & cCalendarIn) : m_In(in), m_Out(out), cCalendar(cCalendarIn) {
+CInterface::CInterface(istream &in, ostream &out, const CCalendar & cCalendarIn) : m_In(in), m_Out(out), cCalendar(cCalendarIn){
     words.resize(0);
 }
 
@@ -43,6 +43,7 @@ void CInterface::getCommand(){
 - `showDaily` denní zobrazení kalendáře s udalostí, které má
 - `showWeekly` tydenní zobrazení kalendáře s udalostí, které má
 - `showMonthly` měsíční zobrazení kalendáře s udalostí, které má
+- `showYearly` roční zobrazení kalendáře s udalostí, které má
 - `find ...` vyhledá událost,  aplikace se dotáže na další parametry
 - `load [filename]` načte události ze souboru
 - `save [filename]` uloží události do souboru
@@ -50,7 +51,7 @@ void CInterface::getCommand(){
 - `help` zobrazí nápovědu
 - `quit` ukončí program
  */
-int CInterface::doSmthWithCommand(){
+int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     if(words.empty()){
         m_Out << "Nothing was written. Try again or write \"help\" to show all commands.. " << endl;
         words.clear();
@@ -85,16 +86,36 @@ int CInterface::doSmthWithCommand(){
         return cCalendar.findFirstPossible(m_In, m_Out, cCalendar);
     }
     else if(!strcasecmp(words[0].c_str(), "showDaily")){
-        //TODO emplement calling "showDaily"
+        //TODO setup and show another parameters
+        auto i = views.find("showDaily");
+        i->second->setup(m_In, m_Out, cCalendar);
+        i->second->show(m_Out, cCalendar);
         words.clear();
+        return 0;
     }
     else if(!strcasecmp(words[0].c_str(), "showWeekly")){
-        //TODO emplement calling "showWeekly"
+        //TODO setup and show another parameters
+        auto i = views.find("showWeekly");
+        i->second->setup(m_In, m_Out, cCalendar);
+        i->second->show(m_Out, cCalendar);
         words.clear();
+        return 0;
     }
     else if(!strcasecmp(words[0].c_str(), "showMonthly")){
-        //TODO emplement calling "showMonthly"
+        //TODO setup and show another parameters
+        auto i = views.find("showMonthly");
+        i->second->setup(m_In, m_Out, cCalendar);
+        i->second->show(m_Out, cCalendar);
         words.clear();
+        return 0;
+    }
+    else if(!strcasecmp(words[0].c_str(), "showYearly")){
+        //TODO setup and show another parameters
+        auto i = views.find("showYearly");
+        i->second->setup(m_In, m_Out, cCalendar);
+        i->second->show(m_Out, cCalendar);
+        words.clear();
+        return 0;
     }
     else if(!strcasecmp(words[0].c_str(), "load")){
         CImportExport cImportExport;
@@ -123,9 +144,10 @@ int CInterface::doSmthWithCommand(){
         m_Out << "\"repeat ...\" - nastaví událost, kterou vybere uživatel, opakovaně, aplikace se dotáže na další parametry." << endl;
         m_Out << "\"move ...\" - přesune událost, kterou vybere uživatel, aplikace se dotáže na další parametry." << endl;
         m_Out << "\"findFristPossible ...\" - vyhledá nejbližší možný termín přesunu události, kterou vybere uživatel, aplikace se dotáže na další parametry." << endl;
-        m_Out << "\"showDaily\" - show calendar and all events by day." << endl;
-        m_Out << "\"showWeekly\" - show calendar and all events by week." << endl;
-        m_Out << "\"showMonthly\" - show calendar and all events by month." << endl;
+        m_Out << "\"showDaily ...\" - show calendar and all events for day, aplikace se dotáže na další parametry." << endl;
+        m_Out << "\"showWeekly ...\" - show calendar and all events for week, aplikace se dotáže na další parametry." << endl;
+        m_Out << "\"showMonthly ...\" - show calendar and all events for month, aplikace se dotáže na další parametry." << endl;
+        m_Out << "\"showYearly ...\" - show calendar and all events for year, aplikace se dotáže na další parametry." << endl;
         m_Out << "\"find ...\" - vyhledá událost,  aplikace se dotáže na další parametry." << endl;
         m_Out << "\"load [filename]\" - upload all events from the file called \"filename\"." << endl;
         m_Out << "\"save [filename]\" - save all events to the file called \"filename\"." << endl;

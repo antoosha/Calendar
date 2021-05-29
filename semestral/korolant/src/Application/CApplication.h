@@ -1,6 +1,10 @@
 #pragma once
 #include <iostream>
-
+#include "../Interface/CInterface.h"
+#include "../View/CDaily.h"
+#include "../View/CWeekly.h"
+#include "../View/CMonthly.h"
+#include "../View/CYearly.h"
 
 class CApplication {
 public:
@@ -10,6 +14,8 @@ public:
     ~CApplication () = default;
 
     void run();
+
+    std::map<std::string, CView*> views;
 };
 
 

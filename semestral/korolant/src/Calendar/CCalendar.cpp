@@ -624,7 +624,7 @@ int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCale
                          i->second->returnDateTo().returnYear(), i->second->returnDateTo().returnHour(), i->second->returnDateTo().returnMinute());
             std::sprintf(s2, "[%02d/%02d/%04d %02d:%02d]",nextIter->second->returnDateFrom().returnDay(), nextIter->second->returnDateFrom().returnMonth(),
                          nextIter->second->returnDateFrom().returnYear(), nextIter->second->returnDateFrom().returnHour(), nextIter->second->returnDateFrom().returnMinute());
-            m_Out << "A window between " << s1 << " and " << s2<< endl;
+            m_Out << "A window is between " << s1 << " and " << s2<< endl;
 
             return 0;
         }

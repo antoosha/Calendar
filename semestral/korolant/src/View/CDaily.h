@@ -1,9 +1,11 @@
 #pragma once
 #include "CView.h"
 #include <string>
-class CDay : public CView {
+class CDaily : public CView {
 public:
     void show(std::ostream & os, CCalendar & cCalendar) const override;
+
+    void setup( std::istream & in, std::ostream & os, CCalendar & cCalendar) override;
 };
 
 

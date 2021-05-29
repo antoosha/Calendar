@@ -16,7 +16,7 @@ class CInterface {
 public:
     CInterface ( std::istream & in, std::ostream & out, const CCalendar & cCalendarIn);
 
-    int doSmthWithCommand();
+    int doSmthWithCommand(std::map<std::string, CView*> & views);
 
     void getCommand();
 
