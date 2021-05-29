@@ -1,11 +1,12 @@
 #pragma once
 #include <memory>
 
+#include "../Calendar/CCalendar.h"
 #include "../Calendar/CDate.h"
 
 class CPostpone {
 public:
-    virtual bool postponeEvent(const int & id, const std::shared_ptr<CDate> & dateFrom, const std::shared_ptr<CDate> & dateTo);
+    int moveEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
 };
 
 

@@ -8,6 +8,8 @@
 #include "../Calendar/CCalendar.h"
 #include "../View/CMonthly.h"
 #include "../ImportExport/CImportExport.h"
+#include "../Postpone/CPostpone.h"
+#include "../Repeat/CRepeat.h"
 
 class CInterface {
 

@@ -20,8 +20,6 @@ add_executable(korolant
         korolant/src/Calendar/CDate.h
         korolant/src/Postpone/CPostpone.h
         korolant/src/View/CView.h
-        korolant/src/Postpone/CFirstPossible.cpp
-        korolant/src/Postpone/CFirstPossible.h
         korolant/src/View/CDay.cpp
         korolant/src/View/CDay.h
         korolant/src/View/CWeekly.cpp
@@ -29,4 +27,4 @@ add_executable(korolant
         korolant/src/View/CMonthly.cpp
         korolant/src/View/CMonthly.h
         korolant/src/Calendar/CEvent.h
-        korolant/src/Postpone/CPostpone.cpp korolant/src/Calendar/CEvent.cpp)
+        korolant/src/Postpone/CPostpone.cpp korolant/src/Calendar/CEvent.cpp korolant/src/Repeat/CRepeat.cpp korolant/src/Repeat/CRepeat.h)

@@ -66,8 +66,9 @@ int CInterface::doSmthWithCommand(){
         return cCalendar.deleteEvent(m_In, m_Out, cCalendar);
     }
     else if(!strcasecmp(words[0].c_str(), "repeat")){
+        CRepeat cRepeat;
         words.clear();
-        return cCalendar.repeatEvent(m_In, m_Out, cCalendar);
+        return cRepeat.repeatEvent(m_In, m_Out, cCalendar);
     }
     else if(!strcasecmp(words[0].c_str(), "listEvents")){
         words.clear();
@@ -75,8 +76,9 @@ int CInterface::doSmthWithCommand(){
         return 0;
     }
     else if(!strcasecmp(words[0].c_str(), "move")){
+        CPostpone cPostpone;
         words.clear();
-        return cCalendar.moveEvent(m_In, m_Out, cCalendar);
+        return cPostpone.moveEvent(m_In, m_Out, cCalendar);
     }
     else if(!strcasecmp(words[0].c_str(), "showDaily")){
         //TODO emplement calling "showDaily"

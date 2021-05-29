@@ -141,14 +141,49 @@ void CDate::moveDays(int days) {
 }
 
 void CDate::moveMonths(int months) {
-    //TODO есди у прошлой даты было 31 число а двигается на февраль то получится 31 февраля что НЕ МОЖЕТ БЫТЬ!
-    if(month + months > 11){
+
+    if(month + months > 12){
         moveYears(1);
         month = 12 - (month + months);
         if(month < 0) month*=-1;
+
     }
     else{
         month += months;
+    }
+    if(day > numberOfDays(month-1,year)){
+        int were = day;
+        int became =  numberOfDays(month-1,year);
+        //were 31 became 30
+        if(were == 31 && became == 30){
+            moveMonths(1);
+            day = 1;
+        }
+            //were 31 became 29
+        else if(were == 31 && became == 29){
+            moveMonths(1);
+            day = 2;
+        }
+            //were 31 became 28
+        else if(were == 31 && became == 28){
+            moveMonths(1);
+            day = 3;
+        }
+            //were 30 became 29
+        else if(were == 30 && became == 29){
+            moveMonths(1);
+            day = 1;
+        }
+            //were 30 became 28
+        else if(were == 30 && became == 28){
+            moveMonths(1);
+            day = 2;
+        }
+            //were 29 became 28
+        else if(were == 29 && became == 28){
+            moveMonths(1);
+            day = 1;
+        }
     }
 }
 
@@ -201,13 +236,47 @@ void CDate::moveDaysBack(int days) {
 }
 
 void CDate::moveMonthsBack(int months) {
-    //TODO есди у прошлой даты было 31 число а двигается на февраль то получится 31 февраля что НЕ МОЖЕТ БЫТЬ!
     if(month - months < 1){
         moveYearsBack(1);
         month = 12 + month - months ;
+
     }
     else{
         month-=months;
+    }
+    if(day > numberOfDays(month-1,year)){
+        int were = day;
+        int became =  numberOfDays(month-1,year);
+        //were 31 became 30
+        if(were == 31 && became == 30){
+            moveMonthsBack(1);
+            day = numberOfDays(month-1, year);
+        }
+            //were 31 became 29
+        else if(were == 31 && became == 29){
+            moveMonthsBack(1);
+            day =  numberOfDays(month-1, year) - 1;
+        }
+            //were 31 became 28
+        else if(were == 31 && became == 28){
+            moveMonthsBack(1);
+            day =  numberOfDays(month-1, year) - 2 ;
+        }
+            //were 30 became 29
+        else if(were == 30 && became == 29){
+            moveMonthsBack(1);
+            day =  numberOfDays(month-1, year);
+        }
+            //were 30 became 28
+        else if(were == 30 && became == 28){
+            moveMonthsBack(1);
+            day =  numberOfDays(month-1, year) - 1;
+        }
+            //were 29 became 28
+        else if(were == 29 && became == 28){
+            moveMonthsBack(1);
+            day =  numberOfDays(month-1, year) ;
+        }
     }
 }
 
