@@ -88,7 +88,9 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     else if(!strcasecmp(words[0].c_str(), "showDaily")){
         //TODO setup and show another parameters
         auto i = views.find("showDaily");
-        i->second->setup(m_In, m_Out, cCalendar);
+        if(i->second->setup(m_In, m_Out, cCalendar) != 0){
+            return -4;
+        }
         i->second->show(m_Out, cCalendar);
         words.clear();
         return 0;
@@ -96,7 +98,9 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     else if(!strcasecmp(words[0].c_str(), "showWeekly")){
         //TODO setup and show another parameters
         auto i = views.find("showWeekly");
-        i->second->setup(m_In, m_Out, cCalendar);
+        if(i->second->setup(m_In, m_Out, cCalendar) != 0){
+            return -4;
+        }
         i->second->show(m_Out, cCalendar);
         words.clear();
         return 0;
@@ -104,7 +108,9 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     else if(!strcasecmp(words[0].c_str(), "showMonthly")){
         //TODO setup and show another parameters
         auto i = views.find("showMonthly");
-        i->second->setup(m_In, m_Out, cCalendar);
+        if(i->second->setup(m_In, m_Out, cCalendar) != 0){
+            return -4;
+        }
         i->second->show(m_Out, cCalendar);
         words.clear();
         return 0;
@@ -112,7 +118,9 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     else if(!strcasecmp(words[0].c_str(), "showYearly")){
         //TODO setup and show another parameters
         auto i = views.find("showYearly");
-        i->second->setup(m_In, m_Out, cCalendar);
+        if(i->second->setup(m_In, m_Out, cCalendar) != 0){
+            return -4;
+        }
         i->second->show(m_Out, cCalendar);
         words.clear();
         return 0;
@@ -139,16 +147,16 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     else if(!strcasecmp(words[0].c_str(), "help")){
         m_Out << "------HELP------" << endl;
         m_Out << "\"new\" ...  - create new event." << endl;
-        m_Out << "\"delete ...\" smaže událost, aplikace se dotáže na další parametry." << endl;
-        m_Out << "\"listEvents\" - výpíše vsechny události, které jsou v kalendáři." << endl;
-        m_Out << "\"repeat ...\" - nastaví událost, kterou vybere uživatel, opakovaně, aplikace se dotáže na další parametry." << endl;
-        m_Out << "\"move ...\" - přesune událost, kterou vybere uživatel, aplikace se dotáže na další parametry." << endl;
-        m_Out << "\"findFristPossible ...\" - vyhledá nejbližší možný termín přesunu události, kterou vybere uživatel, aplikace se dotáže na další parametry." << endl;
-        m_Out << "\"showDaily ...\" - show calendar and all events for day, aplikace se dotáže na další parametry." << endl;
-        m_Out << "\"showWeekly ...\" - show calendar and all events for week, aplikace se dotáže na další parametry." << endl;
-        m_Out << "\"showMonthly ...\" - show calendar and all events for month, aplikace se dotáže na další parametry." << endl;
-        m_Out << "\"showYearly ...\" - show calendar and all events for year, aplikace se dotáže na další parametry." << endl;
-        m_Out << "\"find ...\" - vyhledá událost,  aplikace se dotáže na další parametry." << endl;
+        m_Out << "\"delete ...\" delete event." << endl;
+        m_Out << "\"listEvents\" - lists all events from calendar." << endl;
+        m_Out << "\"repeat ...\" - set repeat for event with user's time interval." << endl;
+        m_Out << "\"move ...\" - postopne event, which user will choose." << endl;
+        m_Out << "\"findFirstPossible ...\" - find first possible date to pospone event." << endl;
+        m_Out << "\"showDaily ...\" - show calendar and all events for day." << endl;
+        m_Out << "\"showWeekly ...\" - show calendar and all events for week." << endl;
+        m_Out << "\"showMonthly ...\" - show calendar and all events for month." << endl;
+        m_Out << "\"showYearly ...\" - show calendar and all events for year." << endl;
+        m_Out << "\"find ...\" - find event." << endl;
         m_Out << "\"load [filename]\" - upload all events from the file called \"filename\"." << endl;
         m_Out << "\"save [filename]\" - save all events to the file called \"filename\"." << endl;
         m_Out << "\"edit\" ... - edit event." << endl;

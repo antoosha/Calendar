@@ -561,7 +561,7 @@ int CCalendar::deleteEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
     m_In >> idToDelete;
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     if(!cCalendar.returnMapById().count(idToDelete)){
-        m_Out << "Event with id " << idToDelete << "does not exist, try again.."  << endl;
+        m_Out << "Event with id " << idToDelete << " does not exist, try again.."  << endl;
         return -4;
     }
     else{

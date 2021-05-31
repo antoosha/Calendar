@@ -39,6 +39,7 @@ public:
 
     int numberOfDays (int monthNumber, int year) const;
 
+    std::string dateToShortString(int yearIn, int monthIn, int dayIn) const;
     //std:: string returnDate() const;
 
     int returnDay() const;
@@ -54,6 +55,7 @@ private:
     int year;
     int hour;
     int minute;
+
 };
 
 

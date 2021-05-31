@@ -11,9 +11,13 @@ public:
 
     virtual void show(std::ostream & os, CCalendar & cCalendar) const = 0;
 
-    virtual void setup( std::istream & in, std::ostream & os, CCalendar & cCalendar) = 0;
+    virtual int setup( std::istream & in, std::ostream & os, CCalendar & cCalendar) = 0;
 
 protected:
+    int day;
+    int month;
+    int year;
+    int week;
 
 };
 
