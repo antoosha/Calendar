@@ -39,48 +39,59 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         while (flagDateFrom == 0) {
             m_Out << "Write year of date 'from' and press 'Enter':" << endl;
             m_In >> yearFrom;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (yearFrom < 1600) {
+            if (yearFrom < 1600 || m_In.fail()) {
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
                 m_Out << "Year is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write month of date 'from' and press 'Enter':" << endl;
             m_In >> monthFrom;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (monthFrom < 1 || monthFrom > 12) {
+            if (monthFrom < 1 || monthFrom > 12 || m_In.fail()) {
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Month is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write day of date 'from' and press 'Enter':" << endl;
             m_In >> dayFrom;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (dayFrom > cDate->numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1) {
+            if (dayFrom > cDate->numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1 || m_In.fail()) {
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Day is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write hour of date 'from' and press 'Enter':" << endl;
             m_In >> hourFrom;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (hourFrom > 23 || hourFrom < 0) {
+            if (hourFrom > 23 || hourFrom < 0 || m_In.fail()) {
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Hour is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write minute of date 'from' and press 'Enter':" << endl;
             m_In >> minuteFrom;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (minuteFrom > 59 || minuteFrom < 0) {
+            if (minuteFrom > 59 || minuteFrom < 0 || m_In.fail()) {
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Minutes are not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             dateFrom = CDate(dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom);
             flagDateFrom = 1;
@@ -100,48 +111,59 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         while (flagDateTo == 0) {
             m_Out << "Write year of date 'to' and press 'Enter':" << endl;
             m_In >> yearTo;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (yearTo < 1600) {
+            if (yearTo < 1600 || m_In.fail()) {
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Year is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write month of date 'to' and press 'Enter':" << endl;
             m_In >> monthTo;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (monthTo < 1 || monthTo > 12) {
+            if (monthTo < 1 || monthTo > 12 || m_In.fail()) {
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Month is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write day of date 'to' and press 'Enter':" << endl;
             m_In >> dayTo;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (dayTo > cDate->numberOfDays(monthTo - 1, yearTo) || dayTo < 1) {
+            if (dayTo > cDate->numberOfDays(monthTo - 1, yearTo) || dayTo < 1 || m_In.fail()) {
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Day is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write hour of date 'to' and press 'Enter':" << endl;
             m_In >> hourTo;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (hourTo > 23 || hourTo < 0) {
+            if (hourTo > 23 || hourTo < 0 || m_In.fail()) {
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Hour is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write minute of date 'to' and press 'Enter':" << endl;
             m_In >> minuteTo;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if (minuteTo > 59 || minuteTo < 0) {
+
+            if (minuteTo > 59 || minuteTo < 0 || m_In.fail()) {
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Minutes are not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             dateTo = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
             flagDateTo = 1;
@@ -161,7 +183,15 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         m_Out << "If you want to add member, write \"+\" and press 'Enter':" << endl;
         m_Out << "If you DO NOT want to add member, write \"-\" and press 'Enter':" << endl;
         m_In >> sign;
+
+        if((sign != '+' && sign != '-') || m_In.fail()){
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+            m_Out << "Please write sign \"+\" or \"-\" in correct way, try again.." << endl;
+            continue;
+        }
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
         if(sign == '+'){
             m_Out << "Write person, who you want to add to this event and press 'Enter':" << endl;
             string memberIn;
@@ -182,6 +212,7 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
     m_Out << "Choose obligation of this event, write \"required\" or \"optional\" and press 'Enter':" << endl;
     m_In >> obligation;
+
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     if(strcasecmp(obligation.c_str(), "required") < 0){
         if(strcasecmp(obligation.c_str(), "optional") < 0){
@@ -209,11 +240,15 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
     int number;
     m_Out << "Write ID of event you want to change and press 'Enter':" << endl;
     m_In >> id;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(cCalendar.returnMapById().count(id) == 0){
+
+    if(cCalendar.returnMapById().count(id) == 0 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "This ID does not exist, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
     m_Out << "Choose number, which you want to change and press 'Enter':" << endl;
     m_Out << "1) Date from" << endl;
     m_Out << "2) Date to" << endl;
@@ -222,7 +257,14 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
     m_Out << "5) Members" << endl;
     m_Out << "6) Description" << endl;
     m_In >> number;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+    if(number < 1 || number > 6 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Please choose correct number, try again.." << endl;
+        return -4;
+    }
+
+
     if (number == 1) {
 
         CDate newDate;
@@ -230,48 +272,59 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         while(flagDateFrom == 0) {
             m_Out << "Write year of date 'from' and press 'Enter':" << endl;
             m_In >> yearFrom;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(yearFrom < 1600){
+            if(yearFrom < 1600 || m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Year is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write month of date 'from' and press 'Enter':" << endl;
             m_In >> monthFrom;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(monthFrom < 1 || monthFrom > 12){
+            if(monthFrom < 1 || monthFrom > 12 || m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Month is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write day of date 'from' and press 'Enter':" << endl;
             m_In >> dayFrom;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(dayFrom > cDate->numberOfDays(monthFrom-1, yearFrom) || dayFrom < 1){
+            if(dayFrom > cDate->numberOfDays(monthFrom-1, yearFrom) || dayFrom < 1 || m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Day is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write hour of date 'from' and press 'Enter':" << endl;
             m_In >> hourFrom;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(hourFrom > 23 || hourFrom < 0){
+            if(hourFrom > 23 || hourFrom < 0 || m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Hour is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write minute of date 'from' and press 'Enter':" << endl;
             m_In >> minuteFrom;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(minuteFrom > 59 || minuteFrom < 0){
+
+            if(minuteFrom > 59 || minuteFrom < 0 ||  m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Minutes are not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             newDate = CDate(dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom);
 
@@ -291,48 +344,58 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         while(flagDateTo == 0) {
             m_Out << "Write year of date 'to' and press 'Enter':" << endl;
             m_In >> yearTo;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(yearTo < 1600){
+            if(yearTo < 1600 || m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Year is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write month of date 'to' and press 'Enter':" << endl;
             m_In >> monthTo;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(monthTo < 1 || monthTo > 12){
+            if(monthTo < 1 || monthTo > 12 || m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Month is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write day of date 'to' and press 'Enter':" << endl;
             m_In >> dayTo;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(dayTo > cDate->numberOfDays(monthTo-1, yearTo) || dayTo < 1){
+            if(dayTo > cDate->numberOfDays(monthTo-1, yearTo) || dayTo < 1 ||  m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Day is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write hour of date 'to' and press 'Enter':" << endl;
             m_In >> hourTo;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(hourTo > 23 || hourTo < 0){
+            if(hourTo > 23 || hourTo < 0 || m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Hour is not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             m_Out << "Write minute of date 'to' and press 'Enter':" << endl;
             m_In >> minuteTo;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            if(minuteTo > 59 || minuteTo < 0){
+            if(minuteTo > 59 || minuteTo < 0 || m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Minutes are not correct, try again.." << endl;
                 continue;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
             newDate = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
 
@@ -380,7 +443,14 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         m_Out << "Write \"+\" if you want to add new member and press 'Enter'" << endl;
         m_Out << "Write \"-\" if you want to delete member and press 'Enter'" << endl;
         m_In >> sign;
+        if((sign != '+' && sign != '-') || m_In.fail()){
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+            m_Out << "Please write sign \"+\" or \"-\" in correct way, try again.." << endl;
+            return -4;
+        }
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
         if(sign == '+'){
             m_Out << "Write person, who you want to add to this event and press 'Enter':" << endl;
             string memberIn;
@@ -403,18 +473,21 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             }
             m_Out << "Write index of person, who you want to delete from this event and press 'Enter':" << endl;
             m_In >> index;
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-            if(index <= 0 || index >  cCalendar.returnMapById().at(id)->returnMembers().size()){
+
+            if(index <= 0 || index >  cCalendar.returnMapById().at(id)->returnMembers().size() || m_In.fail()){
+                m_In.clear();
+                m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Index is not correct, try again.." << endl;
                 return -4;
             }
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
             auto indexIter = cCalendar.returnMapById().at(id)->returnMembers().begin() + index - 1 ; // -1 beacouse in vector in 0 1 2 3... but for user is 1 2 3
             cCalendar.returnMapById().at(id)->returnMembers().erase(indexIter);
             m_Out << "Person has been successfully deleted." << endl;
             return 0;
         }
         else{
-            m_Out << "Please write sign \"+\" or \"-\" in correct way, try again.." << endl;
             return -4;
         }
 
@@ -434,7 +507,6 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         return 0;
     }
     else{
-        m_Out << "Please choose correct number, try again.." << endl;
         return -4;
     }
 
@@ -451,8 +523,11 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
     m_Out << "2) Place:" << endl;
     m_Out << "3) Name and place:" << endl;
     m_In >> number;
+
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     if(number != 1 && number != 2 && number != 3){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Number is not correct, try again.." << endl;
         return -4;
     }
@@ -559,8 +634,11 @@ int CCalendar::deleteEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
     int idToDelete;
     m_Out << "Write id of event to delete and press 'Enter':" << endl;
     m_In >> idToDelete;
+
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     if(!cCalendar.returnMapById().count(idToDelete)){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Event with id " << idToDelete << " does not exist, try again.."  << endl;
         return -4;
     }
@@ -601,8 +679,11 @@ int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCale
     int id;
     m_Out << "Write id of event you want to find first possible term to postpone it and press 'Enter':" << endl;
     m_In >> id;
+
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     if(cCalendar.returnMapById().count(id) == 0){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "This ID does not exist, try again.." << endl;
         return -4;
     }

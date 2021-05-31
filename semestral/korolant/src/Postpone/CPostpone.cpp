@@ -1,6 +1,8 @@
 #include "CPostpone.h"
 using namespace std;
 
+//TODO osetrseni vstupu like in CCalendar
+
 int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     int idToMove;
     m_Out << "Write id of event you want to move and press 'Enter':" << endl;

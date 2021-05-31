@@ -11,6 +11,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
     m_Out << "Write path to file, from where you want to import data from calendar and press 'Enter':" << endl;
     m_Out << "Example: \"C:\\Users\\PC\\Desktop\\file.txt\"" << endl;
     m_In >> fileName;
+    //TODO osetrseni vstupu
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
     indata.open(fileName); // opens the file
