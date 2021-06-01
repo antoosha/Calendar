@@ -32,7 +32,7 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     }
     if(number == 1){
         int exampleId = id;
-        for(size_t i = 0; i < howManyTimesToRepeat; i++){
+        for(size_t i = 0; i < (size_t)howManyTimesToRepeat; i++){
             CDate newDateFrom = cCalendar.returnMapById().at(exampleId)->returnDateFrom();
             CDate newDateTo = cCalendar.returnMapById().at(exampleId)->returnDateTo();
             newDateFrom.moveDays(1);
@@ -50,7 +50,7 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     }
     else if(number == 2){
         int exampleId = id;
-        for(size_t i = 0; i < howManyTimesToRepeat; i++){
+        for(size_t i = 0; i < (size_t)howManyTimesToRepeat; i++){
             CDate newDateFrom = cCalendar.returnMapById().at(exampleId)->returnDateFrom();
             CDate newDateTo = cCalendar.returnMapById().at(exampleId)->returnDateTo();
             newDateFrom.moveDays(7);
@@ -68,7 +68,7 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     }
     else if(number == 3){
         int exampleId = id;
-        for(size_t i = 0; i < howManyTimesToRepeat; i++){
+        for(size_t i = 0; i < (size_t)howManyTimesToRepeat; i++){
             CDate newDateFrom = cCalendar.returnMapById().at(exampleId)->returnDateFrom();
             CDate newDateTo = cCalendar.returnMapById().at(exampleId)->returnDateTo();
             newDateFrom.moveMonths(1);
@@ -86,7 +86,7 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     }
     else if(number == 4){
         int exampleId = id;
-        for(size_t i = 0; i < howManyTimesToRepeat; i++){
+        for(size_t i = 0; i < (size_t)howManyTimesToRepeat; i++){
             CDate newDateFrom = cCalendar.returnMapById().at(exampleId)->returnDateFrom();
             CDate newDateTo = cCalendar.returnMapById().at(exampleId)->returnDateTo();
             newDateFrom.moveYears(1);

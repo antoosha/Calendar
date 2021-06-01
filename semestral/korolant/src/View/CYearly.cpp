@@ -77,13 +77,17 @@ void CYearly::show(std::ostream &m_Out, CCalendar &cCalendar) const {
     }
 }
 
-int CYearly::setup(std::istream &m_In, std::ostream &m_Out, CCalendar &cCalendar) {
+int CYearly::setup(std::istream &m_In, std::ostream &m_Out) {
     m_Out << "Write year, you want to show:" << endl;
     m_In >> year;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(year < 1600){
+
+    if(year < 1600 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Year is not correct, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
     return 0;
 }

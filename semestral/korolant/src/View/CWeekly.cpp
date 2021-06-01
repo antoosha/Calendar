@@ -91,29 +91,39 @@ void CWeekly::show(ostream &m_Out, CCalendar & cCalendar) const {
     m_Out << endl;
 }
 
-int CWeekly::setup(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
+int CWeekly::setup(istream &m_In, ostream &m_Out) {
     m_Out << "Write year, you want to show:" << endl;
     m_In >> year;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(year < 1600){
+
+    if(year < 1600 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Year is not correct, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
     m_Out << "Write month, you want to show:" << endl;
     m_In >> month;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(month < 1 || month > 12){
+
+    if(month < 1 || month > 12 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Month is not correct, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
     m_Out << "Write week, you want to show:" << endl;
     m_In >> week;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     CDate cDate = {};
-    if(week < 1 || week > 5 || (cDate.numberOfDays(month-1, year) < 29 && week == 5)){
+    if(week < 1 || week > 5 || (cDate.numberOfDays(month-1, year) < 29 && week == 5) || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Week is not correct, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
     return 0;
 }

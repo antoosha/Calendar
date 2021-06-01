@@ -23,7 +23,7 @@ void CMonthly::show(ostream &m_Out, CCalendar & cCalendar) const {
     // Print the current month name
     m_Out << endl;
     m_Out << "  ";
-    for(int k = 0 ; k < 33; k++){
+    for(size_t k = 0 ; k < 33; k++){
         if(k == (33/2 - cDate.getMonthName(i).size()/2)){
             m_Out << cDate.getMonthName(i);
             k+=cDate.getMonthName(i).size();
@@ -76,20 +76,27 @@ void CMonthly::show(ostream &m_Out, CCalendar & cCalendar) const {
     m_Out << endl;
 }
 
-int CMonthly::setup(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
+int CMonthly::setup(istream &m_In, ostream &m_Out) {
     m_Out << "Write year, you want to show:" << endl;
     m_In >> year;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(year < 1600){
+
+    if(year < 1600 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Year is not correct, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
     m_Out << "Write month, you want to show:" << endl;
     m_In >> month;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(month < 1 || month > 12){
+
+    if(month < 1 || month > 12 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Month is not correct, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     return 0;
 }

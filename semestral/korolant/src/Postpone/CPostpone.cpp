@@ -1,27 +1,32 @@
 #include "CPostpone.h"
 using namespace std;
 
-//TODO osetrseni vstupu like in CCalendar
-
 int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     int idToMove;
     m_Out << "Write id of event you want to move and press 'Enter':" << endl;
     m_In >> idToMove;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(!cCalendar.returnMapById().count(idToMove)){
+
+    if(!cCalendar.returnMapById().count(idToMove) || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Event with id " << idToMove << " does not exist, try again.."  << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
     int numberForWay;
     m_Out << "Choose number what you want to move and press 'Enter':" << endl;
     m_Out << "1) Rewind date forward" << endl;
     m_Out << "2) Rewind date back" << endl;
     m_In >> numberForWay;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(numberForWay != 1 && numberForWay != 2){
+
+    if((numberForWay != 1 && numberForWay != 2) || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Number is not correct, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
     int number;
     m_Out << "Choose number what you want to move and press 'Enter':" << endl;
@@ -45,21 +50,28 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     m_Out << "5) Years"<< endl;
     m_Out << "6) Move this event to the nearest working day with same time (Monday, Tuesday, Wednesday, Thursday, Friday)"<< endl;
     m_In >> number;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(number < 1 || number > 6){
+
+    if(number < 1 || number > 6 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Number is not correct, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
     if(number == 1 ){
         int minutes;
         m_Out << "Write for how many minutes you want to move event and press 'Enter':" << endl;
         m_In >> minutes;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        if(minutes < 1 || minutes > 59){
+
+        if(minutes < 1 || minutes > 59 || m_In.fail()){
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
             m_Out << "Minutes should be between 1 to 59, try again.." << endl;
             return -4;
         }
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
         if(numberForWay == 1){
             cCalendar.returnMapById().at(idToMove)->returnDateFrom().moveMinutes(minutes);
             cCalendar.returnMapById().at(idToMove)->returnDateTo().moveMinutes(minutes);
@@ -74,11 +86,15 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
         int hours;
         m_Out << "Write for how many hours you want to move event and press 'Enter':" << endl;
         m_In >> hours;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        if(hours < 1 || hours > 23){
+
+        if(hours < 1 || hours > 23 || m_In.fail()){
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
             m_Out << "Hours should be between 1 to 23, try again.." << endl;
             return -4;
         }
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
         if(numberForWay == 1){
             cCalendar.returnMapById().at(idToMove)->returnDateFrom().moveHours(hours);
             cCalendar.returnMapById().at(idToMove)->returnDateTo().moveHours(hours);
@@ -93,11 +109,15 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
         int days;
         m_Out << "Write for how many days you want to move event and press 'Enter':" << endl;
         m_In >> days;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        if(days < 1 || days > minOfDaysFirstOrLastMonth - 1 ){
+
+        if(days < 1 || days > minOfDaysFirstOrLastMonth - 1 || m_In.fail() ){
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
             m_Out << "Days should be between 1 to " << minOfDaysFirstOrLastMonth-1  << ", try again.." << endl;
             return -4;
         }
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
         if(numberForWay == 1){
             cCalendar.returnMapById().at(idToMove)->returnDateFrom().moveDays(days);
             cCalendar.returnMapById().at(idToMove)->returnDateTo().moveDays(days);
@@ -112,11 +132,15 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
         int months;
         m_Out << "Write for how many months you want to move event and press 'Enter':" << endl;
         m_In >> months;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        if(months < 1 || months > 11){
+
+        if(months < 1 || months > 11 || m_In.fail()){
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
             m_Out << "Months should be between 1 to 11, try again.." << endl;
             return -4;
         }
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
         if(numberForWay == 1){
             cCalendar.returnMapById().at(idToMove)->returnDateFrom().moveMonths(months);
             cCalendar.returnMapById().at(idToMove)->returnDateTo().moveMonths(months);
@@ -130,11 +154,15 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
         int years;
         m_Out << "Write for how many years you want to move event and press 'Enter':" << endl;
         m_In >> years;
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-        if(years < 0){
+
+        if(years < 0 || m_In.fail()){
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
             m_Out << "Year should be positive, try again.." << endl;
             return -4;
         }
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
         if(numberForWay == 1){
             cCalendar.returnMapById().at(idToMove)->returnDateFrom().moveYears(years);
             cCalendar.returnMapById().at(idToMove)->returnDateTo().moveYears(years);

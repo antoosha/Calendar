@@ -267,7 +267,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
     if (number == 1) {
 
-        CDate newDate;
+        CDate newDate = {};
         int flagDateFrom = 0;
         while(flagDateFrom == 0) {
             m_Out << "Write year of date 'from' and press 'Enter':" << endl;
@@ -474,7 +474,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             m_Out << "Write index of person, who you want to delete from this event and press 'Enter':" << endl;
             m_In >> index;
 
-            if(index <= 0 || index >  cCalendar.returnMapById().at(id)->returnMembers().size() || m_In.fail()){
+            if(index <= 0 || (size_t)index >  cCalendar.returnMapById().at(id)->returnMembers().size() || m_In.fail()){
                 m_In.clear();
                 m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Index is not correct, try again.." << endl;
@@ -659,7 +659,7 @@ int CCalendar::deleteEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
 
 
-void CCalendar::listEvents(istream &m_In, ostream &m_Out, CCalendar &cCalendar) const {
+void CCalendar::listEvents(ostream &m_Out, CCalendar &cCalendar) const {
 
     if(!cCalendar.mapOfEventsById.empty()) {
         for (auto i = cCalendar.mapOfEventsById.begin(); i != cCalendar.mapOfEventsById.end(); i++) {

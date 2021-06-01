@@ -32,12 +32,25 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="implemented:&#10;show(View) implementation of show and setup&#10;&#10;need to do:&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;...">
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Postpone/CPostpone.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Postpone/CPostpone.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Repeat/CRepeat.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Repeat/CRepeat.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CView.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +86,7 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="korolant" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" REDIRECT_INPUT_PATH="$PROJECT_DIR$/../test/test.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="semestralka" TARGET_NAME="korolant" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="semestralka" RUN_TARGET_NAME="korolant">
+    <configuration name="korolant" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="true" REDIRECT_INPUT_PATH="$PROJECT_DIR$/../test/test.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="semestralka" TARGET_NAME="korolant" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="semestralka" RUN_TARGET_NAME="korolant">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -99,7 +112,7 @@
       <workItem from="1622294763176" duration="622000" />
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
-      <workItem from="1622298727956" duration="37934000" />
+      <workItem from="1622298727956" duration="42279000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, added after KB">
       <created>1620926569285</created>
@@ -227,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622496588477</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;...">
+      <created>1622499782872</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1622499782872</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,14 +284,15 @@
     <MESSAGE value="implemented:&#10;&#10;need to do:&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;..." />
     <MESSAGE value="implemented:&#10;i have done polymorfism of CView&#10;&#10;need to do:&#10;show(View) implementation of show and setup&#10;osetrseni vstupu!&#10;tests&#10;..." />
     <MESSAGE value="implemented:&#10;show(View) implementation of show and setup&#10;&#10;need to do:&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented:&#10;show(View) implementation of show and setup&#10;&#10;need to do:&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
+    <MESSAGE value="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="70" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622495628340">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622534031829">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622495628340" />
-    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622298704795" />
+    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622534031829" />
     <state x="548" y="120" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1621713778355">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -285,46 +306,46 @@
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621713813764" />
     <state x="2606" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622296059546" />
-    <state width="1493" height="8" key="GridCell.Tab.0.bottom" timestamp="1622499470059">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1877" height="221" key="GridCell.Tab.0.bottom" timestamp="1622535576482">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="8" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622499470059" />
-    <state width="1877" height="43" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622385499488" />
-    <state width="1493" height="8" key="GridCell.Tab.0.center" timestamp="1622499470059">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="96" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622532749471" />
+    <state width="1877" height="221" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622535576482" />
+    <state width="1877" height="221" key="GridCell.Tab.0.center" timestamp="1622535576482">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="8" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622499470059" />
-    <state width="1877" height="43" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622385499488" />
-    <state width="1493" height="8" key="GridCell.Tab.0.left" timestamp="1622499470058">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="96" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622532749471" />
+    <state width="1877" height="221" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622535576482" />
+    <state width="1877" height="221" key="GridCell.Tab.0.left" timestamp="1622535576482">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="8" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622499470058" />
-    <state width="1877" height="43" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622385499488" />
-    <state width="1493" height="8" key="GridCell.Tab.0.right" timestamp="1622499470059">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="96" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622532749471" />
+    <state width="1877" height="221" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622535576482" />
+    <state width="1877" height="221" key="GridCell.Tab.0.right" timestamp="1622535576482">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1493" height="8" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622499470059" />
-    <state width="1877" height="43" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622385499488" />
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1622297582453">
+    <state width="1493" height="96" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622532749471" />
+    <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622535576482" />
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1622535451786">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622297582453" />
-    <state width="1877" height="340" key="GridCell.Tab.1.center" timestamp="1622297582453">
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622535451786" />
+    <state width="1877" height="340" key="GridCell.Tab.1.center" timestamp="1622535451786">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622297582453" />
-    <state width="1877" height="340" key="GridCell.Tab.1.left" timestamp="1622297582453">
+    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622535451786" />
+    <state width="1877" height="340" key="GridCell.Tab.1.left" timestamp="1622535451785">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622297582453" />
-    <state width="1877" height="340" key="GridCell.Tab.1.right" timestamp="1622297582453">
+    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622535451785" />
+    <state width="1877" height="340" key="GridCell.Tab.1.right" timestamp="1622535451786">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622297582453" />
+    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622535451786" />
     <state x="2269" y="73" key="SettingsEditor" timestamp="1622299105754">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

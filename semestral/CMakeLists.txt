@@ -1,6 +1,7 @@
 project(semestralka)
 
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_FLAGS "-Wall -pedantic -Wextra ${CMAKE_CXX_FLAGS}")
 
 add_executable(korolant
         korolant/src/main.cpp

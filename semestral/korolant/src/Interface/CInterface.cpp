@@ -73,7 +73,7 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     }
     else if(!strcasecmp(words[0].c_str(), "listEvents")){
         words.clear();
-        cCalendar.listEvents(m_In, m_Out, cCalendar);
+        cCalendar.listEvents(m_Out, cCalendar);
         return 0;
     }
     else if(!strcasecmp(words[0].c_str(), "move")){
@@ -86,9 +86,8 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
         return cCalendar.findFirstPossible(m_In, m_Out, cCalendar);
     }
     else if(!strcasecmp(words[0].c_str(), "showDaily")){
-        //TODO setup and show another parameters
         auto i = views.find("showDaily");
-        if(i->second->setup(m_In, m_Out, cCalendar) != 0){
+        if(i->second->setup(m_In, m_Out) != 0){
             return -4;
         }
         i->second->show(m_Out, cCalendar);
@@ -96,9 +95,8 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
         return 0;
     }
     else if(!strcasecmp(words[0].c_str(), "showWeekly")){
-        //TODO setup and show another parameters
         auto i = views.find("showWeekly");
-        if(i->second->setup(m_In, m_Out, cCalendar) != 0){
+        if(i->second->setup(m_In, m_Out) != 0){
             return -4;
         }
         i->second->show(m_Out, cCalendar);
@@ -106,9 +104,8 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
         return 0;
     }
     else if(!strcasecmp(words[0].c_str(), "showMonthly")){
-        //TODO setup and show another parameters
         auto i = views.find("showMonthly");
-        if(i->second->setup(m_In, m_Out, cCalendar) != 0){
+        if(i->second->setup(m_In, m_Out) != 0){
             return -4;
         }
         i->second->show(m_Out, cCalendar);
@@ -116,9 +113,8 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
         return 0;
     }
     else if(!strcasecmp(words[0].c_str(), "showYearly")){
-        //TODO setup and show another parameters
         auto i = views.find("showYearly");
-        if(i->second->setup(m_In, m_Out, cCalendar) != 0){
+        if(i->second->setup(m_In, m_Out) != 0){
             return -4;
         }
         i->second->show(m_Out, cCalendar);

@@ -5,7 +5,7 @@ class CDaily : public CView {
 public:
     void show(std::ostream & os, CCalendar & cCalendar) const override;
 
-    int setup( std::istream & in, std::ostream & os, CCalendar & cCalendar) override;
+    int setup( std::istream & in, std::ostream & os) override;
 };
 
 

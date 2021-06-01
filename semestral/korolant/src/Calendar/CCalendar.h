@@ -29,7 +29,7 @@ public:
 
     int deleteEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
 
-    void listEvents(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) const;
+    void listEvents( std::ostream & m_Out, CCalendar & cCalendar) const;
 
     size_t generateId(CCalendar & cCalendar);
 
