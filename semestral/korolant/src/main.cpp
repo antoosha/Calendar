@@ -20,3 +20,4 @@ Nezapomeňte, že vstupem jsou i různé druhy souborů a tak je potřeba ošet�
 Typicky neexistující soubor, soubor bez práv k přístupu, atp.
 */
 
+//main.o CApplication.o CCalendar.o CDate.o CEvent.o COptional.o CRequired.o CImportExport.o CInterface.o CPostpone.o CRepeat.o CDaily.o CMonthly.o CWeekly.o CYearly.o

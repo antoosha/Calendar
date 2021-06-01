@@ -33,7 +33,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;...">
+      <change afterPath="$PROJECT_DIR$/semestral/korolant/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/Makefile.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +55,15 @@
     <option name="directoryName" value="vuatfvbj" />
   </component>
   <component name="ProjectId" id="1sUTypDjY3GyhTEJzAfI5SGY67p" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
@@ -95,7 +103,7 @@
       <workItem from="1622294763176" duration="622000" />
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
-      <workItem from="1622298727956" duration="52910000" />
+      <workItem from="1622298727956" duration="59202000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, added after KB">
       <created>1620926569285</created>
@@ -251,7 +259,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622558656131</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;...">
+      <created>1622563907433</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1622563907433</updated>
+    </task>
+    <task id="LOCAL-00024" summary="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;...">
+      <created>1622564003655</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1622564003655</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +292,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First commit, added after KB" />
     <MESSAGE value="implemented CInterface &#10;implemented CApplication&#10;added hour and minute to CDate&#10;Change CDate from shared_ptr to CDate without pointers&#10;&#10;What do next?&#10;implement CCalendar&#10;implement CImportExport&#10;implement CEvent&#10;..." />
     <MESSAGE value="was implemented command &quot;new&quot; in interface&#10;mapByName was changed to multimap&#10;in CDate ints were changed to one string&#10;&#10;what need to be implemented next:&#10;CDATE string could be bad and will bring problems&#10;iplement reading of members another way, because now it works only with names, if person have name and surname, could be problem!" />
@@ -298,6 +321,10 @@
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622495628340" />
     <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622534031829" />
+    <state x="525" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622569121321">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="525" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622569121321" />
     <state x="548" y="120" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1621713778355">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -311,25 +338,25 @@
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621713813764" />
     <state x="2606" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622296059546" />
-    <state width="1493" height="24" key="GridCell.Tab.0.bottom" timestamp="1622562915804">
+    <state width="1493" height="62" key="GridCell.Tab.0.bottom" timestamp="1622566189374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="24" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622562915804" />
+    <state width="1493" height="62" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622566189374" />
     <state width="1877" height="422" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622558223386" />
-    <state width="1493" height="24" key="GridCell.Tab.0.center" timestamp="1622562915804">
+    <state width="1493" height="62" key="GridCell.Tab.0.center" timestamp="1622566189374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="24" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622562915804" />
+    <state width="1493" height="62" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622566189374" />
     <state width="1877" height="422" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622558223381" />
-    <state width="1493" height="24" key="GridCell.Tab.0.left" timestamp="1622562915804">
+    <state width="1493" height="62" key="GridCell.Tab.0.left" timestamp="1622566189374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="24" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622562915804" />
+    <state width="1493" height="62" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622566189374" />
     <state width="1877" height="422" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622558223376" />
-    <state width="1493" height="24" key="GridCell.Tab.0.right" timestamp="1622562915804">
+    <state width="1493" height="62" key="GridCell.Tab.0.right" timestamp="1622566189374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="24" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622562915804" />
+    <state width="1493" height="62" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622566189374" />
     <state width="1877" height="422" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622558223381" />
     <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1622535451786">
       <screen x="1920" y="0" width="1920" height="1040" />

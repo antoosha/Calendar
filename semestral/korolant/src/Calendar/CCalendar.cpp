@@ -1,6 +1,5 @@
 #include "CCalendar.h"
 
-
 using namespace std;
 
 
