@@ -1,10 +1,5 @@
 #include "COptional.h"
 
-/*void COptional::printFunc(std::ostream &os) const {
-    os << "[Optional][" << dateFrom.returnDate() << " - " << dateTo.returnDate() << "]" << "Name: " <<
-       name << std::endl;
-}
-*/
 void COptional::printFunc(std::ostream &os) const  {
     char s1[17];
     s1[16] = '\0';

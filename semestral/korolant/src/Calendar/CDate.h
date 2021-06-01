@@ -4,7 +4,9 @@
 
 class CDate {
 public:
+
     CDate() = default;
+
     CDate(const int & dayIn, const int & monthIn, const int & yearIn, const int & hourIn, const int & minuteIn );
 
     void editDate(const CDate & date);
@@ -39,15 +41,17 @@ public:
 
     std::string dateToShortString(int yearIn, int monthIn, int dayIn) const;
 
-
     int returnDay() const;
+
     int returnMonth() const;
+
     int returnYear() const;
+
     int returnHour() const;
+
     int returnMinute() const;
 
 private:
-
     int day;
     int month;
     int year;

@@ -29,7 +29,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
 
     while ( !indata.eof() ) { // keep reading until end-of-file
-        string commandNew = "";
+        string commandNew;
         while(getline(indata, commandNew) && strcasecmp(commandNew.c_str(), "new")){
             // word is not new, we are skipping other linew from event, which was earlier
             //we are going to next event
@@ -59,6 +59,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         getline(indata, name);
         if(indata.eof()) continue;
+        if(name.empty()){
+            continue;
+        }
 
         indata >> yearFrom;
 
@@ -170,6 +173,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
         }
 
         std::getline(indata, place);
+        if(place.empty()){
+            continue;
+        }
 
         while(1) {
             char sign;
@@ -181,6 +187,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
             if(sign == '+'){
                 string memberIn;
                 getline(indata, memberIn);
+                if(memberIn.empty()){
+                    continue;
+                }
                 members.emplace_back(memberIn);
                 continue;
             }
@@ -190,6 +199,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
         }
 
         getline(indata, description);
+        if(description.empty()){
+            continue;
+        }
 
         indata >> obligation;
         indata.ignore(numeric_limits<streamsize>::max(), '\n');

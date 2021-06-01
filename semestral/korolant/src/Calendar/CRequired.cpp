@@ -1,11 +1,5 @@
 #include "CRequired.h"
 
-
-/*void CRequired::printFunc(std::ostream &os) const {
-    os << "[Required][" << dateFrom.returnDate() << " - " << dateTo.returnDate() << "]" << "Name: " <<
-       name << std::endl;
-}*/
-
 void CRequired::printFunc(std::ostream &os) const {
     char s1[17];
     s1[16] = '\0';

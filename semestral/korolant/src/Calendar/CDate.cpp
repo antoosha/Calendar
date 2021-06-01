@@ -5,7 +5,7 @@ CDate::CDate(const int & dayIn, const int & monthIn, const int & yearIn, const i
              : day(dayIn), month(monthIn), year(yearIn), hour(hourIn), minute(minuteIn) {}
 
 int CDate::returnDay() const {
-    return day;
+   return day;
 }
 
 int CDate::returnMonth() const {
@@ -237,7 +237,7 @@ void CDate::moveHoursBack(int hours) {
 void CDate::moveDaysBack(int days) {
 
     if(day - days < 1){
-        moveMonthsBack(1); // true poradi
+        moveMonthsBack(1); // true order
         day = numberOfDays(month-1, year) + day - days;
     }
     else{

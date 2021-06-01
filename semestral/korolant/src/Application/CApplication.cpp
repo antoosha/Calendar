@@ -2,8 +2,6 @@
 #include <fstream>
 
 using namespace std;
-void run(){}
-
 
 /*
  * return 0 = all is OK
@@ -19,19 +17,17 @@ void CApplication::run() {
     views.emplace("showMonthly", new CMonthly());
     views.emplace("showYearly", new CYearly());
 
-
     //ofstream MyFile("C:\\Users\\Anton\\Desktop\\file.txt");
     CCalendar cCalendar;
     CInterface  a(cin, cout, cCalendar);
-    while(1){
+    while(true){
         cout << "Write your command. If you want to see the list of commands, write \"help\"" << endl;
         a.getCommand();
         if(a.doSmthWithCommand(views) == -3){
-
             //MyFile.close();
-
             return;
         }
     }
-
 }
+/*g++ main.cpp Application\CApplication.cpp Calendar\CCalendar.cpp Calendar\CDate.cpp Calendar\CEvent.cpp Calendar\COptional.cpp Calendar\CRequired.cpp ImportExport\CImportExport.cpp Interface\CInterface.cpp Postpone\CPostpone.cpp Repeat\CRepeat.cpp View\CDaily.cpp View\CMonthly.cpp View\CWeekly.cpp View\CYearly.cpp
+*/

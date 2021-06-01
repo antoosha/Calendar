@@ -12,9 +12,9 @@ public:
     CApplication ( const CApplication & ) = delete;
     CApplication & operator= ( const CApplication & ) = delete;
     ~CApplication () = default;
-
     void run();
 
+private:
     std::map<std::string, CView*> views;
 };
 

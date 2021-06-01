@@ -6,7 +6,6 @@
 #include <limits>
 #include "../View/CView.h"
 #include "../Calendar/CCalendar.h"
-#include "../View/CMonthly.h"
 #include "../ImportExport/CImportExport.h"
 #include "../Postpone/CPostpone.h"
 #include "../Repeat/CRepeat.h"
@@ -20,7 +19,7 @@ public:
 
     void getCommand();
 
-protected:
+private:
     std::istream & m_In;
     std::ostream & m_Out;
     std::vector<std::string> words;

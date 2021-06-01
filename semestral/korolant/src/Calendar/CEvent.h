@@ -9,6 +9,7 @@
 
 class CEvent {
 public:
+
     CEvent() = default;
 
     CEvent( const int & idIn, const std::string & nameIn, const CDate & dateFromIn, const CDate & dateToIn,

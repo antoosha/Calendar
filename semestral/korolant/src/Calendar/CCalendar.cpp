@@ -23,6 +23,10 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
     m_Out << "Write name of this event and press 'Enter':" << endl;
     getline(m_In, name);
+    if(name.empty()){
+        m_Out << "Name is empty, try again.." << endl;
+        return -4;
+    }
 
     int flagSecondGreaterThanFirst = 0;
     while(flagSecondGreaterThanFirst == 0) {
@@ -34,7 +38,6 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             if (yearFrom < 1600 || yearFrom > 9999 || m_In.fail()) {
                 m_In.clear();
                 m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-
                 m_Out << "Year is not correct, try again.." << endl;
                 continue;
             }
@@ -158,8 +161,12 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
     m_Out << "Write place of this event and press 'Enter':" << endl;
     std::getline(m_In, place);
+    if(place.empty()){
+        m_Out << "Place is empty, try again.." << endl;
+        return -4;
+    }
 
-    while(1) {
+    while(true) {
         char sign;
         m_Out << "If you want to add member, write \"+\" and press 'Enter':" << endl;
         m_Out << "If you DO NOT want to add member, write \"-\" and press 'Enter':" << endl;
@@ -177,6 +184,10 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             m_Out << "Write person, who you want to add to this event and press 'Enter':" << endl;
             string memberIn;
             getline(m_In, memberIn);
+            if(memberIn.empty()){
+                m_Out << "Member is empty, member has not been added, try again.." << endl;
+                continue;
+            }
             members.emplace_back(memberIn);
             m_Out << "Person " << memberIn << " has been successfully added." << endl;
             continue;
@@ -189,6 +200,10 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
     m_Out << "Write description of this event and press 'Enter':" << endl;
     getline(m_In, description);
+    if(description.empty()){
+        m_Out << "Description is empty, try again.." << endl;
+        return -4;
+    }
 
 
     m_Out << "Choose obligation of this event, write \"required\" or \"optional\" and press 'Enter':" << endl;
@@ -396,7 +411,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         m_Out << "Write new name of this event and press 'Enter':" << endl;
         getline(m_In, newName);
         if(newName.empty()){
-            m_Out << "Name is not changed, new name is empty, try again.." << endl;
+            m_Out << "Name has not been changed, new name is empty, try again.." << endl;
             return -4;
         }
         cCalendar.returnMapById().at(id)->returnName() = newName;
@@ -409,7 +424,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         m_Out << "Write place of this event and press 'Enter':" << endl;
         std::getline(m_In, newPlace);
         if(newPlace.empty()){
-            m_Out << "Place is not changed, new place is empty, try again.." << endl;
+            m_Out << "Place has not been changed, new place is empty, try again.." << endl;
             return -4;
         }
         cCalendar.returnMapById().at(id)->returnPlace() = newPlace;
@@ -436,7 +451,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             string memberIn;
             getline(m_In, memberIn);
             if(memberIn.empty()){
-                m_Out << "Member is not changed, new member is empty, try again.." << endl;
+                m_Out << "Member has not been changed, new member is empty, try again.." << endl;
                 return -4;
             }
 
@@ -479,7 +494,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         m_Out << "Write description of this event and press 'Enter':" << endl;
         std::getline(m_In, newDescription);
         if(newDescription.empty()){
-            m_Out << "Description is not changed, new description is empty, try again.." << endl;
+            m_Out << "Description has not been changed, new description is empty, try again.." << endl;
             return -4;
         }
         cCalendar.returnMapById().at(id)->returnDescription() = newDescription;
@@ -520,6 +535,10 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         vector<shared_ptr<CEvent>> events;
         m_Out << "Write name of event and press 'Enter':" << endl;
         getline(m_In, nameFind);
+        if(nameFind.empty()){
+            m_Out << "Name of event to find is empty, try again.." << endl;
+            return -4;
+        }
         for(auto i = cCalendar.returnMapByName().begin(); i != cCalendar.returnMapByName().end(); i++){
             if(!strcasecmp(i->first.c_str(), nameFind.c_str())){
                 events.emplace_back(i->second);
@@ -542,6 +561,10 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         vector<shared_ptr<CEvent>> events;
         m_Out << "Write place of event and press 'Enter':" << endl;
         getline(m_In, placeFind);
+        if(placeFind.empty()){
+            m_Out << "Place of event to find is empty, try again.." << endl;
+            return -4;
+        }
         for(auto i = cCalendar.returnMapByName().begin(); i != cCalendar.returnMapByName().end(); i++){
             if(!strcasecmp(i->second->returnPlace().c_str(), placeFind.c_str())){
                 events.emplace_back(i->second);
@@ -564,8 +587,16 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         vector<shared_ptr<CEvent>> events;
         m_Out << "Write name of event and press 'Enter':" << endl;
         getline(m_In, nameFind);
+        if(nameFind.empty()){
+            m_Out << "Name of event to find is empty, try again.." << endl;
+            return -4;
+        }
         m_Out << "Write place of event and press 'Enter':" << endl;
         getline(m_In, placeFind);
+        if(placeFind.empty()){
+            m_Out << "Place of event to find is empty, try again.." << endl;
+            return -4;
+        }
         for(auto i = cCalendar.returnMapByName().begin(); i != cCalendar.returnMapByName().end(); i++){
             if(!strcasecmp(i->second->returnPlace().c_str(), placeFind.c_str()) && !strcasecmp(i->first.c_str(), nameFind.c_str())){
                 events.emplace_back(i->second);
@@ -634,7 +665,6 @@ int CCalendar::deleteEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         return 0;
     }
 
-    return 0;
 }
 
 
