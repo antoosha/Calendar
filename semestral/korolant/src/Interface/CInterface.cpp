@@ -25,7 +25,7 @@ void CInterface::getCommand(){
             }
             flag++;
             size_t j = i;
-            while(!isspace(line[j])) j++;
+            while(j < line.size() && !isspace(line[j])) j++;
             word = line.substr(i, j-i);
             words.emplace_back(word);
             i = j;
