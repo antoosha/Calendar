@@ -32,7 +32,6 @@ void CApplication::run() {
 
             return;
         }
-
     }
 
 }

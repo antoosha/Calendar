@@ -3,9 +3,9 @@
 
 using namespace std;
 
+
 int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) {
 
-    CDate * cDate;
     int id;
     string name;
     string dateFromIn;
@@ -17,21 +17,12 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
     int dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom;
     int dayTo, monthTo, yearTo, hourTo, minuteTo;
 
-    CDate dateFrom;
-    CDate dateTo;
+    CDate dateFrom = {};
+    CDate dateTo = {};
 
 
     m_Out << "Write name of this event and press 'Enter':" << endl;
     getline(m_In, name);
-
-
-    /*m_Out << "Write date 'from' in format \"dd/mm/year hour:minute\" and press 'Enter':" << endl;
-    getline(m_In, dateFromIn);
-    if(dateFromIn.size() != 16){
-        m_Out << "You should write date in correct format \"dd/mm/year hour:minute\", try again.." << endl;
-        return -4; // something went wrong
-    }
-    dateFrom = CDate(dateFromIn);*/
 
     int flagSecondGreaterThanFirst = 0;
     while(flagSecondGreaterThanFirst == 0) {
@@ -40,7 +31,7 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             m_Out << "Write year of date 'from' and press 'Enter':" << endl;
             m_In >> yearFrom;
 
-            if (yearFrom < 1600 || m_In.fail()) {
+            if (yearFrom < 1600 || yearFrom > 9999 || m_In.fail()) {
                 m_In.clear();
                 m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -63,7 +54,7 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             m_Out << "Write day of date 'from' and press 'Enter':" << endl;
             m_In >> dayFrom;
 
-            if (dayFrom > cDate->numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1 || m_In.fail()) {
+            if (dayFrom > cDate.numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1 || m_In.fail()) {
                 m_In.clear();
                 m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Day is not correct, try again.." << endl;
@@ -97,22 +88,12 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             flagDateFrom = 1;
         }
 
-
-        /*m_Out << "Write date 'to' in format \"dd/mm/year hour:minute\" and press 'Enter':" << endl;
-        getline(m_In, dateToIn);
-        if(dateToIn.size() != 16){
-            m_Out << "You should write date in correct format \"dd/mm/year hour:minute\", try again.." << endl;
-            return -4; // something went wrong
-        }
-        dateTo = CDate(dateToIn);
-        */
-
         int flagDateTo = 0;
         while (flagDateTo == 0) {
             m_Out << "Write year of date 'to' and press 'Enter':" << endl;
             m_In >> yearTo;
 
-            if (yearTo < 1600 || m_In.fail()) {
+            if (yearTo < 1600 || yearTo > 9999 || m_In.fail()) {
                 m_In.clear();
                 m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Year is not correct, try again.." << endl;
@@ -134,7 +115,7 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             m_Out << "Write day of date 'to' and press 'Enter':" << endl;
             m_In >> dayTo;
 
-            if (dayTo > cDate->numberOfDays(monthTo - 1, yearTo) || dayTo < 1 || m_In.fail()) {
+            if (dayTo > cDate.numberOfDays(monthTo - 1, yearTo) || dayTo < 1 || m_In.fail()) {
                 m_In.clear();
                 m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Day is not correct, try again.." << endl;
@@ -234,7 +215,6 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) {
 
     int id;
-    CDate * cDate;
     int dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom;
     int dayTo, monthTo, yearTo, hourTo, minuteTo;
     int number;
@@ -273,7 +253,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             m_Out << "Write year of date 'from' and press 'Enter':" << endl;
             m_In >> yearFrom;
 
-            if(yearFrom < 1600 || m_In.fail()){
+            if(yearFrom < 1600 || yearFrom > 9999 || m_In.fail()){
                 m_In.clear();
                 m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Year is not correct, try again.." << endl;
@@ -295,7 +275,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             m_Out << "Write day of date 'from' and press 'Enter':" << endl;
             m_In >> dayFrom;
 
-            if(dayFrom > cDate->numberOfDays(monthFrom-1, yearFrom) || dayFrom < 1 || m_In.fail()){
+            if(dayFrom > cDate.numberOfDays(monthFrom-1, yearFrom) || dayFrom < 1 || m_In.fail()){
                 m_In.clear();
                 m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Day is not correct, try again.." << endl;
@@ -339,13 +319,13 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         m_Out << "Date was successfully changed." << endl;
         return 0;
     } else if (number == 2) {
-        CDate newDate;
+        CDate newDate = {};
         int flagDateTo = 0;
         while(flagDateTo == 0) {
             m_Out << "Write year of date 'to' and press 'Enter':" << endl;
             m_In >> yearTo;
 
-            if(yearTo < 1600 || m_In.fail()){
+            if(yearTo < 1600 || yearTo > 9999 || m_In.fail()){
                 m_In.clear();
                 m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Year is not correct, try again.." << endl;
@@ -367,7 +347,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             m_Out << "Write day of date 'to' and press 'Enter':" << endl;
             m_In >> dayTo;
 
-            if(dayTo > cDate->numberOfDays(monthTo-1, yearTo) || dayTo < 1 ||  m_In.fail()){
+            if(dayTo > cDate.numberOfDays(monthTo-1, yearTo) || dayTo < 1 ||  m_In.fail()){
                 m_In.clear();
                 m_In.ignore(numeric_limits<streamsize>::max(), '\n');
                 m_Out << "Day is not correct, try again.." << endl;
@@ -612,7 +592,7 @@ std::multimap<std::string, std::shared_ptr<CEvent>> &CCalendar::returnMapByName(
     return mapOfEventsByName;
 }
 
-void CCalendar::addEvent(const int & id, const std::string & name, const CDate & dateFrom, const CDate & dateTo, const std::string place,
+void CCalendar::addEvent(const int & id, const std::string & name, const CDate & dateFrom, const CDate & dateTo, const std::string & place,
                          const std::vector<std::string>& members, const std::string & description, const std::string & obligation) {
     if(!strcasecmp(obligation.c_str(), "required")){
         CRequired cRequired = CRequired(id, name, dateFrom, dateTo, place, members, description);

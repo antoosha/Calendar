@@ -6,8 +6,6 @@ class CDate {
 public:
     CDate() = default;
     CDate(const int & dayIn, const int & monthIn, const int & yearIn, const int & hourIn, const int & minuteIn );
-    //explicit CDate(const std::string & dateIn );
-
 
     void editDate(const CDate & date);
 
@@ -40,7 +38,7 @@ public:
     int numberOfDays (int monthNumber, int year) const;
 
     std::string dateToShortString(int yearIn, int monthIn, int dayIn) const;
-    //std:: string returnDate() const;
+
 
     int returnDay() const;
     int returnMonth() const;
@@ -49,7 +47,7 @@ public:
     int returnMinute() const;
 
 private:
-    //std::string date;
+
     int day;
     int month;
     int year;

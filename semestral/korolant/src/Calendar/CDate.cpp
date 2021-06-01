@@ -2,7 +2,7 @@
 using namespace std;
 
 CDate::CDate(const int & dayIn, const int & monthIn, const int & yearIn, const int & hourIn, const int & minuteIn)
-             : day(dayIn), month(monthIn), year(yearIn), hour(hourIn), minute(minuteIn) {};
+             : day(dayIn), month(monthIn), year(yearIn), hour(hourIn), minute(minuteIn) {}
 
 int CDate::returnDay() const {
     return day;
@@ -15,8 +15,6 @@ int CDate::returnMonth() const {
 int CDate::returnYear() const {
     return year;
 }
-
-
 
  void CDate::editDate(const CDate & date) {
     this->day = date.day;
@@ -44,13 +42,13 @@ std::string CDate::dateToShortString(int yearIn, int monthIn, int dayIn ) const 
     return dateToString;
 }
 
-int CDate::dayNumber(int day, int month, int year) const {
+int CDate::dayNumber(int dayIn, int monthIn, int yearIn) const {
     static int t[] = { 0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 };
-    year -= month < 3;
-    return ( year + year/4 - year/100 + year/400 + t[month-1] + day) % 7;
+    yearIn -= monthIn < 3;
+    return ( yearIn + yearIn/4 - yearIn/100 + yearIn/400 + t[monthIn-1] + dayIn) % 7;
 }
 
-int CDate::numberOfDays(int monthNumber, int year) const {
+int CDate::numberOfDays(int monthNumber, int yearIn) const {
     // January
     if (monthNumber == 0)
         return (31);
@@ -60,8 +58,8 @@ int CDate::numberOfDays(int monthNumber, int year) const {
     {
         // If the year is leap then February has
         // 29 days
-        if (year % 400 == 0 ||
-            (year % 4 == 0 && year % 100 != 0))
+        if (yearIn % 400 == 0 ||
+            (yearIn % 4 == 0 && yearIn % 100 != 0))
             return (29);
         else
             return (28);
@@ -316,13 +314,4 @@ int CDate::returnMinute() const {
     return minute;
 }
 
-
-/*
-CDate::CDate(const string &dateIn) : date(dateIn) {}
- }
-
-std::string CDate::returnDate() const {
-    return date;
-}
-*/
 

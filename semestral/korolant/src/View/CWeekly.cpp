@@ -95,7 +95,7 @@ int CWeekly::setup(istream &m_In, ostream &m_Out) {
     m_Out << "Write year, you want to show:" << endl;
     m_In >> year;
 
-    if(year < 1600 || m_In.fail()){
+    if(year < 1600 || year > 9999 || m_In.fail()){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Year is not correct, try again.." << endl;

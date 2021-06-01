@@ -20,7 +20,7 @@ public:
 
     int createEvent(std::istream & in, std::ostream & out, CCalendar & cCalendar);
 
-    void addEvent(const int & id, const std::string & name, const CDate & dateFrom, const CDate & dateTo, const std::string place,
+    void addEvent(const int & id, const std::string & name, const CDate & dateFrom, const CDate & dateTo, const std::string & place,
                   const std::vector<std::string>& members, const std::string & description, const std::string & obligation);
 
     int editEvent( std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar);
@@ -46,6 +46,8 @@ protected:
     std::multimap<std::string, std::shared_ptr<CEvent>> mapOfEventsByName;
     std::multimap<std::string, std::shared_ptr<CEvent>> mapOfEventsByDate;
 
+private:
+    CDate cDate{};
 };
 
 

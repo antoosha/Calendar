@@ -62,7 +62,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> yearFrom;
 
-        if (yearFrom < 1600 || m_In.fail()) {
+        if (yearFrom < 1600 || yearFrom > 9999 || m_In.fail()) {
             m_In.clear();
             m_In.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
@@ -114,7 +114,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> yearTo;
 
-        if (yearTo < 1600 || m_In.fail()) {
+        if (yearTo < 1600 || yearTo > 9999 || m_In.fail()) {
             m_In.clear();
             m_In.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
