@@ -198,9 +198,21 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
             }
         }
 
-        getline(indata, description);
-        if(description.empty()){
+
+        char sign;
+        m_In >> sign;
+        if ((sign != '+' && sign != '-') || m_In.fail()) {
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
             continue;
+        }
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+        if (sign == '+') {
+            getline(m_In, description);
+            if (description.empty()) {
+                continue;
+            }
         }
 
         indata >> obligation;
@@ -228,6 +240,7 @@ int CImportExport::exportData (std::istream & m_In, std::ostream & m_Out, CCalen
     string fileName;
     m_Out << "Write path to file, where you want to export data from calendar and press 'Enter':" << endl;
     m_Out << "Example: \"C:\\Users\\PC\\Desktop\\file.txt\"" << endl;
+    m_Out << "Attantion! The data in the file will be overwritten." << endl;
     m_In >> fileName;
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 

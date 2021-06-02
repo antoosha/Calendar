@@ -11,16 +11,18 @@ void CRequired::printFunc(std::ostream &os) const {
                  dateTo.returnYear(), dateTo.returnHour(), dateTo.returnMinute());
 
 
-    os << "[ID:"<< id << "][Optional][" << s1 << " - " << s2  << "] Name: " <<
+    os << "[ID:"<< id << "][Required][" << s1 << " - " << s2  << "] Name: " <<
        name << std::endl;
     os << "\tPlace: " << place << std::endl;
 
     if(!members.empty()) {
         os << "\tMembers:" << std::endl;
         for (size_t i = 0; i < members.size(); i++) {
-            os << "\t" << i+1 << ") " << members[i] << std::endl;
+            os << "\t " << i+1 << ") " << members[i] << std::endl;
         }
     }
-    os << "\tDescription: " << description << std::endl;
+    if(!description.empty()){
+        os << "\tDescription: " << description << std::endl;
+    }
 
 }

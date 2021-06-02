@@ -18,10 +18,12 @@ void COptional::printFunc(std::ostream &os) const  {
     if(!members.empty()) {
         os << "\tMembers:" << std::endl;
         for (size_t i = 0; i < members.size(); i++) {
-            os << "\t" << i+1 << ") " << members[i] << std::endl;
+            os << "\t " << i+1 << ") " << members[i] << std::endl;
         }
     }
-    os << "\tDescription: " << description << std::endl;
+    if(!description.empty()){
+        os << "\tDescription: " << description << std::endl;
+    }
 }
 
 

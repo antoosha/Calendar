@@ -88,6 +88,7 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     else if(!strcasecmp(words[0].c_str(), "showDaily")){
         auto i = views.find("showDaily");
         if(i->second->setup(m_In, m_Out) != 0){
+            words.clear();
             return -4;
         }
         i->second->show(m_Out, cCalendar);
@@ -97,6 +98,7 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     else if(!strcasecmp(words[0].c_str(), "showWeekly")){
         auto i = views.find("showWeekly");
         if(i->second->setup(m_In, m_Out) != 0){
+            words.clear();
             return -4;
         }
         i->second->show(m_Out, cCalendar);
@@ -106,6 +108,7 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     else if(!strcasecmp(words[0].c_str(), "showMonthly")){
         auto i = views.find("showMonthly");
         if(i->second->setup(m_In, m_Out) != 0){
+            words.clear();
             return -4;
         }
         i->second->show(m_Out, cCalendar);
@@ -115,6 +118,7 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     else if(!strcasecmp(words[0].c_str(), "showYearly")){
         auto i = views.find("showYearly");
         if(i->second->setup(m_In, m_Out) != 0){
+            words.clear();
             return -4;
         }
         i->second->show(m_Out, cCalendar);

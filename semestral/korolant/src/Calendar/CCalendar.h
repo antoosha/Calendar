@@ -7,6 +7,7 @@
 #include <cstring>
 #include <limits>
 #include <typeinfo>
+#include <algorithm>
 
 #include "CEvent.h"
 #include "COptional.h"

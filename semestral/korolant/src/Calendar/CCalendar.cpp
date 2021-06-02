@@ -196,14 +196,32 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         }
     }
 
+    while(true) {
+        char sign;
+        m_Out << "If you want to add description, write \"+\" and press 'Enter':" << endl;
+        m_Out << "If you DO NOT want to add description, write \"-\" and press 'Enter':" << endl;
+        m_In >> sign;
+        if ((sign != '+' && sign != '-') || m_In.fail()) {
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+            m_Out << "Please write sign \"+\" or \"-\" in correct way, try again.." << endl;
+            continue;
+        }
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    m_Out << "Write description of this event and press 'Enter':" << endl;
-    getline(m_In, description);
-    if(description.empty()){
-        m_Out << "Description is empty, try again.." << endl;
-        return -4;
+        if (sign == '+') {
+            m_Out << "Write description of this event and press 'Enter':" << endl;
+            getline(m_In, description);
+            if (description.empty()) {
+                m_Out << "Description is empty, try again.." << endl;
+                continue;
+            }
+            break;
+        } else {
+            m_Out << "Description will not be added." << endl;
+            break;
+        }
     }
-
 
     m_Out << "Choose obligation of this event, write \"required\" or \"optional\" and press 'Enter':" << endl;
     m_In >> obligation;
@@ -467,6 +485,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             }
             m_Out << "Write index of person, who you want to delete from this event and press 'Enter':" << endl;
             m_In >> index;
+            m_In >> index;
 
             if(index <= 0 || (size_t)index >  cCalendar.returnMapById().at(id)->returnMembers().size() || m_In.fail()){
                 m_In.clear();
@@ -539,9 +558,21 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             return -4;
         }
         for(auto i = cCalendar.returnMapByName().begin(); i != cCalendar.returnMapByName().end(); i++){
-            if(!strcasecmp(i->first.c_str(), nameFind.c_str())){
+            string inMapStrToLow = i->first;
+            std::for_each(inMapStrToLow.begin(), inMapStrToLow.end(), [](char & c){
+                c = ::tolower(c);
+            });
+            std::for_each(nameFind.begin(), nameFind.end(), [](char & c){
+                c = ::tolower(c);
+            });
+            if(inMapStrToLow.find(nameFind) != string::npos){
                 events.emplace_back(i->second);
             }
+            //variant to compare with 100% convergence
+            /*
+            if(!strcasecmp(i->first.c_str(), nameFind.c_str())){
+                events.emplace_back(i->second);
+            }*/
         }
         if(events.empty()){
             m_Out << "Any events have not been found." << endl;
@@ -568,9 +599,21 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             return -4;
         }
         for(auto i = cCalendar.returnMapByName().begin(); i != cCalendar.returnMapByName().end(); i++){
-            if(!strcasecmp(i->second->returnPlace().c_str(), placeFind.c_str())){
+            string inMapStrToLow = i->second->returnPlace();
+            std::for_each(inMapStrToLow.begin(), inMapStrToLow.end(), [](char & c){
+                c = ::tolower(c);
+            });
+            std::for_each(placeFind.begin(), placeFind.end(), [](char & c){
+                c = ::tolower(c);
+            });
+            if(inMapStrToLow.find(placeFind) != string::npos){
                 events.emplace_back(i->second);
             }
+            //variant to compare with 100% convergence
+            /*
+            if(!strcasecmp(i->second->returnPlace().c_str(), placeFind.c_str())){
+                events.emplace_back(i->second);
+            }*/
         }
         if(events.empty()){
             m_Out << "Any events have not been found." << endl;
@@ -602,9 +645,28 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             return -4;
         }
         for(auto i = cCalendar.returnMapByName().begin(); i != cCalendar.returnMapByName().end(); i++){
-            if(!strcasecmp(i->second->returnPlace().c_str(), placeFind.c_str()) && !strcasecmp(i->first.c_str(), nameFind.c_str())){
+            string inMapStrToLowName = i->first;
+            string inMapStrToLowPlace = i->second->returnPlace();
+            std::for_each(inMapStrToLowName.begin(), inMapStrToLowName.end(), [](char & c){
+                c = tolower(c);
+            });
+            std::for_each(nameFind.begin(), nameFind.end(), [](char & c){
+                c = tolower(c);
+            });
+            std::for_each(inMapStrToLowPlace.begin(), inMapStrToLowPlace.end(), [](char & c){
+                c = tolower(c);
+            });
+            std::for_each(placeFind.begin(), placeFind.end(), [](char & c){
+                c = tolower(c);
+            });
+            if(inMapStrToLowName.find(nameFind) != string::npos && inMapStrToLowPlace.find(placeFind) != string::npos ){
                 events.emplace_back(i->second);
             }
+
+            //variant to compare with 100% convergence
+            /*if(!strcasecmp(i->second->returnPlace().c_str(), placeFind.c_str()) && !strcasecmp(i->first.c_str(), nameFind.c_str())){
+                events.emplace_back(i->second);
+            }*/
         }
         if(events.empty()){
             m_Out << "Any events have not been found." << endl;
@@ -663,7 +725,13 @@ int CCalendar::deleteEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         cCalendar.returnMapById().erase(idToDelete);
         for(auto i = cCalendar.returnMapByName().begin(); i != cCalendar.returnMapByName().end(); i++){
             if(i->second->returnId() == idToDelete){
-                mapOfEventsByName.erase(i);
+                cCalendar.returnMapByName().erase(i);
+                break;
+            }
+        }
+        for(auto i = cCalendar.returnMapByDate().begin(); i != cCalendar.returnMapByDate().end(); i++){
+            if(i->second->returnId() == idToDelete){
+                cCalendar.returnMapByDate().erase(i);
                 break;
             }
         }

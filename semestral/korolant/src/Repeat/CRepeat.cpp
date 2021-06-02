@@ -5,19 +5,20 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     int id;
     m_Out << "Write id of event what you want to repeat and press 'Enter':" << endl;
     m_In >> id;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+    if(m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Id is not correct, try again.."  << endl;
+        return -4;
+    }
     if(!cCalendar.returnMapById().count(id)){
-        m_Out << "Event with id " << id << "does not exist, try again.."  << endl;
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Event with id " << id << " does not exist, try again.."  << endl;
         return -4;
     }
-    int howManyTimesToRepeat;
-    m_Out << "Write how many times you want to repeat this event and press 'Enter':" << endl;
-    m_In >> howManyTimesToRepeat;
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(howManyTimesToRepeat < 1){
-        m_Out << "Number of times should be greater than 0, try again.."  << endl;
-        return -4;
-    }
+
     int number;
     m_Out << "Choose at what interval you want to repeat this event and press 'Enter':" << endl;
     m_Out << "1) Every day" << endl;
@@ -25,11 +26,25 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     m_Out << "3) Every month" << endl;
     m_Out << "4) Every year" << endl;
     m_In >> number;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(number < 1 || number > 4){
+    if(number < 1 || number > 4 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Number is not correct, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    int howManyTimesToRepeat;
+    m_Out << "Write how many times you want to repeat this event(MAX=30) and press 'Enter':" << endl;
+    m_In >> howManyTimesToRepeat;
+    if(howManyTimesToRepeat < 1 || howManyTimesToRepeat > 30 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "Number of times should be greater than 0 and lower than 30, try again.."  << endl;
+        return -4;
+    }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
     if(number == 1){
         int exampleId = id;
         for(size_t i = 0; i < (size_t)howManyTimesToRepeat; i++){

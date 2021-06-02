@@ -1,5 +1,5 @@
 new
-Go to ZOO
+Event party STRAHOV
 2021
 06
 02
@@ -18,10 +18,11 @@ Vera (kamaradka)
 +
 p. Vogel
 -
-It will be a trip to ZOO in Prague, where will some of my friends and people who i know
++
+It will be the best PARTY ON STRAHOV
 optional
 new
-Go shopping
+Go shopping second part
 2021
 10
 02
@@ -34,10 +35,11 @@ Go shopping
 59
 Prague in Czech republic
 -
++
 I need to buy new shoes
 required
 new
-Exam BI-PA2
+Exam BI-PA2!!! important oral exam
 2021
 6
 8
@@ -50,10 +52,11 @@ Exam BI-PA2
 0
 CVUT 
 -
++
 Very important exam!
 required
 new
-Work
+Work in prg
 2021
 6
 6
@@ -66,6 +69,7 @@ Work
 59
 Prague 
 -
++
 Work as a courier 
 required
 new
@@ -88,13 +92,14 @@ Georgiy
 +
 Nikita from CVUT FD
 -
++
 This day should be very interesting
 optional
 new
 Beautiful life
 2002
-07
-13
+02
+28
 14
 0
 2202
@@ -104,6 +109,7 @@ Beautiful life
 0
 World
 -
++
 My beautiful life
 required
 new
@@ -120,6 +126,7 @@ First 100 years in 2000th
 00
 All world
 -
++
 First 100 years in 2000th in our common world, that is so small and big and so beautiful! 
 optional
 new
@@ -136,6 +143,7 @@ Event of opening new shopping center
 0
 Berlin
 -
++
 The biggest shopping center in all over the world
 optional
 new
@@ -152,6 +160,7 @@ Last february day in 2022
 00
 Paris France
 -
++
 Last february day in 2022
 optional
 new
@@ -168,6 +177,7 @@ New Year
 59
 Part of the World
 -
++
 happy new YEAR!!!!!!!!!!!!!!!!
 optional
 showWeekly
