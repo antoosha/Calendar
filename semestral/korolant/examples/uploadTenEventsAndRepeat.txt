@@ -1,0 +1,182 @@
+new
+Go to ZOO
+2021
+06
+02
+13
+00
+2021
+06
+05
+13
+00
+Prague in Czech republic
++
+Marek (spoluzak)
++
+Vera (kamaradka)
++
+p. Vogel
+-
+It will be a trip to ZOO in Prague, where will some of my friends and people who i know
+optional
+new
+Go shopping
+2021
+10
+02
+00
+00
+2021
+12
+05
+23
+59
+Prague in Czech republic
+-
+I need to buy new shoes
+required
+new
+Exam BI-PA2
+2021
+6
+8
+9
+0
+2021
+6
+8
+17
+0
+CVUT 
+-
+Very important exam!
+required
+new
+Work
+2021
+6
+6
+8
+0
+2021
+7
+5
+23
+59
+Prague 
+-
+Work as a courier 
+required
+new
+Birthday!!! Beautiful day!
+2021
+7
+13
+0
+0
+2021
+7
+13
+23
+59
+World 
++
+Maks from Ukraine
++
+Georgiy
++
+Nikita from CVUT FD
+-
+This day should be very interesting
+optional
+new
+Beautiful life
+2002
+07
+13
+14
+0
+2202
+07
+13
+14
+0
+World
+-
+My beautiful life
+required
+new
+First 100 years in 2000th
+2000
+01
+01
+00
+00
+2100
+1
+1
+00
+00
+All world
+-
+First 100 years in 2000th in our common world, that is so small and big and so beautiful! 
+optional
+new
+Event of opening new shopping center
+2024
+7
+1
+10
+0
+2024
+7
+1
+23
+0
+Berlin
+-
+The biggest shopping center in all over the world
+optional
+new
+Last february day in 2022
+2022
+2
+28
+00
+00
+2022
+3
+1
+00
+00
+Paris France
+-
+Last february day in 2022
+optional
+new
+New Year
+2022
+1
+1
+00
+00
+2022
+1
+1
+23
+59
+Part of the World
+-
+happy new YEAR!!!!!!!!!!!!!!!!
+optional
+repeat
+9
+5
+4
+repeat
+7
+3
+1
+listEvents
+quit

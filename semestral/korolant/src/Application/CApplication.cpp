@@ -21,7 +21,9 @@ void CApplication::run() {
     CCalendar cCalendar;
     CInterface  a(cin, cout, cCalendar);
     while(true){
-        cout << "Write your command. If you want to see the list of commands, write \"help\"" << endl;
+        cout << "+---------------------------------------------------------------------------+" << endl;
+        cout << "| Write your command. If you want to see the list of commands, write \"help\" |" << endl;
+        cout << "+---------------------------------------------------------------------------+" << endl;
         a.getCommand();
         if(a.doSmthWithCommand(views) == -3){
             //MyFile.close();

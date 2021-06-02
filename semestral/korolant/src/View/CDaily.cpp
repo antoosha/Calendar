@@ -2,6 +2,7 @@
 using namespace std;
 
 void CDaily::show(ostream &m_Out, CCalendar & cCalendar) const {
+    m_Out << endl;
     printf("Events for a %02d/%02d/%04d:\n", day, month, year);
     for(auto l = cCalendar.returnMapByDate().begin(); l != cCalendar.returnMapByDate().end(); l++){
         CDate cDate = {};

@@ -257,7 +257,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         m_Out << "Please choose correct number, try again.." << endl;
         return -4;
     }
-
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
     if (number == 1) {
 
@@ -548,9 +548,12 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             return 0;
         }
         else{
+            m_Out << endl;
             for(auto i = events.begin(); i != events.end(); i++){
+                m_Out << endl;
                 i->get()->printFunc(m_Out);
             }
+            m_Out << endl;
             return 0;
         }
 
@@ -575,8 +578,10 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         }
         else{
             for(auto i = events.begin(); i != events.end(); i++){
+                m_Out << endl;
                 i->get()->printFunc(m_Out);
             }
+            m_Out << endl;
             return 0;
         }
     }
@@ -607,8 +612,10 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         }
         else{
             for(auto i = events.begin(); i != events.end(); i++){
+                m_Out << endl;
                 i->get()->printFunc(m_Out);
             }
+            m_Out << endl;
             return 0;
         }
     }

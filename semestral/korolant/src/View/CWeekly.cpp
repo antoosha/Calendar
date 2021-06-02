@@ -27,6 +27,7 @@ void CWeekly::show(ostream &m_Out, CCalendar & cCalendar) const {
         dayFrom = 29;
         dayLast = cDate.numberOfDays(month-1, year);
     }
+    m_Out << endl;
     for(int i = dayFrom; (i <= cDate.numberOfDays(month-1, year) && i <dayFrom+7 ); i++ ){
         int dayOfWeek = cDate.dayNumber(i,month-1,year);
         if(dayOfWeek == 0){
@@ -83,7 +84,7 @@ void CWeekly::show(ostream &m_Out, CCalendar & cCalendar) const {
         string to = cDate.dateToShortString(l->second->returnDateTo().returnYear(), l->second->returnDateTo().returnMonth(), l->second->returnDateTo().returnDay());;
         string currFirst = cDate.dateToShortString(year, month, dayFrom);
         string currLast = cDate.dateToShortString(year, month, dayLast);
-        if((currFirst >= from && currFirst <= to) || (currLast >= from && currLast <= to) )
+        if((from <= currLast && from >= currFirst) || (to >= currFirst && to <= currLast) || (from <= currFirst && to >= currLast))
         {
             l->second->printFunc(m_Out);
         }
