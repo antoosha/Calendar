@@ -25,6 +25,9 @@ void CApplication::run() {
         a.getCommand();
         if(a.doSmthWithCommand(views) == -3){
             //MyFile.close();
+            for(auto i = views.begin(); i != views.end(); i++){
+                delete i->second;
+            }
             return;
         }
     }
