@@ -6,6 +6,8 @@
 class CView {
 public:
 
+    virtual ~CView() = default;
+
     virtual void show(std::ostream & os, CCalendar & cCalendar) const = 0;
 
     virtual int setup( std::istream & in, std::ostream & os) = 0;
