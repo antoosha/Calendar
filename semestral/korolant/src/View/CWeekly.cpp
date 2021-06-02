@@ -4,80 +4,66 @@ using namespace std;
 
 void CWeekly::show(ostream &m_Out, CCalendar & cCalendar) const {
     CDate cDate = {};
+    int dayFrom = 1;
+    int dayLast = 1;
+    int days;
 
-    int dayFrom = -1;
-    int dayLast = -1;
-    if(week == 1){
-        dayFrom = 1;
-        dayLast = 7;
-    }
-    else if(week == 2){
-        dayFrom = 8;
-        dayLast = 14;
-    }
-    else if(week == 3){
-        dayFrom = 15;
-        dayLast = 21;
-    }
-    else if(week == 4){
-        dayFrom = 22;
-        dayLast = 28;
-    }
-    else if(week == 5){
-        dayFrom = 29;
-        dayLast = cDate.numberOfDays(month-1, year);
+    m_Out << endl;
+
+    // Index of the day from 0 to 6
+    //using for spaces "   "
+    int current = cDate.dayNumber(1, month, year);
+
+    // j --> Iterate through all the days of the
+    //       month - i
+    int i = month - 1;
+    days = cDate.numberOfDays(i, year);
+
+    // Print the current month name
+    m_Out << endl;
+    m_Out << "  ";
+    for(size_t k = 0 ; k < 33; k++){
+        if(k == (33/2 - cDate.getMonthName(i).size()/2)){
+            m_Out << cDate.getMonthName(i);
+            k+=cDate.getMonthName(i).size();
+        }
+        m_Out << "-";
     }
     m_Out << endl;
-    for(int i = dayFrom; (i <= cDate.numberOfDays(month-1, year) && i <dayFrom+7 ); i++ ){
-        int dayOfWeek = cDate.dayNumber(i,month-1,year);
-        if(dayOfWeek == 0){
-            m_Out<<"[Sun]";
-            printf("[%02d/%02d/%04d]", i,month,year);
-            m_Out << endl;
-            continue;
-        }
-        else if(dayOfWeek == 1){
-            m_Out<<"[Mon]";
-            printf("[%02d/%02d/%04d]", i,month,year);
-            m_Out << endl;
-            continue;
-        }
-        else if(dayOfWeek == 2){
-            m_Out<<"[Tue]";
-            printf("[%02d/%02d/%04d]", i,month,year);
-            m_Out << endl;
-            continue;
-        }
-        else if(dayOfWeek == 3){
-            m_Out<<"[Wed]";
-            printf("[%02d/%02d/%04d]", i,month,year);
-            m_Out << endl;
-            continue;
-        }
-        else if(dayOfWeek == 4){
-            m_Out<<"[Thu]";
-            printf("[%02d/%02d/%04d]", i,month,year);
-            m_Out << endl;
-            continue;
-        }
-        else if(dayOfWeek == 5){
-            m_Out<<"[Fri]";
-            printf("[%02d/%02d/%04d]", i,month,year);
-            m_Out << endl;
-            continue;
-        }
-        else if(dayOfWeek == 6){
-            m_Out<<"[Sat]";
-            printf("[%02d/%02d/%04d]", i,month,year);
-            m_Out << endl;
-            continue;
+
+    // Print the columns
+    m_Out << "  Sun  Mon  Tue  Wed  Thu  Fri  Sat" << endl;
+
+    // Print appropriate spaces
+    int k = 0;
+
+    for (k = 0; k < current; k++) {
+        if(week == 1) {
+            m_Out << "     ";
         }
     }
-    m_Out << "Events for this week:" << endl;
 
+
+    int weekFlag = 1;
+    for (int j = 1; j <= days; j++) {
+        if(weekFlag == week){
+            printf("%5d", j);
+            dayLast = j; //last j, which we have already written
+        }
+        if (++k > 6) {
+            k = 0;
+            weekFlag++;
+            if(weekFlag == week){
+                dayFrom = j + 1; //+1 because at next cycle j we'l write
+            }
+        }
+    }
+
+    m_Out << endl;
 
     // Print events from this month
     m_Out << endl;
+    bool hasBeenWritten = false;
     for(auto l = cCalendar.returnMapByDate().begin(); l != cCalendar.returnMapByDate().end(); l++){
         CDate cDate = {};
         string from = cDate.dateToShortString(l->second->returnDateFrom().returnYear(), l->second->returnDateFrom().returnMonth(), l->second->returnDateFrom().returnDay());
@@ -86,9 +72,11 @@ void CWeekly::show(ostream &m_Out, CCalendar & cCalendar) const {
         string currLast = cDate.dateToShortString(year, month, dayLast);
         if((from <= currLast && from >= currFirst) || (to >= currFirst && to <= currLast) || (from <= currFirst && to >= currLast))
         {
+            hasBeenWritten = true;
             l->second->printFunc(m_Out);
         }
     }
+    if(!hasBeenWritten) m_Out << "    Any events has not been found." << endl;
     m_Out << endl;
 }
 
@@ -118,7 +106,7 @@ int CWeekly::setup(istream &m_In, ostream &m_Out) {
     m_Out << "Write week, you want to show:" << endl;
     m_In >> week;
     CDate cDate = {};
-    if(week < 1 || week > 5 || (cDate.numberOfDays(month-1, year) < 29 && week == 5) || m_In.fail()){
+    if(week < 1 || week > 5 || (cDate.numberOfDays(month-1, year) < 29 && cDate.dayNumber(1,month,year) == 0 && week == 5) || m_In.fail()){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Week is not correct, try again.." << endl;

@@ -54,6 +54,7 @@ void CYearly::show(std::ostream &m_Out, CCalendar &cCalendar) const {
         current = k;
 
         // Print events from this month
+        bool hasBeenWritten = false;
         m_Out << endl;
         for(auto l = cCalendar.returnMapByDate().begin(); l != cCalendar.returnMapByDate().end(); l++){
             if( //for a year
@@ -69,10 +70,11 @@ void CYearly::show(std::ostream &m_Out, CCalendar &cCalendar) const {
                 (l->second->returnDateFrom().returnMonth()-1 <= i && l->second->returnDateTo().returnMonth()-1 >= i &&
                  l->second->returnDateFrom().returnYear() == year && l->second->returnDateTo().returnYear() == year))
             {
-
+                hasBeenWritten = true;
                 l->second->printFunc(m_Out);
             }
         }
+        if(!hasBeenWritten) m_Out << "    Any events has not been found." << endl;
         m_Out << endl;
     }
 }

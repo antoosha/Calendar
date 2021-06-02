@@ -88,18 +88,10 @@ Měsiční zobrazení kalendáře př.:
 	Description: First 100 years in 2000th in our common world, that is so small and big and so beautiful!
 
 #Tydenní zobrazení kalendáře př.:
-[Tue][08/07/2021]
-[Wed][09/07/2021]
-[Thu][10/07/2021]
-[Fri][11/07/2021]
-[Sat][12/07/2021]
-[Sun][13/07/2021]
-[Mon][14/07/2021]
-Events for this week:
 
-[ID:6][Optional][01/01/2000 00:00 - 01/01/2100 00:00] Name: First 100 years in 2000th
-	Place: All world
-	Description: First 100 years in 2000th in our common world, that is so small and big and so beautiful!
+--------------June---------------
+  Sun  Mon  Tue  Wed  Thu  Fri  Sat
+              1    2    3    4    5
 
 #Denní zobrazení kalendáře př.:
 Events for a 13/07/2021:
