@@ -50,9 +50,31 @@ Stejně tak lze do souboru nahrat(exportovat) všechny událostí, které jsou v
 #Roční zobrazení kalendáře př.:
 
 Calendar - "year"
+  ------------November-------------
+  Sun  Mon  Tue  Wed  Thu  Fri  Sat
+         1    2    3    4    5    6
+    7    8    9   10   11   12   13
+   14   15   16   17   18   19   20
+   21   22   23   24   25   26   27
+   28   29   30
+
+[ID:6][Optional][01/01/2000 00:00 - 01/01/2100 00:00] Name: First 100 years in 2000th
+	Place: All world
+	Description: First 100 years in 2000th in our common world, that is so small and big and so beautiful!
 
 
-  ------------January-------------
+  ------------December-------------
+  Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                   1    2    3    4
+    5    6    7    8    9   10   11
+   12   13   14   15   16   17   18
+   19   20   21   22   23   24   25
+   26   27   28   29   30   31
+
+Měsiční zobrazení kalendáře př.:
+          Calendar - 2021
+
+  --------------July---------------
   Sun  Mon  Tue  Wed  Thu  Fri  Sat
                              1    2
     3    4    5    6    7    8    9
@@ -60,77 +82,31 @@ Calendar - "year"
    17   18   19   20   21   22   23
    24   25   26   27   28   29   30
    31
-   
- `[Optional][day/month/year - day/month/year]Name: :název události:`
- `[Required][day/month/year - day/month/year]Name: :název události:`
 
-  ------------February-------------
-  Sun  Mon  Tue  Wed  Thu  Fri  Sat
-         1    2    3    4    5    6
-    7    8    9   10   11   12   13
-   14   15   16   17   18   19   20
-   21   22   23   24   25   26   27
-   28   29
-   
- `[Required][day/month/year - day/month/year]Name: :název události:`
- `[Optional][day/month/year - day/month/year]Name: :název události:`
- `[Required][day/month/year - day/month/year]Name: :název události:`
-
-
-Měsiční zobrazení kalendáře př.:
-
-  ------------February-------------
-  Sun  Mon  Tue  Wed  Thu  Fri  Sat
-         1    2    3    4    5    6
-    7    8    9   10   11   12   13
-   14   15   16   17   18   19   20
-   21   22   23   24   25   26   27
-   28   29
-
- `[Required][day/month/year - day/month/year]Name: :název události:`
- `[Optional][day/month/year - day/month/year]Name: :název události:`
- `[Required][day/month/year - day/month/year]Name: :název události:`
-
+[ID:6][Optional][01/01/2000 00:00 - 01/01/2100 00:00] Name: First 100 years in 2000th
+	Place: All world
+	Description: First 100 years in 2000th in our common world, that is so small and big and so beautiful!
 
 #Tydenní zobrazení kalendáře př.:
+[Tue][08/07/2021]
+[Wed][09/07/2021]
+[Thu][10/07/2021]
+[Fri][11/07/2021]
+[Sat][12/07/2021]
+[Sun][13/07/2021]
+[Mon][14/07/2021]
+Events for this week:
 
-  ------------January-------------
-  Sun  Mon  Tue  Wed  Thu  Fri  Sat
-                             1    2
- `[Required][day/month/year - day/month/year]Name: :název události:`                           
- `[Required][01/01/year - 28/07/year]Name: :název události:`
-                             
-  ------------January-------------
-  Sun  Mon  Tue  Wed  Thu  Fri  Sat
-    3    4    5    6    7    8    9
- `[Required][day/month/year - day/month/year]Name: :název události:`
- `[Required][01/01/year - 28/07/year]Name: :název události:`
- 
-  ------------January-------------
-  Sun  Mon  Tue  Wed  Thu  Fri  Sat
-   14   15   16   17   18   19   20                       
- `[Required][day/month/year - day/month/year]Name: :název události:`
- `[Required][01/01/year - 28/07/year]Name: :název události:`
- 
+[ID:6][Optional][01/01/2000 00:00 - 01/01/2100 00:00] Name: First 100 years in 2000th
+	Place: All world
+	Description: First 100 years in 2000th in our common world, that is so small and big and so beautiful!
+
 #Denní zobrazení kalendáře př.:
-------------January-------------
- [JANUARY][Fri][01/01/year]
-`[Required][day/month/year - day/month/year]Name: :název události:` 
+Events for a 13/07/2021:
+[ID:6][Optional][01/01/2000 00:00 - 01/01/2100 00:00] Name: First 100 years in 2000th
+	Place: All world
+	Description: First 100 years in 2000th in our common world, that is so small and big and so beautiful!
 
- [JANUARY][Sat][02/01/year]
-`[Required][day/month/year - day/month/year]Name: :název události:`
-`[Required][day/month/year - day/month/year]Name: :název události:` 
-`[Required][day/month/year - day/month/year]Name: :název události:` 
- [JANUARY][Sun][03/01/year]
- [JANUARY][Mon][04/01/year]   
- ...
- ...
- 
- ------------February-------------
- Sun  Mon  Tue  Wed  Thu  Fri  Sat
-        1    2    3    4    5    6
-`[Required][day/month/year - day/month/year]Name: :název události:`
- ...        
 
 ------------------------------------------------------------------------------------------------------------------------
 # Popis polymorfismu a zamyšlení v čem usnadní práci
