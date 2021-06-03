@@ -108,6 +108,9 @@ int CDate::numberOfDays(int monthNumber, int yearIn) const {
 }
 
 std::string CDate::getMonthName(int monthNumber) const {
+    if(monthNumber > 11) {
+        throw std::out_of_range("monthNumber is greater than 11");
+    }
     std::string months[] = {"January", "February", "March",
                             "April", "May", "June",
                             "July", "August", "September",

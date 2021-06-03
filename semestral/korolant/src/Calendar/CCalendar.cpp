@@ -756,7 +756,14 @@ void CCalendar::listEvents(ostream &m_Out, CCalendar &cCalendar) const {
 }
 
 size_t CCalendar::generateId(CCalendar &cCalendar) {
-   return cCalendar.returnMapById().size();
+    std::size_t newId = 0;
+    while(true){
+        if(!cCalendar.returnMapById().count(newId)){
+           break;
+        }
+        newId++;
+    }
+   return newId;
 }
 
 int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {

@@ -34,6 +34,11 @@ public:
 
     CDate &returnDateTo();
 
+    /**
+     * This method prints an event with different obligation wich depends on obligation of event.
+     *
+     * @param os is output stream
+     */
     virtual void printFunc(std::ostream & os) const = 0;
 
 protected:
@@ -42,6 +47,7 @@ protected:
     CDate dateFrom{};
     CDate dateTo{};
     std::string place;
+    /**vector of members, which relates to this event*/
     std::vector<std::string> members;
     std::string description;
 

@@ -34,23 +34,6 @@ void CInterface::getCommand(){
 
 }
 
-/*
-- `new ...` vytvoří novou událost, aplikace se dotáže na další parametry
-- `delete ...` smaže nějakou událost, aplikace se dotáže na další parametry
-- `listEvents` výpíše vsechny události, které jsou v kalendáři
-- `repeat ...` nastaví událost, kterou vybere uživatel, opakovaně, aplikace se dotáže na další parametry
-- `move ...` přesune událost, kterou vybere uživatel, aplikace se dotáže na další parametry
-- `showDaily` denní zobrazení kalendáře s udalostí, které má
-- `showWeekly` tydenní zobrazení kalendáře s udalostí, které má
-- `showMonthly` měsíční zobrazení kalendáře s udalostí, které má
-- `showYearly` roční zobrazení kalendáře s udalostí, které má
-- `find ...` vyhledá událost,  aplikace se dotáže na další parametry
-- `load [filename]` načte události ze souboru
-- `save [filename]` uloží události do souboru
-- `edit ...` změní událost, aplikace se dotáže na další parametry
-- `help` zobrazí nápovědu
-- `quit` ukončí program
- */
 int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
     if(words.empty()){
         m_Out << "Nothing was written. Try again or write \"help\" to show all commands.. " << endl;
@@ -176,7 +159,6 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
         words.clear();
         return -2; //does not exist
     }
-    return 0;
 }
 
 
