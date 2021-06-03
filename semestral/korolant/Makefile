@@ -1,6 +1,7 @@
 TARGET = korolant
 
 CXX = g++
+LD = g++
 MKDIR = mkdir -p
 
 CXXFLAGS = -Wall -pedantic -Wextra -std=c++14

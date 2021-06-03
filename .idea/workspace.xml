@@ -35,7 +35,7 @@
     <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="+README.md&#10;edit doxyfile and makefile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,14 +107,7 @@
       <workItem from="1622294763176" duration="622000" />
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
-      <workItem from="1622298727956" duration="118525000" />
-    </task>
-    <task id="LOCAL-00001" summary="First commit, added after KB">
-      <created>1620926569285</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1620926569285</updated>
+      <workItem from="1622298727956" duration="119160000" />
     </task>
     <task id="LOCAL-00002" summary="implemented CInterface &#10;implemented CApplication&#10;added hour and minute to CDate&#10;Change CDate from shared_ptr to CDate without pointers&#10;&#10;What do next?&#10;implement CCalendar&#10;implement CImportExport&#10;implement CEvent&#10;...">
       <created>1621716786844</created>
@@ -452,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622752206538</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="+README.md&#10;edit doxyfile and makefile">
+      <created>1622753863963</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1622753863969</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

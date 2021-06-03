@@ -1,7 +1,7 @@
 # Kalendář
-Autor: Anton Korolov
-------------------------------------------------------------------------------------------------------------------------
-# Specifikace zadání
+# Autor: Anton Korolov
+
+## O aplikaci
 Aplikace "Kalendář", uživatel aplikaci spustí a může pomocí jednoduchých příkazů do konzole ovládát aplikaci.
 Příkazy:
 - `new ...` vytvoří novou událost, aplikace se dotáže na další parametry
@@ -22,14 +22,18 @@ Příkazy:
 - `quit` ukončí program
 
 Uživatel vytvoří buď povinnou(required) nebo volitelnou(optional) událost.
-Rozdíl bude jenom v výpisu. Je to jen pro uživatele, aby věděl, musí-li této událostí zúčastnit.
-Událostí lze načíst ze souboru(měl by mít přesný tvar). Když soubor nepůjde otevřít, aplikace výhodí výjimku.
-Stejně tak lze do souboru nahrat(exportovat) všechny událostí, které jsou v kalendáří.
-------------------------------------------------------------------------------------------------------------------------
-##Výpis:
-#Roční zobrazení kalendáře př.:
 
-Calendar - "year"
+Rozdíl bude jenom v výpisu. Je to jen pro uživatele, aby věděl, musí-li této událostí zúčastnit.
+
+Událostí lze načíst ze souboru(měl by mít přesný tvar). Když soubor nepůjde otevřít, aplikace výhodí výjimku.
+
+Stejně tak lze do souboru nahrat(exportovat) všechny událostí, které jsou v kalendáří.
+
+
+## Výpis:
+# Roční zobrazení kalendáře př.:
+```
+          Calendar - "year"
   ------------November-------------
   Sun  Mon  Tue  Wed  Thu  Fri  Sat
          1    2    3    4    5    6
@@ -51,7 +55,7 @@ Calendar - "year"
    19   20   21   22   23   24   25
    26   27   28   29   30   31
 
-Měsiční zobrazení kalendáře př.:
+# Měsiční zobrazení kalendáře př.:
           Calendar - 2021
 
   --------------July---------------
@@ -67,21 +71,21 @@ Měsiční zobrazení kalendáře př.:
 	Place: All world
 	Description: First 100 years in 2000th in our common world, that is so small and big and so beautiful!
 
-#Tydenní zobrazení kalendáře př.:
+# Tydenní zobrazení kalendáře př.:
 
 --------------June---------------
   Sun  Mon  Tue  Wed  Thu  Fri  Sat
               1    2    3    4    5
 
-#Denní zobrazení kalendáře př.:
+# Denní zobrazení kalendáře př.:
 Events for a 13/07/2021:
 [ID:6][Optional][01/01/2000 00:00 - 01/01/2100 00:00] Name: First 100 years in 2000th
 	Place: All world
 	Description: First 100 years in 2000th in our common world, that is so small and big and so beautiful!
 
-
+```
 ------------------------------------------------------------------------------------------------------------------------
-# Popis polymorfismu a zamyšlení v čem usnadní práci
+## Popis polymorfismu a zamyšlení v čem usnadní práci
 Polymorfismus používám ve třídách "CView" a "CEvent"
 
 Ve třídě "CView" polymorfismus mi usnadní výpis.
