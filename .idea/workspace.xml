@@ -32,8 +32,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="makefile">
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/examples/fileToLoad.txt" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/examples/fileToLoad.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,7 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="korolant" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" REDIRECT_INPUT_PATH="$PROJECT_DIR$/semestral/korolant/examples/uploadTenEvents.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="semestralka" TARGET_NAME="korolant" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="semestralka" RUN_TARGET_NAME="korolant">
+    <configuration name="korolant" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="true" REDIRECT_INPUT_PATH="$PROJECT_DIR$/../ant.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="semestralka" TARGET_NAME="korolant" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="semestralka" RUN_TARGET_NAME="korolant">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -106,7 +107,7 @@
       <workItem from="1622294763176" duration="622000" />
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
-      <workItem from="1622298727956" duration="112392000" />
+      <workItem from="1622298727956" duration="114922000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, added after KB">
       <created>1620926569285</created>
@@ -423,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622740634276</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="import">
+      <created>1622742852749</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1622742852749</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +451,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="has been implemented:&#10;1) first date greater than second(problem), this problem has been solved (edit + new)&#10;&#10;NEED TO DO:&#10;1)import/export &#10;2)presunuti&#10;3)view" />
     <MESSAGE value="has been implemented:&#10;import/export&#10;rozbil jsem to po tridach, ted ten CInterface je hezci, prestal fungovat view(hlasi chyby, ale s tim jsem nic nedelal)&#10;&#10;NEED TO DO:&#10;1)presunuti&#10;2)view&#10;3)tests&#10;4) osetrseni" />
     <MESSAGE value="has been implemented:&#10;edit to edit with name/place/desc/members...&#10;find by name or place&#10;&#10;NEED TO DO:&#10;1)presunuti&#10;2)view&#10;3)tests&#10;4)osetrseni!&#10;5)nastavit udalost opakovane" />
     <MESSAGE value="hned link" />
@@ -468,14 +475,15 @@
     <MESSAGE value="implemented:&#10;&#10;added:&#10;+ Dependencies&#10;&#10;need to do:&#10;doc comments&#10;..." />
     <MESSAGE value="doc comments&#10;&#10;need to do:&#10;..." />
     <MESSAGE value="makefile" />
-    <option name="LAST_COMMIT_MESSAGE" value="makefile" />
+    <MESSAGE value="import" />
+    <option name="LAST_COMMIT_MESSAGE" value="import" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622725641643">
+    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622743617401">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622661076543" />
-    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622725641643" />
+    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622743617401" />
     <state x="525" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622715719668">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -490,51 +498,51 @@
     </state>
     <state x="552" y="213" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622646801324" />
     <state x="2610" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622284373892" />
-    <state x="2606" y="215" key="FileChooserDialogImpl" timestamp="1622645761474">
+    <state x="2606" y="215" key="FileChooserDialogImpl" timestamp="1622743615328">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621713813764" />
-    <state x="2606" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622645761474" />
-    <state width="1877" height="8" key="GridCell.Tab.0.bottom" timestamp="1622727860422">
+    <state x="2606" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622743615328" />
+    <state width="1877" height="172" key="GridCell.Tab.0.bottom" timestamp="1622745230293">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="108" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622667315548" />
-    <state width="1877" height="8" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622727860422" />
-    <state width="1877" height="8" key="GridCell.Tab.0.center" timestamp="1622727860422">
+    <state width="1877" height="172" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745230293" />
+    <state width="1877" height="172" key="GridCell.Tab.0.center" timestamp="1622745230292">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="108" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622667315548" />
-    <state width="1877" height="8" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622727860422" />
-    <state width="1877" height="8" key="GridCell.Tab.0.left" timestamp="1622727860422">
+    <state width="1877" height="172" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745230292" />
+    <state width="1877" height="172" key="GridCell.Tab.0.left" timestamp="1622745230292">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="108" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622667315548" />
-    <state width="1877" height="8" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622727860422" />
-    <state width="1877" height="8" key="GridCell.Tab.0.right" timestamp="1622727860422">
+    <state width="1877" height="172" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745230292" />
+    <state width="1877" height="172" key="GridCell.Tab.0.right" timestamp="1622745230292">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="108" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622667315548" />
-    <state width="1877" height="8" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622727860422" />
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1622642483911">
+    <state width="1877" height="172" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745230292" />
+    <state width="1877" height="241" key="GridCell.Tab.1.bottom" timestamp="1622745045630">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622642483911" />
-    <state width="1877" height="340" key="GridCell.Tab.1.center" timestamp="1622642483911">
+    <state width="1877" height="241" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745045630" />
+    <state width="1877" height="241" key="GridCell.Tab.1.center" timestamp="1622745045630">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622642483911" />
-    <state width="1877" height="340" key="GridCell.Tab.1.left" timestamp="1622642483911">
+    <state width="1877" height="241" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745045630" />
+    <state width="1877" height="241" key="GridCell.Tab.1.left" timestamp="1622745045630">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622642483911" />
-    <state width="1877" height="340" key="GridCell.Tab.1.right" timestamp="1622642483911">
+    <state width="1877" height="241" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745045630" />
+    <state width="1877" height="241" key="GridCell.Tab.1.right" timestamp="1622745045630">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622642483911" />
+    <state width="1877" height="241" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745045630" />
     <state x="279" y="58" key="SettingsEditor" timestamp="1622571997147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -562,13 +570,27 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2536" y="240" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622292324364" />
-    <state x="2459" y="183" width="840" height="856" key="search.everywhere.popup" timestamp="1622294249994">
+    <state x="2459" y="183" width="840" height="856" key="search.everywhere.popup" timestamp="1622743272451">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857203745" />
-    <state x="2459" y="183" width="840" height="856" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622294249994" />
+    <state x="2459" y="183" width="840" height="856" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622743272451" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp</url>
+          <line>7</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp</url>
+          <line>208</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="dateToIn" />

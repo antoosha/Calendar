@@ -36,7 +36,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
                 indata.close();
                 return 0;
             }
-            // word is not new, we are skipping other linew from event, which was earlier
+            // word is not new, we are skipping other line from event, which was earlier
             //we are going to next event
             continue;
         }
@@ -70,9 +70,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> yearFrom;
 
-        if (yearFrom < 1600 || yearFrom > 9999 || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (yearFrom < 1600 || yearFrom > 9999 || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -80,9 +80,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> monthFrom;
 
-        if (monthFrom < 1 || monthFrom > 12 || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (monthFrom < 1 || monthFrom > 12 || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -90,9 +90,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> dayFrom;
 
-        if (dayFrom > cDate->numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1 || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (dayFrom > cDate->numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1 || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -100,9 +100,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> hourFrom;
 
-        if (hourFrom > 23 || hourFrom < 0 || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (hourFrom > 23 || hourFrom < 0 || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -110,9 +110,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> minuteFrom;
 
-        if (minuteFrom > 59 || minuteFrom < 0 || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (minuteFrom > 59 || minuteFrom < 0 || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -122,9 +122,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> yearTo;
 
-        if (yearTo < 1600 || yearTo > 9999 || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (yearTo < 1600 || yearTo > 9999 || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -132,9 +132,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> monthTo;
 
-        if (monthTo < 1 || monthTo > 12 || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (monthTo < 1 || monthTo > 12 || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -142,9 +142,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> dayTo;
 
-        if (dayTo > cDate->numberOfDays(monthTo - 1, yearTo) || dayTo < 1 || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (dayTo > cDate->numberOfDays(monthTo - 1, yearTo) || dayTo < 1 || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -152,9 +152,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> hourTo;
 
-        if (hourTo > 23 || hourTo < 0 || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (hourTo > 23 || hourTo < 0 || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -162,9 +162,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> minuteTo;
 
-        if (minuteTo > 59 || minuteTo < 0 || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (minuteTo > 59 || minuteTo < 0 || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             howManyEventsHasBeenSkipped++;
             continue;
         }
@@ -185,7 +185,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
         while(1) {
             char sign;
             indata >> sign;
-            if(sign != '+' && sign != '-'){
+            if((sign != '+' && sign != '-') || indata.fail() ){
+                indata.clear();
+                indata.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
             }
             indata.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -204,17 +206,16 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
         }
 
 
-        char sign;
-        m_In >> sign;
-        if ((sign != '+' && sign != '-') || m_In.fail()) {
-            m_In.clear();
-            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        char sign = ' ';
+        indata >> sign;
+        if ((sign != '+' && sign != '-') || indata.fail()) {
+            indata.clear();
+            indata.ignore(numeric_limits<streamsize>::max(), '\n');
             continue;
         }
-        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-
+        indata.ignore(numeric_limits<streamsize>::max(), '\n');
         if (sign == '+') {
-            getline(m_In, description);
+            getline(indata, description);
             if (description.empty()) {
                 continue;
             }
