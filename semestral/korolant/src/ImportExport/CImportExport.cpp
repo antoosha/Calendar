@@ -31,6 +31,11 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
     while ( !indata.eof() ) { // keep reading until end-of-file
         string commandNew;
         while(getline(indata, commandNew) && strcasecmp(commandNew.c_str(), "new")){
+            if(indata.eof()){
+                m_Out << howManyEventsHasBeenRead << "/" << howManyEventsHasBeenRead + howManyEventsHasBeenSkipped << " events has been loaded." << endl;
+                indata.close();
+                return 0;
+            }
             // word is not new, we are skipping other linew from event, which was earlier
             //we are going to next event
             continue;
