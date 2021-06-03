@@ -32,11 +32,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="+README.md&#10;edit doxyfile and makefile">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="+README.md&#10;edit doxyfile and makefile" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,14 +103,7 @@
       <workItem from="1622294763176" duration="622000" />
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
-      <workItem from="1622298727956" duration="119160000" />
-    </task>
-    <task id="LOCAL-00002" summary="implemented CInterface &#10;implemented CApplication&#10;added hour and minute to CDate&#10;Change CDate from shared_ptr to CDate without pointers&#10;&#10;What do next?&#10;implement CCalendar&#10;implement CImportExport&#10;implement CEvent&#10;...">
-      <created>1621716786844</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1621716786844</updated>
+      <workItem from="1622298727956" duration="119869000" />
     </task>
     <task id="LOCAL-00003" summary="was implemented command &quot;new&quot; in interface&#10;mapByName was changed to multimap&#10;in CDate ints were changed to one string&#10;&#10;what need to be implemented next:&#10;CDATE string could be bad and will bring problems&#10;iplement reading of members another way, because now it works only with names, if person have name and surname, could be problem!">
       <created>1621863236754</created>
@@ -452,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622753863969</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="+README.md&#10;edit doxyfile and makefile">
+      <created>1622754704137</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1622754704137</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

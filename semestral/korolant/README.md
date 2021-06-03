@@ -31,8 +31,9 @@ Stejně tak lze do souboru nahrat(exportovat) všechny událostí, které jsou v
 
 
 ## Výpis:
-# Roční zobrazení kalendáře př.:
 ```
+
+# Roční zobrazení kalendáře př.:
           Calendar - "year"
   ------------November-------------
   Sun  Mon  Tue  Wed  Thu  Fri  Sat
@@ -78,6 +79,7 @@ Stejně tak lze do souboru nahrat(exportovat) všechny událostí, které jsou v
               1    2    3    4    5
 
 # Denní zobrazení kalendáře př.:
+
 Events for a 13/07/2021:
 [ID:6][Optional][01/01/2000 00:00 - 01/01/2100 00:00] Name: First 100 years in 2000th
 	Place: All world
