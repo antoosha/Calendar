@@ -1,25 +1,41 @@
+TARGET = korolant
+
 CXX = g++
-LD = g++
+MKDIR = mkdir -p
+
 CXXFLAGS = -Wall -pedantic -Wextra -std=c++14
 
-HEADERS = $(wildcard src/*.h)
+SOURCE_DIR = src
+BUILD_DIR = build
 
-all: app
+SOURCES = $(wildcard $(SOURCE_DIR)/*.cpp)
+HEADERS = $(wildcard $(SOURCE_DIR)/*.h)
+OBJECTS = $(SOURCES:$(SOURCE_DIR)/%.cpp=$(BUILD_DIR)/%.o)
 
-app:  src/main.o src/Application/CApplication.o src/Calendar/CCalendar.o src/Calendar/CDate.o src/Calendar/CEvent.o src/Calendar/COptional.o src/Calendar/CRequired.o src/ImportExport/CImportExport.o src/Interface/CInterface.o src/Postpone/CPostpone.o src/Repeat/CRepeat.o src/View/CDaily.o src/View/CMonthly.o src/View/CWeekly.o src/View/CYearly.o
-	$(LD) $(CXXFLAGS) -o $@ $^
+.PHONY: all
+all: compile doc
 
-deps:
-	$(CXX) -MM src/main.cpp src/Application/CApplication.cpp src/Calendar/CCalendar.cpp src/Calendar/CDate.cpp src/Calendar/CEvent.cpp src/Calendar/COptional.cpp src/Calendar/CRequired.cpp src/ImportExport/CImportExport.cpp src/Interface/CInterface.cpp src/Postpone/CPostpone.cpp src/Repeat/CRepeat.cpp src/View/CDaily.cpp src/View/CMonthly.cpp src/View/CWeekly.cpp src/View/CYearly.cpp > Makefile.d
+.PHONY: compile
+compile: $(TARGET)
+
+.PHONY: run
+run: $(TARGET)
+	./$(TARGET)
+
+$(TARGET): $(OBJECTS)
+	$(CXX) $^ -o $@
+
+$(BUILD_DIR)/%.o: $(SOURCE_DIR)/%.cpp
+	$(MKDIR) $(BUILD_DIR)
+	$(CXX) $(CXXFLAGS) $< -c -o $@
 
 doc: Doxyfile $(HEADERS)
 	doxygen Doxyfile
 	
+PHONY: clean
 clean:
-	rm -rf *.o doc/ app 2>/dev/null
-	@echo "Has been cleaned."
+	rm -rf $(TARGET) doc/ $(BUILD_DIR)/ 2>/dev/null
 
--include Makefile.d
 
 # Requirements / Dependencies
 main.o: src/main.cpp src/Application/CApplication.h \
