@@ -69,13 +69,13 @@ public:
 
     /**
      * This method moves months forward for months from input parameter
-     * @param days for how many months to move
+     * @param months for how many months to move
      */
     void moveMonths(int months);
 
     /**
      * This method moves years forward for years from input parameter
-     * @param days for how many years to move
+     * @param years for how many years to move
      */
     void moveYears(int years);
 
