@@ -32,11 +32,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="CDate.h">
-      <change afterPath="$PROJECT_DIR$/semestral/korolant/README.md" afterDir="false" />
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="+README.md&#10;edit doxyfile and makefile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/Doxyfile" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/Doxyfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +107,7 @@
       <workItem from="1622294763176" duration="622000" />
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
-      <workItem from="1622298727956" duration="116855000" />
+      <workItem from="1622298727956" duration="118525000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, added after KB">
       <created>1620926569285</created>
@@ -446,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622745505404</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="+README.md&#10;edit doxyfile and makefile">
+      <created>1622752206538</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1622752206538</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +472,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="has been implemented:&#10;edit to edit with name/place/desc/members...&#10;find by name or place&#10;&#10;NEED TO DO:&#10;1)presunuti&#10;2)view&#10;3)tests&#10;4)osetrseni!&#10;5)nastavit udalost opakovane" />
     <MESSAGE value="hned link" />
     <MESSAGE value="predelal jsem normalne virtualy a ted nemam cycklickou smycku" />
     <MESSAGE value="i have implemented find with both of parameters and that is all :)" />
@@ -491,7 +496,8 @@
     <MESSAGE value="makefile" />
     <MESSAGE value="import" />
     <MESSAGE value="CDate.h" />
-    <option name="LAST_COMMIT_MESSAGE" value="CDate.h" />
+    <MESSAGE value="+README.md&#10;edit doxyfile and makefile" />
+    <option name="LAST_COMMIT_MESSAGE" value="+README.md&#10;edit doxyfile and makefile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622743617401">

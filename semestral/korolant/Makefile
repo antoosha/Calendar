@@ -22,8 +22,8 @@ compile: $(TARGET)
 run: $(TARGET)
 	./$(TARGET)
 
-$(TARGET): $(OBJECTS)
-	$(CXX) $^ -o $@
+$(TARGET): src/main.o src/Application/CApplication.o src/Calendar/CCalendar.o src/Calendar/CDate.o src/Calendar/CEvent.o src/Calendar/COptional.o src/Calendar/CRequired.o src/ImportExport/CImportExport.o src/Interface/CInterface.o src/Postpone/CPostpone.o src/Repeat/CRepeat.o src/View/CDaily.o src/View/CMonthly.o src/View/CWeekly.o src/View/CYearly.o
+	$(LD) $(CXXFLAGS) -o $@ $^
 
 $(BUILD_DIR)/%.o: $(SOURCE_DIR)/%.cpp
 	$(MKDIR) $(BUILD_DIR)
