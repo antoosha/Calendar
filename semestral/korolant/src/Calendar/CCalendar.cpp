@@ -226,13 +226,15 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
     m_Out << "Choose obligation of this event, write \"required\" or \"optional\" and press 'Enter':" << endl;
     m_In >> obligation;
 
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     if(strcasecmp(obligation.c_str(), "required") != 0){
         if(strcasecmp(obligation.c_str(), "optional") != 0){
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
             m_Out << "You should write obligation in correct format \"required\" or \"optional\", try again.." << endl;
             return -4; // something went wrong
         }
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
     id = generateId(cCalendar);
     cCalendar.addEvent(id, name, dateFrom, dateTo, place, members, description, obligation);
@@ -536,14 +538,14 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
     m_Out << "2) Place:" << endl;
     m_Out << "3) Name and place:" << endl;
     m_In >> number;
-
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     if(number != 1 && number != 2 && number != 3){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Number is not correct, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
     if(mapOfEventsByName.empty()){
         m_Out << "Any events have not been found, calendar has not any events." << endl;
         return 0;
@@ -714,30 +716,30 @@ int CCalendar::deleteEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
     m_Out << "Write id of event to delete and press 'Enter':" << endl;
     m_In >> idToDelete;
 
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     if(!cCalendar.returnMapById().count(idToDelete)){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Event with id " << idToDelete << " does not exist, try again.."  << endl;
         return -4;
     }
-    else{
-        cCalendar.returnMapById().erase(idToDelete);
-        for(auto i = cCalendar.returnMapByName().begin(); i != cCalendar.returnMapByName().end(); i++){
-            if(i->second->returnId() == idToDelete){
-                cCalendar.returnMapByName().erase(i);
-                break;
-            }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    cCalendar.returnMapById().erase(idToDelete);
+    for(auto i = cCalendar.returnMapByName().begin(); i != cCalendar.returnMapByName().end(); i++){
+        if(i->second->returnId() == idToDelete){
+            cCalendar.returnMapByName().erase(i);
+            break;
         }
-        for(auto i = cCalendar.returnMapByDate().begin(); i != cCalendar.returnMapByDate().end(); i++){
-            if(i->second->returnId() == idToDelete){
-                cCalendar.returnMapByDate().erase(i);
-                break;
-            }
-        }
-        m_Out << "Event was successfully deleted." << endl;
-        return 0;
     }
+    for(auto i = cCalendar.returnMapByDate().begin(); i != cCalendar.returnMapByDate().end(); i++){
+        if(i->second->returnId() == idToDelete){
+            cCalendar.returnMapByDate().erase(i);
+            break;
+        }
+    }
+    m_Out << "Event was successfully deleted." << endl;
+    return 0;
+
 
 }
 
@@ -771,13 +773,13 @@ int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCale
     m_Out << "Write id of event you want to find first possible term to postpone it and press 'Enter':" << endl;
     m_In >> id;
 
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     if(cCalendar.returnMapById().count(id) == 0){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "This ID does not exist, try again.." << endl;
         return -4;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     string dateFromStr = cCalendar.mapOfEventsById.at(id)->returnDateFrom().dateToString();
     string dateToStr = cCalendar.mapOfEventsById.at(id)->returnDateTo().dateToString();
     for(auto i = cCalendar.mapOfEventsByDate.begin(); i != cCalendar.mapOfEventsByDate.end(); i++){

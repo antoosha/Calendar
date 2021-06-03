@@ -13,18 +13,22 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
     m_Out << "Write path to file, from where you want to import data from calendar and press 'Enter':" << endl;
     m_Out << "Example: \"C:\\Users\\PC\\Desktop\\file.txt\"" << endl;
     m_In >> fileName;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
     indata.open(fileName); // opens the file
     if(!indata) { // file couldn't be opened
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Error: file could not be opened, try again.." << endl;
         return -4;
     }
     if(indata.eof()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "File is empty. Nothing was recorded." << endl;
         indata.close();
         return 0;
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
 
 
@@ -248,14 +252,16 @@ int CImportExport::exportData (std::istream & m_In, std::ostream & m_Out, CCalen
     m_Out << "Example: \"C:\\Users\\PC\\Desktop\\file.txt\"" << endl;
     m_Out << "Attantion! The data in the file will be overwritten." << endl;
     m_In >> fileName;
-    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
     ofstream outdata; // outdata is like cin
     outdata.open(fileName); // opens the file
     if( !outdata ) { // file couldn't be opened
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Error: file could not be opened, try again.." << endl;
         return -4; //something went wrong
     }
+    m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
     if(cCalendar.returnMapById().empty()){
         m_Out << "Events has not been saved, calendar has not any events." << endl;
