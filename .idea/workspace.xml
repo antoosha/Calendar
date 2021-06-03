@@ -32,28 +32,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="implemented:&#10;&#10;added:&#10;+ Dependencies&#10;&#10;need to do:&#10;doc comments&#10;...">
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="doc comments&#10;&#10;need to do:&#10;...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Application/CApplication.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Application/CApplication.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Application/CApplication.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Application/CApplication.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CEvent.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CEvent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/COptional.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/COptional.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CRequired.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CRequired.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Postpone/CPostpone.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Postpone/CPostpone.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Repeat/CRepeat.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Repeat/CRepeat.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CView.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CView.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/Doxyfile" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/Doxyfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +100,7 @@
       <workItem from="1622294763176" duration="622000" />
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
-      <workItem from="1622298727956" duration="106171000" />
+      <workItem from="1622298727956" duration="107945000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, added after KB">
       <created>1620926569285</created>
@@ -394,7 +375,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622716190136</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="doc comments&#10;&#10;need to do:&#10;...">
+      <created>1622735543918</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1622735543918</updated>
+    </task>
+    <task id="LOCAL-00041" summary="doc comments&#10;&#10;need to do:&#10;...">
+      <created>1622735650683</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1622735650683</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +409,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed CDate string to ints&#10;&#10;need to do:&#10;TODO EDIT osetreseni vstupu in reading date From and To&#10;TODO implement reading of new date with osetrseni vstupu&#10;TODO vypisByDay, byWeek,byMonth&#10;TODO presun&#10;TODO imp/exp" />
     <MESSAGE value="has been implemented:&#10;1) osetrseni vstupu(70%) need to do if first date greater than second(problem) &#10;2)EDIT with osetreseni vstupu&#10;&#10;NEED TO DO:&#10;1)osetrseni vstupu(first date greater than second) new + edit&#10;2)import/export &#10;3)presunuti&#10;4)view" />
     <MESSAGE value="has been implemented:&#10;1) first date greater than second(problem), this problem has been solved (edit + new)&#10;&#10;NEED TO DO:&#10;1)import/export &#10;2)presunuti&#10;3)view" />
     <MESSAGE value="has been implemented:&#10;import/export&#10;rozbil jsem to po tridach, ted ten CInterface je hezci, prestal fungovat view(hlasi chyby, ale s tim jsem nic nedelal)&#10;&#10;NEED TO DO:&#10;1)presunuti&#10;2)view&#10;3)tests&#10;4) osetrseni" />
@@ -439,7 +433,8 @@
     <MESSAGE value="implemented:&#10;&#10;need to do:&#10;doc comments&#10;..." />
     <MESSAGE value="implemented:&#10;&#10;added:&#10;Doxyfile&#10;&#10;need to do:&#10;doc comments&#10;..." />
     <MESSAGE value="implemented:&#10;&#10;added:&#10;+ Dependencies&#10;&#10;need to do:&#10;doc comments&#10;..." />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented:&#10;&#10;added:&#10;+ Dependencies&#10;&#10;need to do:&#10;doc comments&#10;..." />
+    <MESSAGE value="doc comments&#10;&#10;need to do:&#10;..." />
+    <option name="LAST_COMMIT_MESSAGE" value="doc comments&#10;&#10;need to do:&#10;..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622725641643">
