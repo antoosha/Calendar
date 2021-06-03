@@ -35,7 +35,7 @@ doc: Doxyfile $(HEADERS)
 	
 PHONY: clean
 clean:
-	rm -rf src/*/*.o $(TARGET) doc/ $(BUILD_DIR)/ 2>/dev/null
+	rm -rf src/*.o src/*/*.o $(TARGET) doc/ $(BUILD_DIR)/ 2>/dev/null
 
 
 # Requirements / Dependencies
