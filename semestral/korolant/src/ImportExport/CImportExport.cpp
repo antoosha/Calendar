@@ -223,8 +223,8 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         indata >> obligation;
         indata.ignore(numeric_limits<streamsize>::max(), '\n');
-        if(strcasecmp(obligation.c_str(), "required") < 0){
-            if(strcasecmp(obligation.c_str(), "optional") < 0){
+        if(strcasecmp(obligation.c_str(), "required") != 0){
+            if(strcasecmp(obligation.c_str(), "optional") != 0){
                 howManyEventsHasBeenSkipped++;
                 continue;
             }

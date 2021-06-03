@@ -227,8 +227,8 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
     m_In >> obligation;
 
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    if(strcasecmp(obligation.c_str(), "required") < 0){
-        if(strcasecmp(obligation.c_str(), "optional") < 0){
+    if(strcasecmp(obligation.c_str(), "required") != 0){
+        if(strcasecmp(obligation.c_str(), "optional") != 0){
             m_Out << "You should write obligation in correct format \"required\" or \"optional\", try again.." << endl;
             return -4; // something went wrong
         }
