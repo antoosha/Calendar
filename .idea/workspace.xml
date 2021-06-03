@@ -32,7 +32,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="doc comments&#10;&#10;need to do:&#10;...">
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="makefile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/Doxyfile" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/Doxyfile" afterDir="false" />
     </list>
@@ -100,7 +100,7 @@
       <workItem from="1622294763176" duration="622000" />
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
-      <workItem from="1622298727956" duration="107945000" />
+      <workItem from="1622298727956" duration="108572000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, added after KB">
       <created>1620926569285</created>
@@ -389,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622735650683</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="makefile">
+      <created>1622737311575</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1622737311575</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +416,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="has been implemented:&#10;1) osetrseni vstupu(70%) need to do if first date greater than second(problem) &#10;2)EDIT with osetreseni vstupu&#10;&#10;NEED TO DO:&#10;1)osetrseni vstupu(first date greater than second) new + edit&#10;2)import/export &#10;3)presunuti&#10;4)view" />
     <MESSAGE value="has been implemented:&#10;1) first date greater than second(problem), this problem has been solved (edit + new)&#10;&#10;NEED TO DO:&#10;1)import/export &#10;2)presunuti&#10;3)view" />
     <MESSAGE value="has been implemented:&#10;import/export&#10;rozbil jsem to po tridach, ted ten CInterface je hezci, prestal fungovat view(hlasi chyby, ale s tim jsem nic nedelal)&#10;&#10;NEED TO DO:&#10;1)presunuti&#10;2)view&#10;3)tests&#10;4) osetrseni" />
     <MESSAGE value="has been implemented:&#10;edit to edit with name/place/desc/members...&#10;find by name or place&#10;&#10;NEED TO DO:&#10;1)presunuti&#10;2)view&#10;3)tests&#10;4)osetrseni!&#10;5)nastavit udalost opakovane" />
@@ -434,7 +440,8 @@
     <MESSAGE value="implemented:&#10;&#10;added:&#10;Doxyfile&#10;&#10;need to do:&#10;doc comments&#10;..." />
     <MESSAGE value="implemented:&#10;&#10;added:&#10;+ Dependencies&#10;&#10;need to do:&#10;doc comments&#10;..." />
     <MESSAGE value="doc comments&#10;&#10;need to do:&#10;..." />
-    <option name="LAST_COMMIT_MESSAGE" value="doc comments&#10;&#10;need to do:&#10;..." />
+    <MESSAGE value="makefile" />
+    <option name="LAST_COMMIT_MESSAGE" value="makefile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622725641643">
