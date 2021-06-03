@@ -487,7 +487,6 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             }
             m_Out << "Write index of person, who you want to delete from this event and press 'Enter':" << endl;
             m_In >> index;
-            m_In >> index;
 
             if(index <= 0 || (size_t)index >  cCalendar.returnMapById().at(id)->returnMembers().size() || m_In.fail()){
                 m_In.clear();
@@ -497,7 +496,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             }
             m_In.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            auto indexIter = cCalendar.returnMapById().at(id)->returnMembers().begin() + index - 1 ; // -1 beacouse in vector in 0 1 2 3... but for user is 1 2 3
+            auto indexIter = cCalendar.returnMapById().at(id)->returnMembers().begin() + index - 1 ; // -1 because in vector in 0 1 2 3... but for user is 1 2 3
             cCalendar.returnMapById().at(id)->returnMembers().erase(indexIter);
             m_Out << "Person has been successfully deleted." << endl;
             return 0;
@@ -538,7 +537,7 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
     m_Out << "2) Place:" << endl;
     m_Out << "3) Name and place:" << endl;
     m_In >> number;
-    if(number != 1 && number != 2 && number != 3){
+    if((number != 1 && number != 2 && number != 3) || m_In.fail() ){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Number is not correct, try again.." << endl;
@@ -716,6 +715,12 @@ int CCalendar::deleteEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
     m_Out << "Write id of event to delete and press 'Enter':" << endl;
     m_In >> idToDelete;
 
+    if(idToDelete < 0 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "ID should be greater than 0, try again.."  << endl;
+        return -4;
+    }
     if(!cCalendar.returnMapById().count(idToDelete)){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -773,6 +778,12 @@ int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCale
     m_Out << "Write id of event you want to find first possible term to postpone it and press 'Enter':" << endl;
     m_In >> id;
 
+    if(id < 0){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "ID should be greater than 0, try again.."  << endl;
+        return -4;
+    }
     if(cCalendar.returnMapById().count(id) == 0){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');

@@ -5,7 +5,7 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     int id;
     m_Out << "Write id of event what you want to repeat and press 'Enter':" << endl;
     m_In >> id;
-    if(m_In.fail()){
+    if( id < 0 || m_In.fail()){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
         m_Out << "Id is not correct, try again.."  << endl;

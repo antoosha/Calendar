@@ -6,6 +6,12 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     m_Out << "Write id of event you want to move and press 'Enter':" << endl;
     m_In >> idToMove;
 
+    if(idToMove < 0 || m_In.fail()){
+        m_In.clear();
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        m_Out << "ID should be greater than 0, try again.."  << endl;
+        return -4;
+    }
     if(!cCalendar.returnMapById().count(idToMove) || m_In.fail()){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
