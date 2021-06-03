@@ -16,7 +16,7 @@ doc: Doxyfile $(HEADERS)
 	doxygen Doxyfile
 	
 clean:
-	rm -f app doc/ $(BUILD_DIR)/ 2>/dev/null
+	rm -f *.o app doc/ 2>/dev/null
 	@echo "Has been cleaned."
 
 -include Makefile.d
