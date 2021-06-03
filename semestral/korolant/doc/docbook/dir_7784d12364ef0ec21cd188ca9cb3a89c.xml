@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_7784d12364ef0ec21cd188ca9cb3a89c">
+<title>src/View Directory Reference</title>
+<indexterm><primary>src/View Directory Reference</primary></indexterm>
+Directory dependency graph for View:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_7784d12364ef0ec21cd188ca9cb3a89c_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_CDaily_8cpp">CDaily.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_CDaily_8h">CDaily.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_CMonthly_8cpp">CMonthly.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_CMonthly_8h">CMonthly.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_CView_8h">CView.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_CWeekly_8cpp">CWeekly.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_CWeekly_8h">CWeekly.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_CYearly_8cpp">CYearly.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_CYearly_8h">CYearly.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

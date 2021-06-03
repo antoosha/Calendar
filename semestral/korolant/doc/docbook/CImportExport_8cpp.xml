@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_CImportExport_8cpp">
+<title>src/ImportExport/CImportExport.cpp File Reference</title>
+<indexterm><primary>src/ImportExport/CImportExport.cpp</primary></indexterm>
+<programlisting>#include &quot;CImportExport.h&quot;
+</programlisting>Include dependency graph for CImportExport.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="CImportExport_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classCDate">CDate</link> * <link linkend="_CImportExport_8cpp_1a8eb3694935cf03cd133ae70215eae227">cDate</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_CImportExport_8cpp_1a8eb3694935cf03cd133ae70215eae227"/>    <section>
+    <title>cDate</title>
+<indexterm><primary>cDate</primary><secondary>CImportExport.cpp</secondary></indexterm>
+<indexterm><primary>CImportExport.cpp</primary><secondary>cDate</secondary></indexterm>
+<para><computeroutput><link linkend="_classCDate">CDate</link>* cDate</computeroutput></para></section>
+</section>
+</section>

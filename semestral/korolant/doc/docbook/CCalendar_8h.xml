@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_CCalendar_8h">
+<title>src/Calendar/CCalendar.h File Reference</title>
+<indexterm><primary>src/Calendar/CCalendar.h</primary></indexterm>
+<programlisting>#include &lt;map&gt;
+#include &lt;string&gt;
+#include &lt;memory&gt;
+#include &lt;vector&gt;
+#include &lt;utility&gt;
+#include &lt;cstring&gt;
+#include &lt;limits&gt;
+#include &lt;typeinfo&gt;
+#include &lt;algorithm&gt;
+#include &quot;CEvent.h&quot;
+#include &quot;COptional.h&quot;
+#include &quot;CRequired.h&quot;
+#include &quot;CDate.h&quot;
+</programlisting>Include dependency graph for CCalendar.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="CCalendar_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="CCalendar_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classCCalendar">CCalendar</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

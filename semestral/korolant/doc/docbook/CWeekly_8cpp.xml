@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_CWeekly_8cpp">
+<title>src/View/CWeekly.cpp File Reference</title>
+<indexterm><primary>src/View/CWeekly.cpp</primary></indexterm>
+<programlisting>#include &quot;CWeekly.h&quot;
+#include &lt;chrono&gt;
+</programlisting>Include dependency graph for CWeekly.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="CWeekly_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

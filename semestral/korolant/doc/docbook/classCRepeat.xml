@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classCRepeat">
+<title>CRepeat Class Reference</title>
+<indexterm><primary>CRepeat</primary></indexterm>
+<para>
+<computeroutput>#include &lt;CRepeat.h&gt;</computeroutput>
+</para>
+Collaboration diagram for CRepeat:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCRepeat__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_classCRepeat_1a6bfe547c5e84d11386d48983867cdf74">repeatEvent</link> (std::istream &amp;m_In, std::ostream &amp;m_Out, <link linkend="_classCCalendar">CCalendar</link> &amp;cCalendar)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classCRepeat_1a6bfe547c5e84d11386d48983867cdf74"/>    <section>
+    <title>repeatEvent()</title>
+<indexterm><primary>repeatEvent</primary><secondary>CRepeat</secondary></indexterm>
+<indexterm><primary>CRepeat</primary><secondary>repeatEvent</secondary></indexterm>
+<para><computeroutput>int CRepeat::repeatEvent (std::istream &amp; m_In, std::ostream &amp; m_Out, <link linkend="_classCCalendar">CCalendar</link> &amp; cCalendar)</computeroutput></para>
+<para>This method repeat event, which user will choose using id of event. Is possible to repeat event by days, by month, by weeks and by years. How many times to repeat event user writes. Maximum is 30 times.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>m_In</entry>
+                                <entry>
+<para>is input stream </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>m_Out</entry>
+                                <entry>
+<para>is output stream </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>cCalendar</entry>
+                                <entry>
+<para>is a reference to an object of <link linkend="_classCCalendar">CCalendar</link> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>if all is OK </para>
+
+<para>if something went wrong </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCRepeat_a6bfe547c5e84d11386d48983867cdf74_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCRepeat_a6bfe547c5e84d11386d48983867cdf74_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/Repeat/<link linkend="_CRepeat_8h">CRepeat.h</link>src/Repeat/<link linkend="_CRepeat_8cpp">CRepeat.cpp</link></section>
+</section>

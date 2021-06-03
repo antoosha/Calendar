@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classCYearly">
+<title>CYearly Class Reference</title>
+<indexterm><primary>CYearly</primary></indexterm>
+<para>
+<computeroutput>#include &lt;CYearly.h&gt;</computeroutput>
+</para>
+Inheritance diagram for CYearly:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCYearly__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for CYearly:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCYearly__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classCYearly_1ab0d1ec893478bf7968266e332121ca74">~CYearly</link> () override=default</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCYearly_1a007d3cfca28a8ce957e81e07e8ee38c1">show</link> (std::ostream &amp;os, <link linkend="_classCCalendar">CCalendar</link> &amp;cCalendar) const override</para>
+</listitem>
+            <listitem><para>int <link linkend="_classCYearly_1a5632b78b26a9bde14c214c312bb74b83">setup</link> (std::istream &amp;in, std::ostream &amp;os) override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classCYearly_1ab0d1ec893478bf7968266e332121ca74"/>    <section>
+    <title>~CYearly()</title>
+<indexterm><primary>~CYearly</primary><secondary>CYearly</secondary></indexterm>
+<indexterm><primary>CYearly</primary><secondary>~CYearly</secondary></indexterm>
+<para><computeroutput>CYearly::~CYearly ( )<computeroutput>[override]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classCYearly_1a5632b78b26a9bde14c214c312bb74b83"/>    <section>
+    <title>setup()</title>
+<indexterm><primary>setup</primary><secondary>CYearly</secondary></indexterm>
+<indexterm><primary>CYearly</primary><secondary>setup</secondary></indexterm>
+<para><computeroutput>int CYearly::setup (std::istream &amp; in, std::ostream &amp; os)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>This method is overwritten by same method in <link linkend="_classCView">CView</link>. It setups parameters before showing them using method show. 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>os</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_classCView_1a55691341969d6fc02eec607af4aeb508">CView</link>.</para>
+    </section><anchor xml:id="_classCYearly_1a007d3cfca28a8ce957e81e07e8ee38c1"/>    <section>
+    <title>show()</title>
+<indexterm><primary>show</primary><secondary>CYearly</secondary></indexterm>
+<indexterm><primary>CYearly</primary><secondary>show</secondary></indexterm>
+<para><computeroutput>void CYearly::show (std::ostream &amp; os, <link linkend="_classCCalendar">CCalendar</link> &amp; cCalendar) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>This method is overwritten by same method in <link linkend="_classCView">CView</link>. It represents calendar. 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>os</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>cCalendar</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classCView_1aede5744697a982d999d88b62566e76e2">CView</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCYearly_a007d3cfca28a8ce957e81e07e8ee38c1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/View/<link linkend="_CYearly_8h">CYearly.h</link>src/View/<link linkend="_CYearly_8cpp">CYearly.cpp</link></section>
+</section>

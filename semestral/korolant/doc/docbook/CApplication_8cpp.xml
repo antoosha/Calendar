@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_CApplication_8cpp">
+<title>src/Application/CApplication.cpp File Reference</title>
+<indexterm><primary>src/Application/CApplication.cpp</primary></indexterm>
+<programlisting>#include &quot;CApplication.h&quot;
+#include &lt;fstream&gt;
+</programlisting>Include dependency graph for CApplication.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="CApplication_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

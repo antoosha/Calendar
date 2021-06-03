@@ -1,0 +1,960 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classCDate">
+<title>CDate Class Reference</title>
+<indexterm><primary>CDate</primary></indexterm>
+<para>
+<computeroutput>#include &lt;CDate.h&gt;</computeroutput>
+</para>
+Collaboration diagram for CDate:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classCDate_1a6c41e5088bd7b9ef463316ba69c1bda8">CDate</link> ()=default</para>
+</listitem>
+            <listitem><para><link linkend="_classCDate_1aa0c46df561846fb0c66b5bb5093680d3">CDate</link> (const int &amp;dayIn, const int &amp;monthIn, const int &amp;yearIn, const int &amp;hourIn, const int &amp;minuteIn)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1aeea031df57f50b520a57eb37e5e3683b">editDate</link> (const <link linkend="_classCDate">CDate</link> &amp;date)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classCDate_1a423487379fcbc97fa86585126ad8dee9">dateToString</link> () const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1a471e0b949ef06f2dbc45dcf26c6d8c23">dayNumber</link> (int <link linkend="_classCDate_1a0cb0ffa2135690983d18a549a3d7be8a">day</link>, int <link linkend="_classCDate_1a000a3cfde0ee5cbcc46900ada5f8e02b">month</link>, int <link linkend="_classCDate_1a1b2fe8716ea7771bc9e7064745c43257">year</link>) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1a81aa02bd8b97e47baf19194019bd2e43">moveMinutes</link> (int minutes)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1a3fd9e2db90fe2377f6ee0b20b4e88aef">moveHours</link> (int hours)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1ac2aa92ab49a1596140726ade42b6060c">moveDays</link> (int days)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1a7d7f6deaf151d563e04db09858316f45">moveMonths</link> (int months)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1a2bdbf688ba5fa48f18d1c8e4781f79a0">moveYears</link> (int years)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1a4bbd2680b9d6991988d27c1713f1dbb6">moveMinutesBack</link> (int minutes)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1a84efc0be011445f0ff244b1322ef0d66">moveHoursBack</link> (int hours)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1aaff6725e86d4edf8007b5dfd7f65aff1">moveDaysBack</link> (int days)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1aa41b4ca9d282c8ffc029e67fbb84d00d">moveMonthsBack</link> (int months)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classCDate_1a7336185d96dfe20a9f6b36f94637400f">moveYearsBack</link> (int years)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classCDate_1a3fab11307b171e155455b66193821eb8">getMonthName</link> (int monthNumber) const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1a14125ca46ce83ccd3f4b9d9f873caf6d">numberOfDays</link> (int monthNumber, int <link linkend="_classCDate_1a1b2fe8716ea7771bc9e7064745c43257">year</link>) const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classCDate_1a8e9eaa747b68a19f8cbd9a368208253f">dateToShortString</link> (int yearIn, int monthIn, int dayIn) const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1af7c92036c14433b1d077143a84ba6080">returnDay</link> () const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1a4e8ecdb2910c366634f2076e9655676e">returnMonth</link> () const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1a7123e931276904a7be9e89d11efa51e2">returnYear</link> () const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1a951105badbde9ebb785cc8fa95ea4ccc">returnHour</link> () const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1aa1fc90c7c299ae4af98d8a3fe4553cfc">returnMinute</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_classCDate_1a0cb0ffa2135690983d18a549a3d7be8a">day</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1a000a3cfde0ee5cbcc46900ada5f8e02b">month</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1a1b2fe8716ea7771bc9e7064745c43257">year</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1aef8714e8fefea07b40747d4ca8c2c688">hour</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_classCDate_1a8d750fb299bed17bcfabf13376263120">minute</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classCDate_1a6c41e5088bd7b9ef463316ba69c1bda8"/>    <section>
+    <title>CDate()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>CDate</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>CDate</secondary></indexterm>
+<para><computeroutput>CDate::CDate ( )<computeroutput>[default]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classCDate_1aa0c46df561846fb0c66b5bb5093680d3"/>    <section>
+    <title>CDate()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>CDate</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>CDate</secondary></indexterm>
+<para><computeroutput>CDate::CDate (const int &amp; dayIn, const int &amp; monthIn, const int &amp; yearIn, const int &amp; hourIn, const int &amp; minuteIn)</computeroutput></para>
+<para>Constructor, witch sets parameters of object <link linkend="_classCDate">CDate</link>.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>dayIn</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>monthIn</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>yearIn</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>hourIn</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>minuteIn</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classCDate_1a8e9eaa747b68a19f8cbd9a368208253f"/>    <section>
+    <title>dateToShortString()</title>
+<indexterm><primary>dateToShortString</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>dateToShortString</secondary></indexterm>
+<para><computeroutput>std::string CDate::dateToShortString (int yearIn, int monthIn, int dayIn) const</computeroutput></para>
+<para>This method converts date from input to string in format YYYYMMDD</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>yearIn</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>monthIn</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>dayIn</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>date converted to string </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a8e9eaa747b68a19f8cbd9a368208253f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a8e9eaa747b68a19f8cbd9a368208253f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a423487379fcbc97fa86585126ad8dee9"/>    <section>
+    <title>dateToString()</title>
+<indexterm><primary>dateToString</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>dateToString</secondary></indexterm>
+<para><computeroutput>std::string CDate::dateToString ( ) const</computeroutput></para>
+<para>This method converts the date to string in format YYYYMMDDHHMM.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>converted date to string </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a423487379fcbc97fa86585126ad8dee9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a423487379fcbc97fa86585126ad8dee9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a471e0b949ef06f2dbc45dcf26c6d8c23"/>    <section>
+    <title>dayNumber()</title>
+<indexterm><primary>dayNumber</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>dayNumber</secondary></indexterm>
+<para><computeroutput>int CDate::dayNumber (int day, int month, int year) const</computeroutput></para>
+<para>This method is used to know a number of day from input parameters 0 = Sunday 1 = Monday 2 = Tuesday 3 = Wednesday 4 = Thursday 5 = Friday 6 = Saturday</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>day</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>month</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>year</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>number of day in week </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a471e0b949ef06f2dbc45dcf26c6d8c23_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1aeea031df57f50b520a57eb37e5e3683b"/>    <section>
+    <title>editDate()</title>
+<indexterm><primary>editDate</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>editDate</secondary></indexterm>
+<para><computeroutput>void CDate::editDate (const <link linkend="_classCDate">CDate</link> &amp; date)</computeroutput></para>
+<para>This method edit attributes of current object to attributes of input date type const reference to <link linkend="_classCDate">CDate</link></para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>date</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_classCDate_1a3fab11307b171e155455b66193821eb8"/>    <section>
+    <title>getMonthName()</title>
+<indexterm><primary>getMonthName</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>getMonthName</secondary></indexterm>
+<para><computeroutput>std::string CDate::getMonthName (int monthNumber) const</computeroutput></para>
+<para>This method will return name of month using month number, which is an input parameter</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>monthNumber</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>name of month </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out_of_range</entry>
+                                <entry>
+<para>if the month &gt; 11, {0,1...11} </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a3fab11307b171e155455b66193821eb8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1ac2aa92ab49a1596140726ade42b6060c"/>    <section>
+    <title>moveDays()</title>
+<indexterm><primary>moveDays</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>moveDays</secondary></indexterm>
+<para><computeroutput>void CDate::moveDays (int days)</computeroutput></para>
+<para>This method moves days forward for days from input parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>days</entry>
+                                <entry>
+<para>for how many days to move </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_ac2aa92ab49a1596140726ade42b6060c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_ac2aa92ab49a1596140726ade42b6060c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1aaff6725e86d4edf8007b5dfd7f65aff1"/>    <section>
+    <title>moveDaysBack()</title>
+<indexterm><primary>moveDaysBack</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>moveDaysBack</secondary></indexterm>
+<para><computeroutput>void CDate::moveDaysBack (int days)</computeroutput></para>
+<para>This method moves days back for days from input parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>days</entry>
+                                <entry>
+<para>for how many days to move </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_aaff6725e86d4edf8007b5dfd7f65aff1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_aaff6725e86d4edf8007b5dfd7f65aff1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a3fd9e2db90fe2377f6ee0b20b4e88aef"/>    <section>
+    <title>moveHours()</title>
+<indexterm><primary>moveHours</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>moveHours</secondary></indexterm>
+<para><computeroutput>void CDate::moveHours (int hours)</computeroutput></para>
+<para>This method moves hours forward for hours from input parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>hours</entry>
+                                <entry>
+<para>for how many hours to move </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a3fd9e2db90fe2377f6ee0b20b4e88aef_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a3fd9e2db90fe2377f6ee0b20b4e88aef_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a84efc0be011445f0ff244b1322ef0d66"/>    <section>
+    <title>moveHoursBack()</title>
+<indexterm><primary>moveHoursBack</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>moveHoursBack</secondary></indexterm>
+<para><computeroutput>void CDate::moveHoursBack (int hours)</computeroutput></para>
+<para>This method moves hours back for hours from input parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>hours</entry>
+                                <entry>
+<para>for how many hours to move </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a84efc0be011445f0ff244b1322ef0d66_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a84efc0be011445f0ff244b1322ef0d66_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a81aa02bd8b97e47baf19194019bd2e43"/>    <section>
+    <title>moveMinutes()</title>
+<indexterm><primary>moveMinutes</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>moveMinutes</secondary></indexterm>
+<para><computeroutput>void CDate::moveMinutes (int minutes)</computeroutput></para>
+<para>This method moves minutes forward for minutes from input parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>minutes</entry>
+                                <entry>
+<para>for how many minutes to move </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a81aa02bd8b97e47baf19194019bd2e43_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a4bbd2680b9d6991988d27c1713f1dbb6"/>    <section>
+    <title>moveMinutesBack()</title>
+<indexterm><primary>moveMinutesBack</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>moveMinutesBack</secondary></indexterm>
+<para><computeroutput>void CDate::moveMinutesBack (int minutes)</computeroutput></para>
+<para>This method moves minutes back for minutes from input parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>minutes</entry>
+                                <entry>
+<para>for how many minutes to move </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a4bbd2680b9d6991988d27c1713f1dbb6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a7d7f6deaf151d563e04db09858316f45"/>    <section>
+    <title>moveMonths()</title>
+<indexterm><primary>moveMonths</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>moveMonths</secondary></indexterm>
+<para><computeroutput>void CDate::moveMonths (int months)</computeroutput></para>
+<para>This method moves months forward for months from input parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>days</entry>
+                                <entry>
+<para>for how many months to move </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a7d7f6deaf151d563e04db09858316f45_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a7d7f6deaf151d563e04db09858316f45_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1aa41b4ca9d282c8ffc029e67fbb84d00d"/>    <section>
+    <title>moveMonthsBack()</title>
+<indexterm><primary>moveMonthsBack</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>moveMonthsBack</secondary></indexterm>
+<para><computeroutput>void CDate::moveMonthsBack (int months)</computeroutput></para>
+<para>This method moves months back for months from input parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>months</entry>
+                                <entry>
+<para>for how many months to move </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_aa41b4ca9d282c8ffc029e67fbb84d00d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_aa41b4ca9d282c8ffc029e67fbb84d00d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a2bdbf688ba5fa48f18d1c8e4781f79a0"/>    <section>
+    <title>moveYears()</title>
+<indexterm><primary>moveYears</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>moveYears</secondary></indexterm>
+<para><computeroutput>void CDate::moveYears (int years)</computeroutput></para>
+<para>This method moves years forward for years from input parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>days</entry>
+                                <entry>
+<para>for how many years to move </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a2bdbf688ba5fa48f18d1c8e4781f79a0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a2bdbf688ba5fa48f18d1c8e4781f79a0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a7336185d96dfe20a9f6b36f94637400f"/>    <section>
+    <title>moveYearsBack()</title>
+<indexterm><primary>moveYearsBack</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>moveYearsBack</secondary></indexterm>
+<para><computeroutput>void CDate::moveYearsBack (int years)</computeroutput></para>
+<para>This method moves years back for years from input parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>years</entry>
+                                <entry>
+<para>for how many years to move </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a7336185d96dfe20a9f6b36f94637400f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a7336185d96dfe20a9f6b36f94637400f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a14125ca46ce83ccd3f4b9d9f873caf6d"/>    <section>
+    <title>numberOfDays()</title>
+<indexterm><primary>numberOfDays</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>numberOfDays</secondary></indexterm>
+<para><computeroutput>int CDate::numberOfDays (int monthNumber, int year) const</computeroutput></para>
+<para>This method find how many number of days in month of year, which will get from input</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>monthNumber</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>year</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>number of days in input month for input year </para>
+
+<para>-1 if input is not correct </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a14125ca46ce83ccd3f4b9d9f873caf6d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1af7c92036c14433b1d077143a84ba6080"/>    <section>
+    <title>returnDay()</title>
+<indexterm><primary>returnDay</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>returnDay</secondary></indexterm>
+<para><computeroutput>int CDate::returnDay ( ) const</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_af7c92036c14433b1d077143a84ba6080_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a951105badbde9ebb785cc8fa95ea4ccc"/>    <section>
+    <title>returnHour()</title>
+<indexterm><primary>returnHour</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>returnHour</secondary></indexterm>
+<para><computeroutput>int CDate::returnHour ( ) const</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a951105badbde9ebb785cc8fa95ea4ccc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1aa1fc90c7c299ae4af98d8a3fe4553cfc"/>    <section>
+    <title>returnMinute()</title>
+<indexterm><primary>returnMinute</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>returnMinute</secondary></indexterm>
+<para><computeroutput>int CDate::returnMinute ( ) const</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_aa1fc90c7c299ae4af98d8a3fe4553cfc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a4e8ecdb2910c366634f2076e9655676e"/>    <section>
+    <title>returnMonth()</title>
+<indexterm><primary>returnMonth</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>returnMonth</secondary></indexterm>
+<para><computeroutput>int CDate::returnMonth ( ) const</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a4e8ecdb2910c366634f2076e9655676e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_classCDate_1a7123e931276904a7be9e89d11efa51e2"/>    <section>
+    <title>returnYear()</title>
+<indexterm><primary>returnYear</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>returnYear</secondary></indexterm>
+<para><computeroutput>int CDate::returnYear ( ) const</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCDate_a7123e931276904a7be9e89d11efa51e2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classCDate_1a0cb0ffa2135690983d18a549a3d7be8a"/>    <section>
+    <title>day</title>
+<indexterm><primary>day</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>day</secondary></indexterm>
+<para><computeroutput>int CDate::day<computeroutput>[private]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classCDate_1aef8714e8fefea07b40747d4ca8c2c688"/>    <section>
+    <title>hour</title>
+<indexterm><primary>hour</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>hour</secondary></indexterm>
+<para><computeroutput>int CDate::hour<computeroutput>[private]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classCDate_1a8d750fb299bed17bcfabf13376263120"/>    <section>
+    <title>minute</title>
+<indexterm><primary>minute</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>minute</secondary></indexterm>
+<para><computeroutput>int CDate::minute<computeroutput>[private]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classCDate_1a000a3cfde0ee5cbcc46900ada5f8e02b"/>    <section>
+    <title>month</title>
+<indexterm><primary>month</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>month</secondary></indexterm>
+<para><computeroutput>int CDate::month<computeroutput>[private]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classCDate_1a1b2fe8716ea7771bc9e7064745c43257"/>    <section>
+    <title>year</title>
+<indexterm><primary>year</primary><secondary>CDate</secondary></indexterm>
+<indexterm><primary>CDate</primary><secondary>year</secondary></indexterm>
+<para><computeroutput>int CDate::year<computeroutput>[private]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/Calendar/<link linkend="_CDate_8h">CDate.h</link>src/Calendar/<link linkend="_CDate_8cpp">CDate.cpp</link></section>
+</section>
