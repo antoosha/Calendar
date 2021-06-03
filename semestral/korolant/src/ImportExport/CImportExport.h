@@ -24,8 +24,8 @@ public:
     /**
      * This method export data to file, path to file user will write, from calendar using method to print events from CEvent.
      *
-     * @param m_In is input stream
-     * @param m_Out is output stream
+     * @param in is input stream
+     * @param out is output stream
      * @param cCalendar is a reference to an object of CCalendar
      * @return 0 is all is OK
      * @return -4 if something went wrong(ussualy, uncorrect input from user(id does not exist) or file has not been opened)

@@ -28,7 +28,7 @@ public:
      * @param out is output stream
      * @param cCalendar is a reference to an object of CCalendar
      * @return 0, all is OK
-     * @return 0, something went wrong(usually it is wrong input from user)
+     * @return -4, something went wrong(usually it is wrong input from user)
      */
     int createEvent(std::istream & in, std::ostream & out, CCalendar & cCalendar);
 
@@ -52,8 +52,8 @@ public:
      * Otherwise returns -4. This method can edit all parameters of event.
      * To edit event is better to know it index.
      *
-     * @param in is input stream
-     * @param out is output stream
+     * @param m_In is input stream
+     * @param m_Out is output stream
      * @param cCalendar is a reference to an object of CCalendar
      * @return -4 if event with input index does not exist OR number of variant to choose is not correct
      */
@@ -66,8 +66,8 @@ public:
      * 3)by name and place at once
      * Method will find and print events, which have been found or will write a messege, that any events have not been found.
      *
-     * @param in is input stream
-     * @param out is output stream
+     * @param m_In is input stream
+     * @param m_Out is output stream
      * @param cCalendar is a reference to an object of CCalendar
      * @return 0 if all is OK
      * @return -4 if something went wrong(usually it is input from user or unexisting event with input id)
@@ -77,8 +77,8 @@ public:
     /**
      * Method, which delete event from database using it ID(index).
      *
-     * @param in is input stream
-     * @param out is output stream
+     * @param m_In is input stream
+     * @param m_Out is output stream
      * @param cCalendar is a reference to an object of CCalendar
      * @return 0 if all is OK
      * @return -4 if event with id from user's input does not exist
@@ -88,7 +88,7 @@ public:
     /**
      * This method prints all events which are stored in database in calendar.
      *
-     * @param out is output stream
+     * @param m_Out is output stream
      * @param cCalendar is a reference to an object of CCalendar
      */
     void listEvents( std::ostream & m_Out, CCalendar & cCalendar) const;
@@ -106,8 +106,8 @@ public:
      * Method will print the date, where user could postpone this event.
      * If any windows will not be found, date will be printed as a date after the last event.
      *
-     * @param in is input stream
-     * @param out is output stream
+     * @param m_In is input stream
+     * @param m_Out is output stream
      * @param cCalendar is a reference to an object of CCalendar
      * @return 0 if all is OK
      * @return -4 if input id from user is not correct
