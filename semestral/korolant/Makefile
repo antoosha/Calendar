@@ -14,6 +14,9 @@ SOURCES+=$(wildcard $(SOURCE_DIR)/**/*.cpp)
 HEADERS = $(wildcard $(SOURCE_DIR)/*.h)
 OBJECTS = $(SOURCES:$(SOURCE_DIR)/%.cpp=$(BUILD_DIR)/%.o) # % is pattern matching
 
+#.PHONY  is one that is not really the name of a file;
+#rather it is just a name for a recipe to be executed when you make an explicit request.
+
 .PHONY: all
 all: compile doc
 
@@ -43,7 +46,6 @@ clean:
 # Requirements / Dependencies
 #g++ -MM src/*.cpp | sed -r 's|^(.*\.o)|build/\1| for main
 #g++ -MM src/*/*.cpp | sed -r 's|^(.*\.o)|build/\1| for other dirs
-
 build/main.o: src/main.cpp src/Application/CApplication.h \
  src/Application/../Interface/CInterface.h \
  src/Application/../Interface/../View/CView.h \
