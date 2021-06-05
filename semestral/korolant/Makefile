@@ -10,8 +10,9 @@ SOURCE_DIR = src
 BUILD_DIR = build
 
 SOURCES = $(wildcard $(SOURCE_DIR)/*.cpp)
+SOURCES+=$(wildcard $(SOURCE_DIR)/**/*.cpp)
 HEADERS = $(wildcard $(SOURCE_DIR)/*.h)
-OBJECTS = $(SOURCES:$(SOURCE_DIR)/%.cpp=$(BUILD_DIR)/%.o)
+OBJECTS = $(SOURCES:$(SOURCE_DIR)/%.cpp=$(BUILD_DIR)/%.o) # % is pattern matching
 
 .PHONY: all
 all: compile doc
@@ -23,19 +24,20 @@ compile: $(TARGET)
 run: $(TARGET)
 	./$(TARGET)
 
-$(TARGET): src/main.o src/Application/CApplication.o src/Calendar/CCalendar.o src/Calendar/CDate.o src/Calendar/CEvent.o src/Calendar/COptional.o src/Calendar/CRequired.o src/ImportExport/CImportExport.o src/Interface/CInterface.o src/Postpone/CPostpone.o src/Repeat/CRepeat.o src/View/CDaily.o src/View/CMonthly.o src/View/CWeekly.o src/View/CYearly.o
+$(TARGET): $(OBJECTS)
 	$(LD) $(CXXFLAGS) -o $@ $^
 
-$(BUILD_DIR)/%.o: $(SOURCE_DIR)/%.cpp
-	$(MKDIR) $(BUILD_DIR)
+$(BUILD_DIR)/%.o: **/%.cpp
+	$(MKDIR) $(@D)
 	$(CXX) $(CXXFLAGS) $< -c -o $@
 
-doc: Doxyfile $(HEADERS)
+.PHONY: doc
+doc: Doxyfile
 	doxygen Doxyfile
-	
+
 PHONY: clean
 clean:
-	rm -rf src/*.o src/*/*.o $(TARGET) doc/ $(BUILD_DIR)/ 2>/dev/null
+	rm -rf doc/ $(BUILD_DIR)/
 
 
 # Requirements / Dependencies
