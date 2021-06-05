@@ -1,8 +1,9 @@
 # Kalendář
 # Autor: Anton Korolov
 
-``` English version ```
-
+``` 
+English version 
+```
 ## About aplication
 
 The "Calendar" application, the user launches the application and can use simple commands to the console to control the application.
@@ -36,6 +37,7 @@ It is also possible to upload (export) all events that are in the calendar to th
 
 ## Showing:
 ```
+
 # Calendar by years:
           Calendar - "year"
   ------------November-------------
@@ -103,10 +105,12 @@ It can be navigated forwards and backwards, depending on how the user would like
 
 In the "CEvent" class, thanks to the polymorphism, I divide the Event into mandatory and optional.
 
-##----------------------------------------------------------------------------------------------------------------------
-##----------------------------------------------------------------------------------------------------------------------
 
-``` Czech version ```
+
+
+``` 
+Czech version 
+```
 
 ## O aplikaci
 

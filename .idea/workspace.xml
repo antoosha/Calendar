@@ -32,10 +32,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="make">
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/zadani.txt" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/zadani.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,14 +103,7 @@
       <workItem from="1622297715795" duration="990000" />
       <workItem from="1622298727956" duration="124713000" />
       <workItem from="1622902847568" duration="10948000" />
-      <workItem from="1622926006711" duration="375000" />
-    </task>
-    <task id="LOCAL-00013" summary="implemented:&#10;repeat(opakovani)&#10;&#10;&#10;need to do:&#10;CDATE movemonths and movemonthsback!!!&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;...">
-      <created>1622238100545</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1622238100545</updated>
+      <workItem from="1622926006711" duration="831000" />
     </task>
     <task id="LOCAL-00014" summary="implemented:&#10;CDATE movemonths and movemonthsback!!!&#10;&#10;need to do:&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;...">
       <created>1622287320544</created>
@@ -449,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622920381521</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="README.md">
+      <created>1622926598767</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1622926598768</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +468,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="implemented:&#10;i have done polymorfism of CView&#10;&#10;need to do:&#10;show(View) implementation of show and setup&#10;osetrseni vstupu!&#10;tests&#10;..." />
     <MESSAGE value="implemented:&#10;show(View) implementation of show and setup&#10;&#10;need to do:&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
     <MESSAGE value="implemented:&#10;some osetrseni&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
     <MESSAGE value="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
@@ -494,7 +492,8 @@
     <MESSAGE value="edit help" />
     <MESSAGE value="make + dep" />
     <MESSAGE value="make" />
-    <option name="LAST_COMMIT_MESSAGE" value="make" />
+    <MESSAGE value="README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="70" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622910959241">
