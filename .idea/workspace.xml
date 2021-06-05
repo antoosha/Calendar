@@ -32,7 +32,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="make + dep" />
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="make">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/zadani.txt" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/zadani.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,11 +76,6 @@
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="korolant" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" REDIRECT_INPUT_PATH="$PROJECT_DIR$/semestral/korolant/examples/uploadTenEventsAndShowMonthly.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="semestralka" TARGET_NAME="korolant" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="semestralka" RUN_TARGET_NAME="korolant">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -104,14 +103,8 @@
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
       <workItem from="1622298727956" duration="124713000" />
-      <workItem from="1622902847568" duration="10701000" />
-    </task>
-    <task id="LOCAL-00012" summary="implemented:&#10;delete to delete event&#10;listEvents to list events&#10;move(presunuti) to move events rewind date foward or back &#10;&#10;need to do:&#10;repeat(opakovani)&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;...">
-      <created>1622223076696</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1622223076696</updated>
+      <workItem from="1622902847568" duration="10948000" />
+      <workItem from="1622926006711" duration="375000" />
     </task>
     <task id="LOCAL-00013" summary="implemented:&#10;repeat(opakovani)&#10;&#10;&#10;need to do:&#10;CDATE movemonths and movemonthsback!!!&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;...">
       <created>1622238100545</created>
@@ -449,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622919721328</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="make">
+      <created>1622920381521</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1622920381521</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +469,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="implemented:&#10;&#10;need to do:&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;..." />
     <MESSAGE value="implemented:&#10;i have done polymorfism of CView&#10;&#10;need to do:&#10;show(View) implementation of show and setup&#10;osetrseni vstupu!&#10;tests&#10;..." />
     <MESSAGE value="implemented:&#10;show(View) implementation of show and setup&#10;&#10;need to do:&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
     <MESSAGE value="implemented:&#10;some osetrseni&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
@@ -494,7 +493,8 @@
     <MESSAGE value="edit makefile" />
     <MESSAGE value="edit help" />
     <MESSAGE value="make + dep" />
-    <option name="LAST_COMMIT_MESSAGE" value="make + dep" />
+    <MESSAGE value="make" />
+    <option name="LAST_COMMIT_MESSAGE" value="make" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="70" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622910959241">
@@ -521,25 +521,25 @@
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622908353546" />
     <state x="2606" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622743615328" />
-    <state width="1493" height="282" key="GridCell.Tab.0.bottom" timestamp="1622919257170">
+    <state width="1493" height="282" key="GridCell.Tab.0.bottom" timestamp="1622920530064">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622919257170" />
+    <state width="1493" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622920530064" />
     <state width="1877" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
-    <state width="1493" height="282" key="GridCell.Tab.0.center" timestamp="1622919257170">
+    <state width="1493" height="282" key="GridCell.Tab.0.center" timestamp="1622920530064">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622919257170" />
+    <state width="1493" height="282" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622920530064" />
     <state width="1877" height="241" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
-    <state width="1493" height="282" key="GridCell.Tab.0.left" timestamp="1622919257169">
+    <state width="1493" height="282" key="GridCell.Tab.0.left" timestamp="1622920530064">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622919257169" />
+    <state width="1493" height="282" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622920530064" />
     <state width="1877" height="241" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529783" />
-    <state width="1493" height="282" key="GridCell.Tab.0.right" timestamp="1622919257170">
+    <state width="1493" height="282" key="GridCell.Tab.0.right" timestamp="1622920530064">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622919257170" />
+    <state width="1493" height="282" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622920530064" />
     <state width="1877" height="241" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
     <state width="1877" height="241" key="GridCell.Tab.1.bottom" timestamp="1622761529787">
       <screen x="1920" y="0" width="1920" height="1040" />

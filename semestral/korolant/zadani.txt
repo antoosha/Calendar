@@ -105,7 +105,10 @@ Events for a 13/07/2021:
 Polymorfismus používám ve třídách "CView" a "CEvent"
 
 Ve třídě "CView" polymorfismus mi usnadní výpis.
-Dá se díky polymorfismu zobrazit kalendář jinak, zobrazení by mohlo být denní, tydenní a měsiční.
+Dá se díky polymorfismu zobrazit kalendář jinak, zobrazení by mohlo být denní, tydenní a měsiční a roční.
+
+Ve třídě "CView" polymorfismus mi také usnadňuje navigaci.
+Dá se díky navigovat vpřed a vzad, zaleží na to, jak by to chtěl uživatel.
 
 Ve třídě "CEvent" díky polymorfismu rozděluji událost(Event) na povinnou(required) a nepovinnou(optional).
 
