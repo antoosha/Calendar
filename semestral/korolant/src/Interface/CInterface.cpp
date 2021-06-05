@@ -74,9 +74,23 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
             words.clear();
             return -4;
         }
+
         i->second->show(m_Out, cCalendar);
+
         words.clear();
-        return 0;
+        while(true){
+            int whatDoNext = i->second->navigation(m_In, m_Out);
+            if(whatDoNext == 1){
+                i->second->show(m_Out, cCalendar);
+                continue;
+            }
+            else if(whatDoNext == -4){
+                return -4;
+            }
+            else{
+                return 0;
+            }
+        }
     }
     else if(!strcasecmp(words[0].c_str(), "showWeekly")){
         auto i = views.find("showWeekly");
@@ -85,8 +99,21 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
             return -4;
         }
         i->second->show(m_Out, cCalendar);
+
         words.clear();
-        return 0;
+        while(true){
+            int whatDoNext = i->second->navigation(m_In, m_Out);
+            if(whatDoNext == 1){
+                i->second->show(m_Out, cCalendar);
+                continue;
+            }
+            else if(whatDoNext == -4){
+                return -4;
+            }
+            else{
+                return 0;
+            }
+        }
     }
     else if(!strcasecmp(words[0].c_str(), "showMonthly")){
         auto i = views.find("showMonthly");
@@ -95,8 +122,21 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
             return -4;
         }
         i->second->show(m_Out, cCalendar);
+
         words.clear();
-        return 0;
+        while(true){
+            int whatDoNext = i->second->navigation(m_In, m_Out);
+            if(whatDoNext == 1){
+                i->second->show(m_Out, cCalendar);
+                continue;
+            }
+            else if(whatDoNext == -4){
+                return -4;
+            }
+            else{
+                return 0;
+            }
+        }
     }
     else if(!strcasecmp(words[0].c_str(), "showYearly")){
         auto i = views.find("showYearly");
@@ -105,8 +145,21 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
             return -4;
         }
         i->second->show(m_Out, cCalendar);
+
         words.clear();
-        return 0;
+        while(true){
+            int whatDoNext = i->second->navigation(m_In, m_Out);
+            if(whatDoNext == 1){
+                i->second->show(m_Out, cCalendar);
+                continue;
+            }
+            else if(whatDoNext == -4){
+                return -4;
+            }
+            else{
+                return 0;
+            }
+        }
     }
     else if(!strcasecmp(words[0].c_str(), "load")){
         CImportExport cImportExport;

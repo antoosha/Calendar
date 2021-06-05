@@ -20,6 +20,14 @@ public:
      * @return
      */
     int setup( std::istream & in, std::ostream & os) override;
+
+    /**
+    * This method is overwritten by same method in CView. It navigate user in calendar.
+    * @param in
+    * @param os
+    * @return
+    */
+    int navigation ( std::istream & in, std::ostream & os) override;
 };
 
 

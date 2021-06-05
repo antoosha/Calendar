@@ -32,7 +32,19 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="+README.md&#10;edit doxyfile and makefile" />
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="small edit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CView.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,12 +84,12 @@
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="korolant" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="true" REDIRECT_INPUT_PATH="$PROJECT_DIR$/../ant.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="semestralka" TARGET_NAME="korolant" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="semestralka" RUN_TARGET_NAME="korolant">
+    <configuration name="korolant" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" REDIRECT_INPUT_PATH="$PROJECT_DIR$/../ant.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="semestralka" TARGET_NAME="korolant" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="semestralka" RUN_TARGET_NAME="korolant">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -103,35 +115,8 @@
       <workItem from="1622294763176" duration="622000" />
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
-      <workItem from="1622298727956" duration="119869000" />
-    </task>
-    <task id="LOCAL-00003" summary="was implemented command &quot;new&quot; in interface&#10;mapByName was changed to multimap&#10;in CDate ints were changed to one string&#10;&#10;what need to be implemented next:&#10;CDATE string could be bad and will bring problems&#10;iplement reading of members another way, because now it works only with names, if person have name and surname, could be problem!">
-      <created>1621863236754</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1621863236754</updated>
-    </task>
-    <task id="LOCAL-00004" summary="changed CDate string to ints&#10;&#10;need to do:&#10;TODO EDIT osetreseni vstupu in reading date From and To&#10;TODO implement reading of new date with osetrseni vstupu&#10;TODO vypisByDay, byWeek,byMonth&#10;TODO presun&#10;TODO imp/exp">
-      <created>1621866760066</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1621866760066</updated>
-    </task>
-    <task id="LOCAL-00005" summary="has been implemented:&#10;1) osetrseni vstupu(70%) need to do if first date greater than second(problem) &#10;2)EDIT with osetreseni vstupu&#10;&#10;NEED TO DO:&#10;1)osetrseni vstupu(first date greater than second) new + edit&#10;2)import/export &#10;3)presunuti&#10;4)view">
-      <created>1621957275562</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1621957275562</updated>
-    </task>
-    <task id="LOCAL-00006" summary="has been implemented:&#10;1) first date greater than second(problem), this problem has been solved (edit + new)&#10;&#10;NEED TO DO:&#10;1)import/export &#10;2)presunuti&#10;3)view">
-      <created>1621958667019</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1621958667019</updated>
+      <workItem from="1622298727956" duration="124713000" />
+      <workItem from="1622902847568" duration="4903000" />
     </task>
     <task id="LOCAL-00007" summary="has been implemented:&#10;import/export&#10;rozbil jsem to po tridach, ted ten CInterface je hezci, prestal fungovat view(hlasi chyby, ale s tim jsem nic nedelal)&#10;&#10;NEED TO DO:&#10;1)presunuti&#10;2)view&#10;3)tests&#10;4) osetrseni">
       <created>1622052853647</created>
@@ -448,7 +433,35 @@
       <option name="project" value="LOCAL" />
       <updated>1622754704137</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="+README.md&#10;edit doxyfile and makefile">
+      <created>1622755445834</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1622755445834</updated>
+    </task>
+    <task id="LOCAL-00053" summary="small edit in obligation in import and in ccalendar">
+      <created>1622756153205</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1622756153205</updated>
+    </task>
+    <task id="LOCAL-00054" summary="small edit">
+      <created>1622756862185</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1622756862185</updated>
+    </task>
+    <task id="LOCAL-00055" summary="small edit">
+      <created>1622757550931</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1622757550932</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,8 +481,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="hned link" />
-    <MESSAGE value="predelal jsem normalne virtualy a ted nemam cycklickou smycku" />
     <MESSAGE value="i have implemented find with both of parameters and that is all :)" />
     <MESSAGE value="implemented:&#10;delete to delete event&#10;listEvents to list events&#10;move(presunuti) to move events rewind date foward or back &#10;&#10;need to do:&#10;repeat(opakovani)&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;..." />
     <MESSAGE value="implemented:&#10;repeat(opakovani)&#10;&#10;&#10;need to do:&#10;CDATE movemonths and movemonthsback!!!&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;..." />
@@ -493,14 +504,16 @@
     <MESSAGE value="import" />
     <MESSAGE value="CDate.h" />
     <MESSAGE value="+README.md&#10;edit doxyfile and makefile" />
-    <option name="LAST_COMMIT_MESSAGE" value="+README.md&#10;edit doxyfile and makefile" />
+    <MESSAGE value="small edit in obligation in import and in ccalendar" />
+    <MESSAGE value="small edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="small edit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622743617401">
+    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622756083820">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622661076543" />
-    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622743617401" />
+    <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622756083820" />
     <state x="525" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622715719668">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -520,46 +533,46 @@
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621713813764" />
     <state x="2606" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622743615328" />
-    <state width="1877" height="172" key="GridCell.Tab.0.bottom" timestamp="1622745422378">
+    <state width="1877" height="241" key="GridCell.Tab.0.bottom" timestamp="1622761529785">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="108" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622667315548" />
-    <state width="1877" height="172" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745422378" />
-    <state width="1877" height="172" key="GridCell.Tab.0.center" timestamp="1622745422378">
+    <state width="1877" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
+    <state width="1877" height="241" key="GridCell.Tab.0.center" timestamp="1622761529785">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="108" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622667315548" />
-    <state width="1877" height="172" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745422378" />
-    <state width="1877" height="172" key="GridCell.Tab.0.left" timestamp="1622745422378">
+    <state width="1877" height="241" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
+    <state width="1877" height="241" key="GridCell.Tab.0.left" timestamp="1622761529783">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="108" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622667315548" />
-    <state width="1877" height="172" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745422378" />
-    <state width="1877" height="172" key="GridCell.Tab.0.right" timestamp="1622745422378">
+    <state width="1877" height="241" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529783" />
+    <state width="1877" height="241" key="GridCell.Tab.0.right" timestamp="1622761529785">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="108" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622667315548" />
-    <state width="1877" height="172" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745422378" />
-    <state width="1877" height="241" key="GridCell.Tab.1.bottom" timestamp="1622745045630">
+    <state width="1877" height="241" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
+    <state width="1877" height="241" key="GridCell.Tab.1.bottom" timestamp="1622761529787">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="241" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745045630" />
-    <state width="1877" height="241" key="GridCell.Tab.1.center" timestamp="1622745045630">
+    <state width="1877" height="241" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529787" />
+    <state width="1877" height="241" key="GridCell.Tab.1.center" timestamp="1622761529786">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="241" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745045630" />
-    <state width="1877" height="241" key="GridCell.Tab.1.left" timestamp="1622745045630">
+    <state width="1877" height="241" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529786" />
+    <state width="1877" height="241" key="GridCell.Tab.1.left" timestamp="1622761529786">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="241" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745045630" />
-    <state width="1877" height="241" key="GridCell.Tab.1.right" timestamp="1622745045630">
+    <state width="1877" height="241" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529786" />
+    <state width="1877" height="241" key="GridCell.Tab.1.right" timestamp="1622761529786">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1478" height="396" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1621857556711" />
-    <state width="1877" height="241" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622745045630" />
+    <state width="1877" height="241" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529786" />
     <state x="279" y="58" key="SettingsEditor" timestamp="1622571997147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

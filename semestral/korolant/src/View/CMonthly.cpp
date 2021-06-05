@@ -102,3 +102,63 @@ int CMonthly::setup(istream &m_In, ostream &m_Out) {
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
     return 0;
 }
+
+int CMonthly::navigation(std::istream &m_In, std::ostream &m_Out) {
+    int flagNavigation = 0;
+    while(true) {
+        m_Out << "++++++++++++++++++++++| Navigation |++++++++++++++++++++++" << endl;
+        m_Out << "| Choose variant you want to do, write and click 'Enter' |" << endl;
+        m_Out << "|                  1 -> Next month <- 1                  |" << endl;
+        m_Out << "|                2 -> Previous month <- 2                |" << endl;
+        m_Out << "|               3 -> Close navigation <- 3               |" << endl;
+        m_Out << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+        int number;
+        m_In >> number;
+
+        if (number < 1 || number > 3 || m_In.fail()) {
+            m_In.clear();
+            m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+            flagNavigation++;
+            if(flagNavigation == 3){
+                m_Out << "Number is not correct, try " << flagNavigation << "/3. Closing.." << endl;
+                return -4; //close with error
+            }
+            m_Out << "Number is not correct, try " << flagNavigation << "/3, try again.." << endl;
+            continue;
+        }
+
+        m_In.ignore(numeric_limits<streamsize>::max(), '\n');
+        if(number == 1){
+            if(month == 12){
+                month = 1;
+                year++;
+            }
+            else{
+                month++;
+            }
+            return 1; // do show
+        }
+        if(number == 2){
+            if(month == 1){
+                if(year > 1600){
+                    month = 12;
+                    year--;
+                    return 1; // do show
+                }
+                else{
+                    m_Out << "Year could not be less than 1600." << endl;
+                    m_Out << "Closing navigation.." << endl;
+                    return 0; //close
+                }
+            }
+            else{
+                month--;
+                return 1; // do show
+            }
+        }
+        if(number == 3){
+            m_Out << "Navigation has been closed." << endl;
+            return 0; //close
+        }
+    }
+}
