@@ -32,9 +32,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="tests has been updated to CView show***">
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="edit makefile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,14 +108,7 @@
       <workItem from="1622295479172" duration="2086000" />
       <workItem from="1622297715795" duration="990000" />
       <workItem from="1622298727956" duration="124713000" />
-      <workItem from="1622902847568" duration="8432000" />
-    </task>
-    <task id="LOCAL-00009" summary="hned link">
-      <created>1622124466073</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1622124466073</updated>
+      <workItem from="1622902847568" duration="9655000" />
     </task>
     <task id="LOCAL-00010" summary="predelal jsem normalne virtualy a ted nemam cycklickou smycku">
       <created>1622126089965</created>
@@ -452,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622908318598</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="edit makefile">
+      <created>1622918065609</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1622918065609</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +473,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="implemented:&#10;repeat(opakovani)&#10;&#10;&#10;need to do:&#10;CDATE movemonths and movemonthsback!!!&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;..." />
     <MESSAGE value="implemented:&#10;CDATE movemonths and movemonthsback!!!&#10;&#10;need to do:&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;..." />
     <MESSAGE value="implemented:&#10;findTerm&#10;&#10;need to do:&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;..." />
     <MESSAGE value="implemented:&#10;&#10;need to do:&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;..." />
@@ -497,7 +497,8 @@
     <MESSAGE value="small edit" />
     <MESSAGE value="has been added navigation in CView" />
     <MESSAGE value="tests has been updated to CView show***" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests has been updated to CView show***" />
+    <MESSAGE value="edit makefile" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit makefile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="70" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622910959241">
@@ -524,25 +525,25 @@
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622908353546" />
     <state x="2606" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622743615328" />
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom" timestamp="1622910979782">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1622919185962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622910979782" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622919185962" />
     <state width="1877" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
-    <state width="1493" height="146" key="GridCell.Tab.0.center" timestamp="1622910979782">
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1622919185962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622910979782" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622919185962" />
     <state width="1877" height="241" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
-    <state width="1493" height="146" key="GridCell.Tab.0.left" timestamp="1622910979782">
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1622919185962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622910979782" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622919185962" />
     <state width="1877" height="241" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529783" />
-    <state width="1493" height="146" key="GridCell.Tab.0.right" timestamp="1622910979782">
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1622919185962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622910979782" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622919185962" />
     <state width="1877" height="241" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
     <state width="1877" height="241" key="GridCell.Tab.1.bottom" timestamp="1622761529787">
       <screen x="1920" y="0" width="1920" height="1040" />

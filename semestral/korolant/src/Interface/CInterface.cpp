@@ -181,24 +181,24 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
         return cCalendar.findEvent(m_In,m_Out,cCalendar);;
     }
     else if(!strcasecmp(words[0].c_str(), "help")){
-        m_Out << "------HELP------" << endl;
-        m_Out << "\"new\" ...  - create new event." << endl;
-        m_Out << "\"delete ...\" delete event." << endl;
-        m_Out << "\"listEvents\" - lists all events from calendar." << endl;
-        m_Out << "\"repeat ...\" - set repeat for event with user's time interval." << endl;
-        m_Out << "\"move ...\" - postopne event, which user will choose." << endl;
-        m_Out << "\"findFirstPossible ...\" - find first possible date to pospone event." << endl;
-        m_Out << "\"showDaily ...\" - show calendar and all events for day." << endl;
-        m_Out << "\"showWeekly ...\" - show calendar and all events for week." << endl;
-        m_Out << "\"showMonthly ...\" - show calendar and all events for month." << endl;
-        m_Out << "\"showYearly ...\" - show calendar and all events for year." << endl;
-        m_Out << "\"find ...\" - find event." << endl;
-        m_Out << "\"load [filename]\" - upload all events from the file called \"filename\"." << endl;
-        m_Out << "\"save [filename]\" - save all events to the file called \"filename\"." << endl;
-        m_Out << "\"edit\" ... - edit event." << endl;
-        m_Out << "\"help\" - show all commands." << endl;
-        m_Out << "\"quit\" - end the program." << endl;
-        m_Out << "------HELP------" << endl;
+        m_Out << "+-----------------------------------HELP------------------------------------+" << endl;
+        m_Out << "| \"help\" - show all commands.                                               |" << endl;
+        m_Out << "| \"new\" ...  - create new event.                                            |" << endl;
+        m_Out << "| \"move\" ... - postopne event, which user will choose.                      |" << endl;
+        m_Out << "| \"find\" ... - find event.                                                  |" << endl;
+        m_Out << "| \"load\" ... - upload all events from the file called \"filename\".           |" << endl;
+        m_Out << "| \"save\" ... - save all events to the file called \"filename\".               |" << endl;
+        m_Out << "| \"edit\" ... - edit event.                                                  |" << endl;
+        m_Out << "| \"delete\" ... delete event.                                                |" << endl;
+        m_Out << "| \"repeat\" ... - set repeat for event with user's time interval.            |" << endl;
+        m_Out << "| \"showDaily\" ... - show calendar and all events for day.                   |" << endl;
+        m_Out << "| \"showWeekly\" ... - show calendar and all events for week.                 |" << endl;
+        m_Out << "| \"showMonthly\" ... - show calendar and all events for month.               |" << endl;
+        m_Out << "| \"showYearly\" ... - show calendar and all events for year.                 |" << endl;
+        m_Out << "| \"listEvents\" ... - lists all events from calendar.                        |" << endl;
+        m_Out << "| \"findFirstPossible\" ... - find first possible date to pospone event.      |" << endl;
+        m_Out << "| \"quit\" - end the program.                                                 |" << endl;
+        m_Out << "+-----------------------------------HELP------------------------------------+" << endl;
         words.clear();
         return 0;
     }

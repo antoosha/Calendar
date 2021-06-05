@@ -10,8 +10,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
     int howManyEventsHasBeenSkipped = 0;
     ifstream indata; // indata is like cin
     string fileName;
-    m_Out << "Write path to file, from where you want to import data from calendar and press 'Enter':" << endl;
-    m_Out << "Example: \"C:\\Users\\PC\\Desktop\\file.txt\"" << endl;
+    m_Out << "Write absolute path to file, from where you want to import data to calendar and press 'Enter':" << endl;
     m_In >> fileName;
 
     indata.open(fileName); // opens the file
@@ -248,8 +247,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
 int CImportExport::exportData (std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) const {
     string fileName;
-    m_Out << "Write path to file, where you want to export data from calendar and press 'Enter':" << endl;
-    m_Out << "Example: \"C:\\Users\\PC\\Desktop\\file.txt\"" << endl;
+    m_Out << "Write absolute path to file, where you want to export data from calendar and press 'Enter':" << endl;
     m_Out << "Attantion! The data in the file will be overwritten." << endl;
     m_In >> fileName;
 
