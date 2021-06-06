@@ -32,12 +32,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment=".">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment=".+ const ref">
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,14 +101,7 @@
       <workItem from="1623007041065" duration="262000" />
       <workItem from="1623015827083" duration="58000" />
       <workItem from="1623015927719" duration="45000" />
-      <workItem from="1623016246167" duration="1413000" />
-    </task>
-    <task id="LOCAL-00019" summary="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;...">
-      <created>1622499782872</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1622499782872</updated>
+      <workItem from="1623016246167" duration="1757000" />
     </task>
     <task id="LOCAL-00020" summary="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;...">
       <created>1622535597702</created>
@@ -450,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623016647325</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary=".+ const ref">
+      <created>1623017673764</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1623017673764</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +466,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="implemented:&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
     <MESSAGE value="implemented:&#10;try to clean memory&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
     <MESSAGE value="implemented:&#10;no problems with memory&#10;&#10;need to do:&#10;doc comments&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;..." />
     <MESSAGE value="implemented:&#10;&#10;&#10;need to do:&#10;doc comments&#10;..." />
@@ -495,7 +490,8 @@
     <MESSAGE value="make&#10;rm korolant" />
     <MESSAGE value="makefile" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value=".+ const ref" />
+    <option name="LAST_COMMIT_MESSAGE" value=".+ const ref" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="70" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622910959241">

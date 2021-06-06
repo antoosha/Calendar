@@ -151,7 +151,7 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             dateTo = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
             flagDateTo = 1;
         }
-        if (dateFrom.dateToString() > dateTo.dateToString()) {
+        if (dateFrom.dateToString(dateFrom) > dateTo.dateToString(dateTo)) {
             m_Out << "First date is greater, than second, try again.." << endl;
             continue;
         }
@@ -342,7 +342,8 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             newDate = CDate(dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom);
 
-            if(newDate.dateToString() > cCalendar.returnMapById().at(id)->returnDateTo().dateToString()){
+            if(newDate.dateToString(newDate)
+                > cCalendar.returnMapById().at(id)->returnDateTo().dateToString(cCalendar.returnMapById().at(id)->returnDateTo())){
                 m_Out << "First date is greater, than second, try again to edit date \"from\".." << endl;
                 continue;
             }
@@ -413,7 +414,8 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             newDate = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
 
-            if(cCalendar.returnMapById().at(id)->returnDateFrom().dateToString() > newDate.dateToString() ){
+            if(cCalendar.returnMapById().at(id)->returnDateFrom().dateToString(cCalendar.returnMapById().at(id)->returnDateFrom())
+                > newDate.dateToString(newDate) ){
                 m_Out << "First date is greater, than second, try again to edit date \"to\".." << endl;
                 continue;
             }
@@ -791,15 +793,15 @@ int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCale
         return -4;
     }
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    string dateFromStr = cCalendar.mapOfEventsById.at(id)->returnDateFrom().dateToString();
-    string dateToStr = cCalendar.mapOfEventsById.at(id)->returnDateTo().dateToString();
+    string dateFromStr = cCalendar.mapOfEventsById.at(id)->returnDateFrom().dateToString(cCalendar.mapOfEventsById.at(id)->returnDateFrom());
+    string dateToStr = cCalendar.mapOfEventsById.at(id)->returnDateTo().dateToString(cCalendar.mapOfEventsById.at(id)->returnDateTo());
     for(auto i = cCalendar.mapOfEventsByDate.begin(); i != cCalendar.mapOfEventsByDate.end(); i++){
-        if(dateFromStr > i->second->returnDateTo().dateToString()){
+        if(dateFromStr > i->second->returnDateTo().dateToString(i->second->returnDateTo())){
             continue;
         }
         auto nextIter = i;
         nextIter++;
-        if(dateToStr <= nextIter->second->returnDateFrom().dateToString()){
+        if(dateToStr <= nextIter->second->returnDateFrom().dateToString(nextIter->second->returnDateFrom())){
             //show this place
             char s1[19];
             s1[18] = '\0';
