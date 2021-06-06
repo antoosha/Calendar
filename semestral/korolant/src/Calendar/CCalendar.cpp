@@ -818,7 +818,7 @@ int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCale
         //continue to find
     }
     //the last place, after the last event
-    auto i = returnMapByDate().end()--;
+    auto i = returnMapByDate().rbegin();
     char s1[19];
     s1[18] = '\0';
     std::sprintf(s1, "[%02d/%02d/%04d %02d:%02d]",i->second->returnDateTo().returnDay(), i->second->returnDateTo().returnMonth(),
