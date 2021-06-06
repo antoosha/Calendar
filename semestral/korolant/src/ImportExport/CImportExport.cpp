@@ -247,7 +247,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
 int CImportExport::exportData (std::istream & m_In, std::ostream & m_Out, CCalendar & cCalendar) const {
     string fileName;
-    m_Out << "Write absolute path to file, where you want to export data from calendar and press 'Enter':" << endl;
+    m_Out << "Write path to file, where you want to export data from calendar and press 'Enter':" << endl;
     m_Out << "Attantion! The data in the file will be overwritten." << endl;
     m_In >> fileName;
 
