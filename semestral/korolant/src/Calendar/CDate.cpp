@@ -27,9 +27,8 @@ int CDate::returnYear() const {
 std::string CDate::dateToString(const CDate & cDate) const {
     char s1[13];
     s1[12] = '\0';
-    if(cDate.year && cDate.month &&  cDate.day && cDate.hour && cDate.minute)
-        std::sprintf(s1, "%04d%02d%02d%02d%02d",cDate.year, cDate.month, cDate.day, cDate.hour, cDate.minute);
-    else throw "problem with date";
+    std::sprintf(s1, "%04d%02d%02d%02d%02d",cDate.returnYear(), cDate.returnMonth(), cDate.returnDay(),
+                                                       cDate.returnHour(), cDate.returnMinute());
     string dateInString(s1);
     return dateInString;
 }
