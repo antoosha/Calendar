@@ -5,7 +5,13 @@
 class CDate {
 public:
 
-    CDate() = default;
+    CDate(){
+        day = 0;
+        month = 0;
+        year = 0;
+        hour = 0;
+        minute = 0;
+    }
 
     /**
      * Constructor, witch sets parameters of object CDate.
