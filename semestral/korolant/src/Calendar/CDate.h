@@ -150,11 +150,11 @@ public:
     int returnMinute() const;
 
 private:
-    int day;
-    int month;
-    int year;
-    int hour;
-    int minute;
+    int day = 0;
+    int month = 0;
+    int year = 0;
+    int hour = 0;
+    int minute = 0;
 };
 
 

@@ -32,7 +32,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="." />
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="makefile">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,13 +102,8 @@
       <workItem from="1622926006711" duration="1406000" />
       <workItem from="1623007041065" duration="262000" />
       <workItem from="1623015827083" duration="58000" />
-    </task>
-    <task id="LOCAL-00017" summary="implemented:&#10;i have done polymorfism of CView&#10;&#10;need to do:&#10;show(View) implementation of show and setup&#10;osetrseni vstupu!&#10;tests&#10;...">
-      <created>1622328967280</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1622328967280</updated>
+      <workItem from="1623015927719" duration="45000" />
+      <workItem from="1623016246167" duration="394000" />
     </task>
     <task id="LOCAL-00018" summary="implemented:&#10;show(View) implementation of show and setup&#10;&#10;need to do:&#10;osetrseni vstupu!&#10;second additional polymorfism&#10;beautiful inteface&#10;tests&#10;&#10;...">
       <created>1622496588477</created>
@@ -442,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623015878697</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="makefile">
+      <created>1623015959173</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1623015959173</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +478,6 @@
     <MESSAGE value="implemented:&#10;&#10;added:&#10;Doxyfile&#10;&#10;need to do:&#10;doc comments&#10;..." />
     <MESSAGE value="implemented:&#10;&#10;added:&#10;+ Dependencies&#10;&#10;need to do:&#10;doc comments&#10;..." />
     <MESSAGE value="doc comments&#10;&#10;need to do:&#10;..." />
-    <MESSAGE value="makefile" />
     <MESSAGE value="import" />
     <MESSAGE value="CDate.h" />
     <MESSAGE value="+README.md&#10;edit doxyfile and makefile" />
@@ -487,7 +492,8 @@
     <MESSAGE value="README.md" />
     <MESSAGE value="make&#10;rm korolant" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="makefile" />
+    <option name="LAST_COMMIT_MESSAGE" value="makefile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="70" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622910959241">
