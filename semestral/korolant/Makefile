@@ -4,7 +4,7 @@ CXX = g++
 LD = g++
 MKDIR = mkdir -p
 
-CXXFLAGS = -Wall -pedantic -Wextra -std=c++14
+CXXFLAGS = -Wall -pedantic -Wextra -std=c++14 -g
 
 SOURCE_DIR = src
 BUILD_DIR = build
