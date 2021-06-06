@@ -10,7 +10,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
     int howManyEventsHasBeenSkipped = 0;
     ifstream indata; // indata is like cin
     string fileName;
-    m_Out << "Write absolute path to file, from where you want to import data to calendar and press 'Enter':" << endl;
+    m_Out << "Write path to file, from where you want to import data to calendar and press 'Enter':" << endl;
     m_In >> fileName;
 
     indata.open(fileName); // opens the file

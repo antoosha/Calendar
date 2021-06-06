@@ -794,7 +794,7 @@ int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCale
     string dateFromStr = cCalendar.mapOfEventsById.at(id)->returnDateFrom().dateToString();
     string dateToStr = cCalendar.mapOfEventsById.at(id)->returnDateTo().dateToString();
     for(auto i = cCalendar.mapOfEventsByDate.begin(); i != cCalendar.mapOfEventsByDate.end(); i++){
-        if(dateFromStr < i->second->returnDateTo().dateToString()){
+        if(dateFromStr > i->second->returnDateTo().dateToString()){
             continue;
         }
         auto nextIter = i;
