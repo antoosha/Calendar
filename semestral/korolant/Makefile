@@ -40,7 +40,7 @@ doc: Doxyfile
 
 PHONY: clean
 clean:
-	rm -rf doc/ $(BUILD_DIR)/
+	rm -rf doc/ $(BUILD_DIR)/ TARGET
 
 
 # Requirements / Dependencies

@@ -34,7 +34,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,11 +80,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -103,14 +98,8 @@
       <workItem from="1622297715795" duration="990000" />
       <workItem from="1622298727956" duration="124713000" />
       <workItem from="1622902847568" duration="10948000" />
-      <workItem from="1622926006711" duration="831000" />
-    </task>
-    <task id="LOCAL-00014" summary="implemented:&#10;CDATE movemonths and movemonthsback!!!&#10;&#10;need to do:&#10;findTerm&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;...">
-      <created>1622287320544</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1622287320544</updated>
+      <workItem from="1622926006711" duration="1406000" />
+      <workItem from="1623007041065" duration="67000" />
     </task>
     <task id="LOCAL-00015" summary="implemented:&#10;findTerm&#10;&#10;need to do:&#10;show(View) polymorfismus&#10;osetrseni vstupu!&#10;tests&#10;...">
       <created>1622294002393</created>
@@ -448,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622926598768</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="README.md">
+      <created>1622927044807</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1622927044808</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
