@@ -31,7 +31,7 @@ public:
      * @param cDate
      * @return converted date to string
      */
-    std::string dateToString(const CDate & cDate) const;
+    std::string dateToString() const;
 
     /**
      * This method is used to know a number of day from input parameters

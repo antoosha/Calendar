@@ -151,7 +151,7 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             dateTo = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
             flagDateTo = 1;
         }
-        if (dateFrom.dateToString(dateFrom) > dateTo.dateToString(dateTo)) {
+        if (dateFrom.dateToString() > dateTo.dateToString()) {
             m_Out << "First date is greater, than second, try again.." << endl;
             continue;
         }
@@ -342,8 +342,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             newDate = CDate(dayFrom, monthFrom, yearFrom, hourFrom, minuteFrom);
 
-            if(newDate.dateToString(newDate)
-                > cCalendar.returnMapById().at(id)->returnDateTo().dateToString(cCalendar.returnMapById().at(id)->returnDateTo())){
+            if(newDate.dateToString() > cCalendar.returnMapById().at(id)->returnDateTo().dateToString()){
                 m_Out << "First date is greater, than second, try again to edit date \"from\".." << endl;
                 continue;
             }
@@ -414,8 +413,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             newDate = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
 
-            if(cCalendar.returnMapById().at(id)->returnDateFrom().dateToString(cCalendar.returnMapById().at(id)->returnDateFrom())
-                > newDate.dateToString(newDate) ){
+            if(cCalendar.returnMapById().at(id)->returnDateFrom().dateToString() > newDate.dateToString()){
                 m_Out << "First date is greater, than second, try again to edit date \"to\".." << endl;
                 continue;
             }
@@ -700,14 +698,14 @@ void CCalendar::addEvent(const int & id, const std::string & name, const CDate &
         CRequired cRequired = CRequired(id, name, dateFrom, dateTo, place, members, description);
         mapOfEventsByName.emplace(name, make_shared<CRequired>(cRequired));
         mapOfEventsById.emplace(id, make_shared<CRequired>(cRequired));
-        mapOfEventsByDate.emplace(dateFrom.dateToString(dateFrom), make_shared<CRequired>(cRequired));
+        mapOfEventsByDate.emplace(dateFrom.dateToString(), make_shared<CRequired>(cRequired));
 
     }
     else if(!strcasecmp(obligation.c_str(), "optional")){
         COptional cOptional = COptional(id, name, dateFrom, dateTo, place, members, description);
         mapOfEventsByName.emplace(name, make_shared<COptional>(cOptional));
         mapOfEventsById.emplace(id, make_shared<COptional>(cOptional));
-        mapOfEventsByDate.emplace(dateFrom.dateToString(dateFrom), make_shared<COptional>(cOptional));
+        mapOfEventsByDate.emplace(dateFrom.dateToString(), make_shared<COptional>(cOptional));
     }
 
 }
@@ -793,15 +791,16 @@ int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCale
         return -4;
     }
     m_In.ignore(numeric_limits<streamsize>::max(), '\n');
-    string dateFromStr = cCalendar.mapOfEventsById.at(id)->returnDateFrom().dateToString(cCalendar.mapOfEventsById.at(id)->returnDateFrom());
-    string dateToStr = cCalendar.mapOfEventsById.at(id)->returnDateTo().dateToString(cCalendar.mapOfEventsById.at(id)->returnDateTo());
+    string dateFromStr = cCalendar.mapOfEventsById.at(id)->returnDateFrom().dateToString();
+    string dateToStr = cCalendar.mapOfEventsById.at(id)->returnDateTo().dateToString();
     for(auto i = cCalendar.mapOfEventsByDate.begin(); i != cCalendar.mapOfEventsByDate.end(); i++){
-        if(dateFromStr > i->second->returnDateTo().dateToString(i->second->returnDateTo())){
+        if(dateFromStr < i->second->returnDateTo().dateToString()){
             continue;
         }
         auto nextIter = i;
         nextIter++;
-        if(dateToStr <= nextIter->second->returnDateFrom().dateToString(nextIter->second->returnDateFrom())){
+        if(nextIter == cCalendar.mapOfEventsByDate.end()) break;
+        if(dateToStr <= nextIter->second->returnDateFrom().dateToString()){
             //show this place
             char s1[19];
             s1[18] = '\0';

@@ -44,8 +44,8 @@ public:
 protected:
     int id = 0;
     std::string name;
-    CDate dateFrom{0,0,0,0,0};
-    CDate dateTo{0,0,0,0,0};
+    CDate dateFrom{};
+    CDate dateTo{};
     std::string place;
     /**vector of members, which relates to this event*/
     std::vector<std::string> members;
