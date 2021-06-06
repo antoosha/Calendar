@@ -27,7 +27,12 @@ int CDate::returnYear() const {
 std::string CDate::dateToString(const CDate & cDate) const {
     char s1[13];
     s1[12] = '\0';
-    std::sprintf(s1, "%04d%02d%02d%02d%02d",cDate.year, cDate.month, cDate.day, cDate.hour, cDate.minute);
+    int yearIn = cDate.year;
+    int monthIn = cDate.month;
+    int dayIn = cDate.day;
+    int hourIn = cDate.hour;
+    int minuteIn = cDate.minute;
+    std::sprintf(s1, "%04d%02d%02d%02d%02d",yearIn, monthIn, dayIn, hourIn, minuteIn);
     string dateInString(s1);
     return dateInString;
 }
