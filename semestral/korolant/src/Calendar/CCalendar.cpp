@@ -698,14 +698,14 @@ void CCalendar::addEvent(const int & id, const std::string & name, const CDate &
         CRequired cRequired = CRequired(id, name, dateFrom, dateTo, place, members, description);
         mapOfEventsByName.emplace(name, make_shared<CRequired>(cRequired));
         mapOfEventsById.emplace(id, make_shared<CRequired>(cRequired));
-        mapOfEventsByDate.emplace(dateFrom.dateToString(), make_shared<CRequired>(cRequired));
+        mapOfEventsByDate.emplace(dateFrom.dateToString(dateFrom), make_shared<CRequired>(cRequired));
 
     }
     else if(!strcasecmp(obligation.c_str(), "optional")){
         COptional cOptional = COptional(id, name, dateFrom, dateTo, place, members, description);
         mapOfEventsByName.emplace(name, make_shared<COptional>(cOptional));
         mapOfEventsById.emplace(id, make_shared<COptional>(cOptional));
-        mapOfEventsByDate.emplace(dateFrom.dateToString(), make_shared<COptional>(cOptional));
+        mapOfEventsByDate.emplace(dateFrom.dateToString(dateFrom), make_shared<COptional>(cOptional));
     }
 
 }

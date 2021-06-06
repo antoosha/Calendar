@@ -175,7 +175,7 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
 
         dateTo = CDate(dayTo, monthTo, yearTo, hourTo, minuteTo);
 
-        if (dateFrom.dateToString() > dateTo.dateToString()) {
+        if (dateFrom.dateToString(dateFrom) > dateTo.dateToString(dateTo)) {
             howManyEventsHasBeenSkipped++;
             continue;
         }

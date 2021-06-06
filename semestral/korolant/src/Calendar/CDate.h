@@ -28,9 +28,10 @@ public:
     /**
      * This method converts the date to string in format YYYYMMDDHHMM.
      *
+     * @param cDate
      * @return converted date to string
      */
-    std::string dateToString() const;
+    std::string dateToString(const CDate & cDate) const;
 
     /**
      * This method is used to know a number of day from input parameters
@@ -150,11 +151,11 @@ public:
     int returnMinute() const;
 
 private:
-    int day = 0;
-    int month = 0;
-    int year = 0;
-    int hour = 0;
-    int minute = 0;
+    int day;
+    int month;
+    int year;
+    int hour;
+    int minute;
 };
 
 
