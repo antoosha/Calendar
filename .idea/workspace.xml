@@ -32,20 +32,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="rip 2nd time&#10;deleted word &quot;absolute&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Application/CApplication.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Application/CApplication.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CDate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CEvent.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CEvent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/COptional.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/COptional.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CRequired.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CRequired.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/ImportExport/CImportExport.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Interface/CInterface.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Postpone/CPostpone.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Postpone/CPostpone.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Repeat/CRepeat.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Repeat/CRepeat.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CView.h" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CView.h" afterDir="false" />
+    <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="last commit before sent it to progtest">
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,14 +102,7 @@
       <workItem from="1623015827083" duration="58000" />
       <workItem from="1623015927719" duration="45000" />
       <workItem from="1623016246167" duration="7706000" />
-      <workItem from="1623074635555" duration="2120000" />
-    </task>
-    <task id="LOCAL-00032" summary="implemented:&#10;&#10;&#10;need to do:&#10;doc comments&#10;...">
-      <created>1622647115134</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1622647115134</updated>
+      <workItem from="1623074635555" duration="2886000" />
     </task>
     <task id="LOCAL-00033" summary="implemented:&#10;&#10;&#10;need to do:&#10;doc comments&#10;...">
       <created>1622648697747</created>
@@ -459,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623023691726</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="last commit before sent it to progtest">
+      <created>1623076806719</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1623076806720</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +467,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="implemented:&#10;&#10;need to do:&#10;doc comments&#10;..." />
     <MESSAGE value="implemented:&#10;&#10;added:&#10;Doxyfile&#10;&#10;need to do:&#10;doc comments&#10;..." />
     <MESSAGE value="implemented:&#10;&#10;added:&#10;+ Dependencies&#10;&#10;need to do:&#10;doc comments&#10;..." />
     <MESSAGE value="doc comments&#10;&#10;need to do:&#10;..." />
@@ -504,7 +491,8 @@
     <MESSAGE value="date" />
     <MESSAGE value="dateToString works super and im gonna sleep i will die now i have been already die dye diyererer&#10;please&#10;could&#10;i&#10;do&#10;this&#10;exam&#10;PLEASE&#10;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!RIP" />
     <MESSAGE value="rip 2nd time&#10;deleted word &quot;absolute&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="rip 2nd time&#10;deleted word &quot;absolute&quot;" />
+    <MESSAGE value="last commit before sent it to progtest" />
+    <option name="LAST_COMMIT_MESSAGE" value="last commit before sent it to progtest" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="70" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623076775480">
@@ -531,25 +519,25 @@
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622908353546" />
     <state x="2606" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622743615328" />
-    <state width="1493" height="372" key="GridCell.Tab.0.bottom" timestamp="1623023961678">
+    <state width="1493" height="62" key="GridCell.Tab.0.bottom" timestamp="1623076807638">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623023961678" />
+    <state width="1493" height="62" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623076807638" />
     <state width="1877" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
-    <state width="1493" height="372" key="GridCell.Tab.0.center" timestamp="1623023961678">
+    <state width="1493" height="62" key="GridCell.Tab.0.center" timestamp="1623076807638">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623023961678" />
+    <state width="1493" height="62" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623076807638" />
     <state width="1877" height="241" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
-    <state width="1493" height="372" key="GridCell.Tab.0.left" timestamp="1623023961678">
+    <state width="1493" height="62" key="GridCell.Tab.0.left" timestamp="1623076807637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623023961678" />
+    <state width="1493" height="62" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623076807637" />
     <state width="1877" height="241" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529783" />
-    <state width="1493" height="372" key="GridCell.Tab.0.right" timestamp="1623023961678">
+    <state width="1493" height="62" key="GridCell.Tab.0.right" timestamp="1623076807638">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623023961678" />
+    <state width="1493" height="62" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623076807638" />
     <state width="1877" height="241" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
     <state width="1877" height="241" key="GridCell.Tab.1.bottom" timestamp="1622761529787">
       <screen x="1920" y="0" width="1920" height="1040" />
