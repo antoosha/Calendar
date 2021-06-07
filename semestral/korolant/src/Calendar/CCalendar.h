@@ -14,6 +14,9 @@
 #include "CRequired.h"
 #include "CDate.h"
 
+/**
+ * This class is engine of Calendar, it include all necessary methods, like creat new event and do smthing with it.
+ */
 class CCalendar {
 
 public:

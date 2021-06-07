@@ -3,7 +3,9 @@
 #include "CCalendar.h"
 #include "CEvent.h"
 
-
+/**
+ * This class is(describes) "type" of event, which is optional to do.
+ */
 class COptional : public CEvent {
 public:
     /**

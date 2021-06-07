@@ -2,6 +2,9 @@
 #include "CCalendar.h"
 #include "CEvent.h"
 
+/**
+ * This class is(describes) "type" of event, which is required to do.
+ */
 class CRequired : public CEvent {
 public:
     /**

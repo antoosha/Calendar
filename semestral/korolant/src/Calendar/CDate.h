@@ -2,6 +2,9 @@
 #include <memory>
 #include <string>
 
+/**
+ * This class is for working with date, is very important in whole program, because calendar needs to work with date.
+ */
 class CDate {
 public:
 

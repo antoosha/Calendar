@@ -17,7 +17,7 @@ public:
     /** Copy-cons is deleted, because copy of application is not applicable. */
     CApplication ( const CApplication & ) = delete;
 
-    CApplication & operator= ( const CApplication & ) = delete;
+    CApplication & operator= ( const CApplication & cApplication ) = delete;
 
     ~CApplication () = default;
 

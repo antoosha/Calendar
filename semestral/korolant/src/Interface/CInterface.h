@@ -10,6 +10,10 @@
 #include "../Postpone/CPostpone.h"
 #include "../Repeat/CRepeat.h"
 
+/**
+ * This class is a "keyboard" or "planning" brain of program. It decides what to do next after user's input.
+ * Solve user's problems and give an information to user.
+ */
 class CInterface {
 
 public:

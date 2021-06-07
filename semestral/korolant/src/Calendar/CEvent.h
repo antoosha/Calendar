@@ -6,7 +6,9 @@
 #include <string>
 #include <vector>
 
-
+/**
+ * This abstract class review event. Has printing method to print event using format.
+ */
 class CEvent {
 public:
 

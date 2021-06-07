@@ -6,6 +6,11 @@
 #include <limits>
 
 #include "../Calendar/CCalendar.h"
+
+/**
+ * This class is for importing and exporting data to program or from program. It uses specific format for input and beautiful
+ * user's output.
+ */
 class CImportExport {
 public:
     /**

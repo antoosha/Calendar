@@ -4,6 +4,9 @@
 #include "../Calendar/CCalendar.h"
 #include "../Calendar/CDate.h"
 
+/**
+ * This class is used to postpone or another words "move" event to another date.
+ */
 class CPostpone {
 public:
     /**

@@ -315,5 +315,3 @@ int CDate::returnHour() const {
 int CDate::returnMinute() const {
     return minute;
 }
-
-

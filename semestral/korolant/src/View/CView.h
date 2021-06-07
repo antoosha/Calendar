@@ -3,6 +3,9 @@
 #include <string>
 #include "../Calendar/CCalendar.h"
 
+/**
+ * This abstract class represents a view of show events in calendar. There different ways to show events and show calendar.
+ */
 class CView {
 public:
 

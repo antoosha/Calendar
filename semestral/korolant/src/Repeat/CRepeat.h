@@ -1,5 +1,9 @@
 #include "../Calendar/CCalendar.h"
 
+/**
+ * This class is used to repeat events in calendar. New event will be fully new and will not have nothing common
+ * with previous event(exept parameters).
+ */
 class CRepeat {
 public:
     /**
