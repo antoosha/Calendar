@@ -12,6 +12,9 @@ int CImportExport::importData(std::istream & m_In, std::ostream & m_Out, CCalend
     string fileName;
     m_Out << "Write path to file, from where you want to import data to calendar and press 'Enter':" << endl;
     m_In >> fileName;
+    if(m_In.eof()){
+        return -3;
+    }
 
     indata.open(fileName); // opens the file
     if(!indata) { // file couldn't be opened
@@ -250,6 +253,9 @@ int CImportExport::exportData (std::istream & m_In, std::ostream & m_Out, CCalen
     m_Out << "Write path to file, where you want to export data from calendar and press 'Enter':" << endl;
     m_Out << "Attantion! The data in the file will be overwritten." << endl;
     m_In >> fileName;
+    if(m_In.eof()){
+        return -3;
+    }
 
     ofstream outdata; // outdata is like cin
     outdata.open(fileName); // opens the file
