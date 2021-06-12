@@ -18,6 +18,12 @@ void CApplication::run() {
         cout << "+---------------------------------------------------------------------------+" << endl;
 
         a.getCommand();
+        if(cin.eof()){
+            for(auto i = views.begin(); i != views.end(); i++){
+                delete i->second;
+            }
+            return;
+        }
 
         if(a.doSmthWithCommand(views) == -3){
 

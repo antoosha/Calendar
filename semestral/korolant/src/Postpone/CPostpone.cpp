@@ -5,6 +5,9 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     int idToMove;
     m_Out << "Write id of event you want to move and press 'Enter':" << endl;
     m_In >> idToMove;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if(idToMove < 0 || m_In.fail()){
         m_In.clear();
@@ -25,6 +28,9 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     m_Out << "1) Rewind date forward" << endl;
     m_Out << "2) Rewind date back" << endl;
     m_In >> numberForWay;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if((numberForWay != 1 && numberForWay != 2) || m_In.fail()){
         m_In.clear();
@@ -56,6 +62,9 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     m_Out << "5) Years"<< endl;
     m_Out << "6) Move this event to the nearest working day with same time (Monday, Tuesday, Wednesday, Thursday, Friday)"<< endl;
     m_In >> number;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if(number < 1 || number > 6 || m_In.fail()){
         m_In.clear();
@@ -69,6 +78,9 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
         int minutes;
         m_Out << "Write for how many minutes you want to move event and press 'Enter':" << endl;
         m_In >> minutes;
+        if(m_In.eof()){
+            return -3;
+        }
 
         if(minutes < 1 || minutes > 59 || m_In.fail()){
             m_In.clear();
@@ -92,6 +104,9 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
         int hours;
         m_Out << "Write for how many hours you want to move event and press 'Enter':" << endl;
         m_In >> hours;
+        if(m_In.eof()){
+            return -3;
+        }
 
         if(hours < 1 || hours > 23 || m_In.fail()){
             m_In.clear();
@@ -115,6 +130,9 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
         int days;
         m_Out << "Write for how many days you want to move event and press 'Enter':" << endl;
         m_In >> days;
+        if(m_In.eof()){
+            return -3;
+        }
 
         if(days < 1 || days > minOfDaysFirstOrLastMonth - 1 || m_In.fail() ){
             m_In.clear();
@@ -138,6 +156,9 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
         int months;
         m_Out << "Write for how many months you want to move event and press 'Enter':" << endl;
         m_In >> months;
+        if(m_In.eof()){
+            return -3;
+        }
 
         if(months < 1 || months > 11 || m_In.fail()){
             m_In.clear();
@@ -160,6 +181,9 @@ int CPostpone::moveEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
         int years;
         m_Out << "Write for how many years you want to move event and press 'Enter':" << endl;
         m_In >> years;
+        if(m_In.eof()){
+            return -3;
+        }
 
         if(years < 0 || m_In.fail()){
             m_In.clear();

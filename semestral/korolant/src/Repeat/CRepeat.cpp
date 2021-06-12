@@ -5,6 +5,9 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     int id;
     m_Out << "Write id of event what you want to repeat and press 'Enter':" << endl;
     m_In >> id;
+    if(m_In.eof()){
+        return -3;
+    }
     if( id < 0 || m_In.fail()){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -26,6 +29,9 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     m_Out << "3) Every month" << endl;
     m_Out << "4) Every year" << endl;
     m_In >> number;
+    if(m_In.eof()){
+        return -3;
+    }
     if(number < 1 || number > 4 || m_In.fail()){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -37,6 +43,9 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
     int howManyTimesToRepeat;
     m_Out << "Write how many times you want to repeat this event(MAX=30) and press 'Enter':" << endl;
     m_In >> howManyTimesToRepeat;
+    if(m_In.eof()){
+        return -3;
+    }
     if(howManyTimesToRepeat < 1 || howManyTimesToRepeat > 30 || m_In.fail()){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');

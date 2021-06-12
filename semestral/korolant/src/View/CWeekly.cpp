@@ -83,6 +83,9 @@ void CWeekly::show(ostream &m_Out, CCalendar & cCalendar) const {
 int CWeekly::setup(istream &m_In, ostream &m_Out) {
     m_Out << "Write year, you want to show:" << endl;
     m_In >> year;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if(year < 1600 || year > 9999 || m_In.fail()){
         m_In.clear();
@@ -94,6 +97,9 @@ int CWeekly::setup(istream &m_In, ostream &m_Out) {
 
     m_Out << "Write month, you want to show:" << endl;
     m_In >> month;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if(month < 1 || month > 12 || m_In.fail()){
         m_In.clear();
@@ -105,6 +111,9 @@ int CWeekly::setup(istream &m_In, ostream &m_Out) {
 
     m_Out << "Write week, you want to show:" << endl;
     m_In >> week;
+    if(m_In.eof()){
+        return -3;
+    }
     CDate cDate = {};
     if(week < 1 || week > 5 || (cDate.numberOfDays(month-1, year) < 29 && cDate.dayNumber(1,month,year) == 0 && week == 5) || m_In.fail()){
         m_In.clear();
@@ -129,6 +138,9 @@ int CWeekly::navigation(std::istream &m_In, std::ostream &m_Out) {
         m_Out << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
         int number;
         m_In >> number;
+        if(m_In.eof()){
+            return -3;
+        }
 
         if (number < 1 || number > 3 || m_In.fail()) {
             m_In.clear();

@@ -22,6 +22,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
     m_Out << "Write name of this event and press 'Enter':" << endl;
     getline(m_In, name);
+    if(m_In.eof()){
+        return -3;
+    }
     if(name.empty()){
         m_Out << "Name is empty, try again.." << endl;
         return -4;
@@ -33,6 +36,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         while (flagDateFrom == 0) {
             m_Out << "Write year of date 'from' and press 'Enter':" << endl;
             m_In >> yearFrom;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if (yearFrom < 1600 || yearFrom > 9999 || m_In.fail()) {
                 m_In.clear();
@@ -44,6 +50,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
             m_Out << "Write month of date 'from' and press 'Enter':" << endl;
             m_In >> monthFrom;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if (monthFrom < 1 || monthFrom > 12 || m_In.fail()) {
                 m_In.clear();
@@ -55,6 +64,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
             m_Out << "Write day of date 'from' and press 'Enter':" << endl;
             m_In >> dayFrom;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if (dayFrom > cDate.numberOfDays(monthFrom - 1, yearFrom) || dayFrom < 1 || m_In.fail()) {
                 m_In.clear();
@@ -66,6 +78,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
             m_Out << "Write hour of date 'from' and press 'Enter':" << endl;
             m_In >> hourFrom;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if (hourFrom > 23 || hourFrom < 0 || m_In.fail()) {
                 m_In.clear();
@@ -77,6 +92,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
             m_Out << "Write minute of date 'from' and press 'Enter':" << endl;
             m_In >> minuteFrom;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if (minuteFrom > 59 || minuteFrom < 0 || m_In.fail()) {
                 m_In.clear();
@@ -94,6 +112,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         while (flagDateTo == 0) {
             m_Out << "Write year of date 'to' and press 'Enter':" << endl;
             m_In >> yearTo;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if (yearTo < 1600 || yearTo > 9999 || m_In.fail()) {
                 m_In.clear();
@@ -105,6 +126,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
             m_Out << "Write month of date 'to' and press 'Enter':" << endl;
             m_In >> monthTo;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if (monthTo < 1 || monthTo > 12 || m_In.fail()) {
                 m_In.clear();
@@ -116,6 +140,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
             m_Out << "Write day of date 'to' and press 'Enter':" << endl;
             m_In >> dayTo;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if (dayTo > cDate.numberOfDays(monthTo - 1, yearTo) || dayTo < 1 || m_In.fail()) {
                 m_In.clear();
@@ -127,6 +154,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
             m_Out << "Write hour of date 'to' and press 'Enter':" << endl;
             m_In >> hourTo;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if (hourTo > 23 || hourTo < 0 || m_In.fail()) {
                 m_In.clear();
@@ -138,6 +168,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
             m_Out << "Write minute of date 'to' and press 'Enter':" << endl;
             m_In >> minuteTo;
+            if(m_In.eof()){
+                return -3;
+            }
 
 
             if (minuteTo > 59 || minuteTo < 0 || m_In.fail()) {
@@ -160,6 +193,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
     m_Out << "Write place of this event and press 'Enter':" << endl;
     std::getline(m_In, place);
+    if(m_In.eof()){
+        return -3;
+    }
     if(place.empty()){
         m_Out << "Place is empty, try again.." << endl;
         return -4;
@@ -170,6 +206,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         m_Out << "If you want to add member, write \"+\" and press 'Enter':" << endl;
         m_Out << "If you DO NOT want to add member, write \"-\" and press 'Enter':" << endl;
         m_In >> sign;
+        if(m_In.eof()){
+            return -3;
+        }
 
         if((sign != '+' && sign != '-') || m_In.fail()){
             m_In.clear();
@@ -183,6 +222,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
             m_Out << "Write person, who you want to add to this event and press 'Enter':" << endl;
             string memberIn;
             getline(m_In, memberIn);
+            if(m_In.eof()){
+                return -3;
+            }
             if(memberIn.empty()){
                 m_Out << "Member is empty, member has not been added, try again.." << endl;
                 continue;
@@ -201,6 +243,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         m_Out << "If you want to add description, write \"+\" and press 'Enter':" << endl;
         m_Out << "If you DO NOT want to add description, write \"-\" and press 'Enter':" << endl;
         m_In >> sign;
+        if(m_In.eof()){
+            return -3;
+        }
         if ((sign != '+' && sign != '-') || m_In.fail()) {
             m_In.clear();
             m_In.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -212,6 +257,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
         if (sign == '+') {
             m_Out << "Write description of this event and press 'Enter':" << endl;
             getline(m_In, description);
+            if(m_In.eof()){
+                return -3;
+            }
             if (description.empty()) {
                 m_Out << "Description is empty, try again.." << endl;
                 continue;
@@ -225,6 +273,9 @@ int CCalendar::createEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
 
     m_Out << "Choose obligation of this event, write \"required\" or \"optional\" and press 'Enter':" << endl;
     m_In >> obligation;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if(strcasecmp(obligation.c_str(), "required") != 0){
         if(strcasecmp(obligation.c_str(), "optional") != 0){
@@ -254,6 +305,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
     int number;
     m_Out << "Write ID of event you want to change and press 'Enter':" << endl;
     m_In >> id;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if(cCalendar.returnMapById().count(id) == 0 || m_In.fail()){
         m_In.clear();
@@ -271,6 +325,10 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
     m_Out << "5) Members" << endl;
     m_Out << "6) Description" << endl;
     m_In >> number;
+    if(m_In.eof()){
+        return -3;
+    }
+
     if(number < 1 || number > 6 || m_In.fail()){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -286,6 +344,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         while(flagDateFrom == 0) {
             m_Out << "Write year of date 'from' and press 'Enter':" << endl;
             m_In >> yearFrom;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(yearFrom < 1600 || yearFrom > 9999 || m_In.fail()){
                 m_In.clear();
@@ -297,6 +358,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             m_Out << "Write month of date 'from' and press 'Enter':" << endl;
             m_In >> monthFrom;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(monthFrom < 1 || monthFrom > 12 || m_In.fail()){
                 m_In.clear();
@@ -308,6 +372,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             m_Out << "Write day of date 'from' and press 'Enter':" << endl;
             m_In >> dayFrom;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(dayFrom > cDate.numberOfDays(monthFrom-1, yearFrom) || dayFrom < 1 || m_In.fail()){
                 m_In.clear();
@@ -319,6 +386,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             m_Out << "Write hour of date 'from' and press 'Enter':" << endl;
             m_In >> hourFrom;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(hourFrom > 23 || hourFrom < 0 || m_In.fail()){
                 m_In.clear();
@@ -330,7 +400,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             m_Out << "Write minute of date 'from' and press 'Enter':" << endl;
             m_In >> minuteFrom;
-
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(minuteFrom > 59 || minuteFrom < 0 ||  m_In.fail()){
                 m_In.clear();
@@ -358,6 +430,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         while(flagDateTo == 0) {
             m_Out << "Write year of date 'to' and press 'Enter':" << endl;
             m_In >> yearTo;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(yearTo < 1600 || yearTo > 9999 || m_In.fail()){
                 m_In.clear();
@@ -369,6 +444,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             m_Out << "Write month of date 'to' and press 'Enter':" << endl;
             m_In >> monthTo;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(monthTo < 1 || monthTo > 12 || m_In.fail()){
                 m_In.clear();
@@ -380,6 +458,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             m_Out << "Write day of date 'to' and press 'Enter':" << endl;
             m_In >> dayTo;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(dayTo > cDate.numberOfDays(monthTo-1, yearTo) || dayTo < 1 ||  m_In.fail()){
                 m_In.clear();
@@ -391,6 +472,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             m_Out << "Write hour of date 'to' and press 'Enter':" << endl;
             m_In >> hourTo;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(hourTo > 23 || hourTo < 0 || m_In.fail()){
                 m_In.clear();
@@ -402,6 +486,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
 
             m_Out << "Write minute of date 'to' and press 'Enter':" << endl;
             m_In >> minuteTo;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(minuteTo > 59 || minuteTo < 0 || m_In.fail()){
                 m_In.clear();
@@ -429,6 +516,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         string newName;
         m_Out << "Write new name of this event and press 'Enter':" << endl;
         getline(m_In, newName);
+        if(m_In.eof()){
+            return -3;
+        }
         if(newName.empty()){
             m_Out << "Name has not been changed, new name is empty, try again.." << endl;
             return -4;
@@ -442,6 +532,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         string newPlace;
         m_Out << "Write place of this event and press 'Enter':" << endl;
         std::getline(m_In, newPlace);
+        if(m_In.eof()){
+            return -3;
+        }
         if(newPlace.empty()){
             m_Out << "Place has not been changed, new place is empty, try again.." << endl;
             return -4;
@@ -457,6 +550,10 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         m_Out << "Write \"+\" if you want to add new member and press 'Enter'" << endl;
         m_Out << "Write \"-\" if you want to delete member and press 'Enter'" << endl;
         m_In >> sign;
+        if(m_In.eof()){
+            return -3;
+        }
+
         if((sign != '+' && sign != '-') || m_In.fail()){
             m_In.clear();
             m_In.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -469,6 +566,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             m_Out << "Write person, who you want to add to this event and press 'Enter':" << endl;
             string memberIn;
             getline(m_In, memberIn);
+            if(m_In.eof()){
+                return -3;
+            }
             if(memberIn.empty()){
                 m_Out << "Member has not been changed, new member is empty, try again.." << endl;
                 return -4;
@@ -487,6 +587,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             }
             m_Out << "Write index of person, who you want to delete from this event and press 'Enter':" << endl;
             m_In >> index;
+            if(m_In.eof()){
+                return -3;
+            }
 
             if(index <= 0 || (size_t)index >  cCalendar.returnMapById().at(id)->returnMembers().size() || m_In.fail()){
                 m_In.clear();
@@ -512,6 +615,9 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         string newDescription;
         m_Out << "Write description of this event and press 'Enter':" << endl;
         std::getline(m_In, newDescription);
+        if(m_In.eof()){
+            return -3;
+        }
         if(newDescription.empty()){
             m_Out << "Description has not been changed, new description is empty, try again.." << endl;
             return -4;
@@ -537,6 +643,9 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
     m_Out << "2) Place:" << endl;
     m_Out << "3) Name and place:" << endl;
     m_In >> number;
+    if(m_In.eof()){
+        return -3;
+    }
     if((number != 1 && number != 2 && number != 3) || m_In.fail() ){
         m_In.clear();
         m_In.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -554,6 +663,9 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         vector<shared_ptr<CEvent>> events;
         m_Out << "Write name of event and press 'Enter':" << endl;
         getline(m_In, nameFind);
+        if(m_In.eof()){
+            return -3;
+        }
         if(nameFind.empty()){
             m_Out << "Name of event to find is empty, try again.." << endl;
             return -4;
@@ -595,6 +707,9 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         vector<shared_ptr<CEvent>> events;
         m_Out << "Write place of event and press 'Enter':" << endl;
         getline(m_In, placeFind);
+        if(m_In.eof()){
+            return -3;
+        }
         if(placeFind.empty()){
             m_Out << "Place of event to find is empty, try again.." << endl;
             return -4;
@@ -635,12 +750,18 @@ int CCalendar::findEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
         vector<shared_ptr<CEvent>> events;
         m_Out << "Write name of event and press 'Enter':" << endl;
         getline(m_In, nameFind);
+        if(m_In.eof()){
+            return -3;
+        }
         if(nameFind.empty()){
             m_Out << "Name of event to find is empty, try again.." << endl;
             return -4;
         }
         m_Out << "Write place of event and press 'Enter':" << endl;
         getline(m_In, placeFind);
+        if(m_In.eof()){
+            return -3;
+        }
         if(placeFind.empty()){
             m_Out << "Place of event to find is empty, try again.." << endl;
             return -4;
@@ -714,6 +835,9 @@ int CCalendar::deleteEvent(std::istream & m_In, std::ostream & m_Out, CCalendar 
     int idToDelete;
     m_Out << "Write id of event to delete and press 'Enter':" << endl;
     m_In >> idToDelete;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if(idToDelete < 0 || m_In.fail()){
         m_In.clear();
@@ -777,6 +901,9 @@ int CCalendar::findFirstPossible(istream &m_In, ostream &m_Out, CCalendar &cCale
     int id;
     m_Out << "Write id of event you want to find first possible term to postpone it and press 'Enter':" << endl;
     m_In >> id;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if(id < 0){
         m_In.clear();

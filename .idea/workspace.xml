@@ -33,7 +33,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecc7e607-8632-4761-a72e-b0008416c978" name="Default Changelist" comment="last commit before sent it to progtest">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Application/CApplication.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Application/CApplication.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Calendar/CCalendar.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Postpone/CPostpone.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Postpone/CPostpone.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/Repeat/CRepeat.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/Repeat/CRepeat.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CDaily.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CMonthly.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CWeekly.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semestral/korolant/src/View/CYearly.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +82,7 @@
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
-    <configuration name="korolant" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="true" REDIRECT_INPUT_PATH="$PROJECT_DIR$/semestral/korolant/examples/uploadTenEventsAndShowMonthly.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="semestralka" TARGET_NAME="korolant" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="semestralka" RUN_TARGET_NAME="korolant">
+    <configuration name="korolant" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" REDIRECT_INPUT_PATH="$PROJECT_DIR$/semestral/korolant/examples/uploadTenEventsAndShowMonthly.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="semestralka" TARGET_NAME="korolant" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="semestralka" RUN_TARGET_NAME="korolant">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -102,14 +110,11 @@
       <workItem from="1623015827083" duration="58000" />
       <workItem from="1623015927719" duration="45000" />
       <workItem from="1623016246167" duration="7706000" />
-      <workItem from="1623074635555" duration="2886000" />
-    </task>
-    <task id="LOCAL-00033" summary="implemented:&#10;&#10;&#10;need to do:&#10;doc comments&#10;...">
-      <created>1622648697747</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1622648697747</updated>
+      <workItem from="1623074635555" duration="3116000" />
+      <workItem from="1623137308057" duration="1963000" />
+      <workItem from="1623141426080" duration="84000" />
+      <workItem from="1623142917474" duration="2527000" />
+      <workItem from="1623526243080" duration="4475000" />
     </task>
     <task id="LOCAL-00034" summary="implemented:&#10;osetrseni&#10;description + or -&#10;&#10;&#10;need to do:&#10;doc comments&#10;...">
       <created>1622661121700</created>
@@ -447,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623076806720</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="last commit before sent it to progtest">
+      <created>1623077548798</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1623077548798</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,10 +507,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="last commit before sent it to progtest" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="70" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623076775480">
+    <state x="223" y="70" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623141468016">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623076775480" />
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623141468016" />
     <state x="2199" y="88" width="1092" height="709" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622756083820" />
     <state x="525" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622715719668">
       <screen x="0" y="0" width="1536" height="824" />
@@ -519,26 +531,30 @@
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1622908353546" />
     <state x="2606" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622743615328" />
-    <state width="1493" height="62" key="GridCell.Tab.0.bottom" timestamp="1623076807638">
+    <state width="1493" height="119" key="GridCell.Tab.0.bottom" timestamp="1623529716922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="62" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623076807638" />
+    <state width="1493" height="119" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623529716922" />
     <state width="1877" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
-    <state width="1493" height="62" key="GridCell.Tab.0.center" timestamp="1623076807638">
+    <state width="1478" height="32" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623150374909" />
+    <state width="1493" height="119" key="GridCell.Tab.0.center" timestamp="1623529716922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="62" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623076807638" />
+    <state width="1493" height="119" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623529716922" />
     <state width="1877" height="241" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
-    <state width="1493" height="62" key="GridCell.Tab.0.left" timestamp="1623076807637">
+    <state width="1478" height="32" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623150374909" />
+    <state width="1493" height="119" key="GridCell.Tab.0.left" timestamp="1623529716922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="62" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623076807637" />
+    <state width="1493" height="119" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623529716922" />
     <state width="1877" height="241" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529783" />
-    <state width="1493" height="62" key="GridCell.Tab.0.right" timestamp="1623076807638">
+    <state width="1478" height="32" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623150374909" />
+    <state width="1493" height="119" key="GridCell.Tab.0.right" timestamp="1623529716922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="62" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623076807638" />
+    <state width="1493" height="119" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623529716922" />
     <state width="1877" height="241" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622761529785" />
+    <state width="1478" height="32" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623150374909" />
     <state width="1877" height="241" key="GridCell.Tab.1.bottom" timestamp="1622761529787">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

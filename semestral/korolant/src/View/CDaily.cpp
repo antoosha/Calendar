@@ -46,6 +46,9 @@ void CDaily::show(ostream &m_Out, CCalendar & cCalendar) const {
 int CDaily::setup(istream &m_In, ostream &m_Out) {
     m_Out << "Write year, you want to show:" << endl;
     m_In >> year;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if(year < 1600 || year > 9999 || m_In.fail()){
         m_In.clear();
@@ -57,6 +60,9 @@ int CDaily::setup(istream &m_In, ostream &m_Out) {
 
     m_Out << "Write month, you want to show:" << endl;
     m_In >> month;
+    if(m_In.eof()){
+        return -3;
+    }
 
     if(month < 1 || month > 12 || m_In.fail()){
         m_In.clear();
@@ -68,6 +74,9 @@ int CDaily::setup(istream &m_In, ostream &m_Out) {
 
     m_Out << "Write day, you want to show:" << endl;
     m_In >> day;
+    if(m_In.eof()){
+        return -3;
+    }
     CDate cDate = {};
 
     if(day > cDate.numberOfDays(month-1, year || m_In.fail())){
@@ -93,6 +102,9 @@ int CDaily::navigation(std::istream &m_In, std::ostream &m_Out) {
         m_Out << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
         int number;
         m_In >> number;
+        if(m_In.eof()){
+            return -3;
+        }
 
         if (number < 1 || number > 3 || m_In.fail()) {
             m_In.clear();
