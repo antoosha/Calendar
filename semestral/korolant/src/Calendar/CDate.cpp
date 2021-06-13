@@ -201,7 +201,7 @@ void CDate::moveMonths(int months) {
 
 void CDate::moveYears(int years) {
     if(month == 2){
-        if((numberOfDays(2, year) != numberOfDays(2, year + years)) && day == 29){
+        if((numberOfDays(2-1, year) != numberOfDays(2-1, year + years)) && (numberOfDays(2-1, year) == 29)){
             year += years;
             month++;
             day = 1;

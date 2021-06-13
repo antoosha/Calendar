@@ -39,7 +39,7 @@ void CDaily::show(ostream &m_Out, CCalendar & cCalendar) const {
             l->second->printFunc(m_Out);
         }
     }
-    if(!hasBeenWritten) m_Out << "Any events has not been found." << endl;
+    if(!hasBeenWritten) m_Out << "Any events have not been found." << endl;
     m_Out << endl;
 }
 

@@ -583,7 +583,7 @@ int CCalendar::editEvent(std::istream & m_In, std::ostream & m_Out, CCalendar & 
             m_Out << "List of members:" << endl;
             int index;
             for(size_t i = 0; i < cCalendar.returnMapById().at(id)->returnMembers().size(); i++){
-                m_Out << i << ") " <<  cCalendar.returnMapById().at(id)->returnMembers()[i] << endl;
+                m_Out << i+1 << ") " <<  cCalendar.returnMapById().at(id)->returnMembers()[i] << endl;
             }
             m_Out << "Write index of person, who you want to delete from this event and press 'Enter':" << endl;
             m_In >> index;

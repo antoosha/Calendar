@@ -113,8 +113,8 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
         for(size_t i = 0; i < (size_t)howManyTimesToRepeat; i++){
             CDate newDateFrom = cCalendar.returnMapById().at(exampleId)->returnDateFrom();
             CDate newDateTo = cCalendar.returnMapById().at(exampleId)->returnDateTo();
-            newDateFrom.moveYears(1);
-            newDateTo.moveYears(1);
+            newDateFrom.moveYears((int)i+1);
+            newDateTo.moveYears((int)i+1);
             string obligation;
             (!strcmp(typeid(cCalendar.returnMapById().at(exampleId)).name(), "Optional")) ? obligation = "optional" : obligation = "required";
             cCalendar.addEvent(cCalendar.generateId(cCalendar), cCalendar.returnMapById().at(exampleId)->returnName(),
@@ -123,7 +123,6 @@ int CRepeat::repeatEvent(istream &m_In, ostream &m_Out, CCalendar &cCalendar) {
                                cCalendar.returnMapById().at(exampleId)->returnMembers(),
                                cCalendar.returnMapById().at(exampleId)->returnDescription(),
                                obligation);
-            exampleId = (int)cCalendar.generateId(cCalendar)-1;
         }
     }
     m_Out << "Event was repeated." << endl;
