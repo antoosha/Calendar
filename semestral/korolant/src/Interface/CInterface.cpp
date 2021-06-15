@@ -196,7 +196,7 @@ int CInterface::doSmthWithCommand(std::map<std::string, CView*> & views){
         m_Out << "| \"showMonthly\" ... - show calendar and all events for month.               |" << endl;
         m_Out << "| \"showYearly\" ... - show calendar and all events for year.                 |" << endl;
         m_Out << "| \"listEvents\" ... - lists all events from calendar.                        |" << endl;
-        m_Out << "| \"findFirstPossible\" ... - find first possible date to postpone event.      |" << endl;
+        m_Out << "| \"findFirstPossible\" ... - find first possible date to postpone event.     |" << endl;
         m_Out << "| \"quit\" - end the program.                                                 |" << endl;
         m_Out << "+-----------------------------------HELP------------------------------------+" << endl;
         words.clear();
